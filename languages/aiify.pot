@@ -1,0 +1,742 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2023-05-04 23:30+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Rahal <rahal.aboulfeth@gmail.com>\n"
+"Language-Team: \n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.2.2\n"
+"X-Poedit-KeywordsList: __;_e;esc_attr_e;esc_attr__;esc_html__;esc_html_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: vendor\n"
+"X-Poedit-SearchPathExcluded-1: node_modules\n"
+
+#: aiify.php:42
+msgid "To start using AIIFY Blocks, please setup you OpenAi Key"
+msgstr ""
+
+#: aiify.php:43
+msgid "Go to Aiify Blocks settings"
+msgstr ""
+
+#: aiify/src/aiify__premium_only.js:32
+msgid "How would you like to edit this text?"
+msgstr ""
+
+#: aiify/src/aiify__premium_only.js:36
+msgid "You can ask for specific edits like : Translate to german"
+msgstr ""
+
+#: aiify/src/aiify__premium_only.js:39
+msgid "Cancel"
+msgstr ""
+
+#: aiify/src/aiify__premium_only.js:42
+msgid "Edit"
+msgstr ""
+
+#: aiify/src/edit.js:89
+msgid "Select a content type"
+msgstr ""
+
+#: aiify/src/edit.js:106
+msgid "What do you want to write today?"
+msgstr ""
+
+#: aiify/src/edit.js:114
+msgid "Write"
+msgstr ""
+
+#: aiify/src/edit.js:115
+msgid "Clear"
+msgstr ""
+
+#: aiify/src/panel.js:31
+msgid "Max words to generate"
+msgstr ""
+
+#: aiify/src/panel.js:32
+msgid "Do not exceed this value"
+msgstr ""
+
+#: aiify/src/panel.js:40
+msgid "Select writing style"
+msgstr ""
+
+#: aiify/src/panel.js:52
+msgid "Select writing tone"
+msgstr ""
+
+#: aiify/src/panel.js:70
+msgid "Aiify Settings"
+msgstr ""
+
+#: aiify/src/toolbar.js:113
+msgid "Custom edit"
+msgstr ""
+
+#: aiify/src/toolbar.js:150
+msgid "Aiify me"
+msgstr ""
+
+#: aiify/src/toolbar.js:154
+msgid "Review or edit this block"
+msgstr ""
+
+#: aiify/src/toolbar.js:157
+msgid "Generate and prepend based on this block"
+msgstr ""
+
+#: aiify/src/toolbar.js:160
+msgid "Generate and append based on this block"
+msgstr ""
+
+#: aiify/src/toolbar.js:169
+msgid "Custom command"
+msgstr ""
+
+#: aiify/src/tools.js:112
+msgid "Please wait..."
+msgstr ""
+
+#: includes/constants.php:16
+msgid "Write a blog post about"
+msgstr ""
+
+#: includes/constants.php:16
+msgid "a topic"
+msgstr ""
+
+#: includes/constants.php:17
+msgid "Write a press release about"
+msgstr ""
+
+#: includes/constants.php:17
+msgid "a news event"
+msgstr ""
+
+#: includes/constants.php:18
+msgid "Write a social media post about"
+msgstr ""
+
+#: includes/constants.php:18
+msgid "a specific aspect of your product or service"
+msgstr ""
+
+#: includes/constants.php:19
+msgid "Write a product description for"
+msgstr ""
+
+#: includes/constants.php:19
+msgid "a specific retailer or audience"
+msgstr ""
+
+#: includes/constants.php:20
+msgid "Write an email newsletter about"
+msgstr ""
+
+#: includes/constants.php:20
+msgid "news or updates related to your business"
+msgstr ""
+
+#: includes/constants.php:21
+msgid "Write website copy for"
+msgstr ""
+
+#: includes/constants.php:21
+msgid "a specific page or section of your website"
+msgstr ""
+
+#: includes/constants.php:22
+msgid "Write a video script for"
+msgstr ""
+
+#: includes/constants.php:22
+msgid "a promotional or instructional video"
+msgstr ""
+
+#: includes/constants.php:23
+msgid "Write a whitepaper on"
+msgstr ""
+
+#: includes/constants.php:23
+msgid "a particular topic or industry trend"
+msgstr ""
+
+#: includes/constants.php:24
+msgid "Write a case study about"
+msgstr ""
+
+#: includes/constants.php:24
+msgid "a specific customer or business challenge"
+msgstr ""
+
+#: includes/constants.php:25
+msgid "Write an e-book on"
+msgstr ""
+
+#: includes/constants.php:25
+msgid "a specific topic or industry"
+msgstr ""
+
+#: includes/constants.php:26
+msgid "Write an infographic about"
+msgstr ""
+
+#: includes/constants.php:26
+msgid "a specific topic or data set"
+msgstr ""
+
+#: includes/constants.php:27
+msgid "Write a sales letter for"
+msgstr ""
+
+#: includes/constants.php:27 includes/constants.php:29
+msgid "a specific product or service"
+msgstr ""
+
+#: includes/constants.php:28
+msgid "Write a landing page for"
+msgstr ""
+
+#: includes/constants.php:28
+msgid "a specific offer or promotion"
+msgstr ""
+
+#: includes/constants.php:29
+msgid "Write a product review for"
+msgstr ""
+
+#: includes/constants.php:30
+msgid "Write a how-to guide for"
+msgstr ""
+
+#: includes/constants.php:30
+msgid "a specific task or process"
+msgstr ""
+
+#: includes/constants.php:31
+msgid "Write a listicle about"
+msgstr ""
+
+#: includes/constants.php:31
+msgid "a specific topic or set of related items"
+msgstr ""
+
+#: includes/constants.php:32
+msgid "Write a research paper on"
+msgstr ""
+
+#: includes/constants.php:32
+msgid "a specific topic or question"
+msgstr ""
+
+#: includes/constants.php:33
+msgid "Write a personal essay about"
+msgstr ""
+
+#: includes/constants.php:33
+msgid "a personal experience or perspective"
+msgstr ""
+
+#: includes/constants.php:34
+msgid "Write a news article about"
+msgstr ""
+
+#: includes/constants.php:34
+msgid "a specific news event"
+msgstr ""
+
+#: includes/constants.php:35
+msgid "Write a feature article about"
+msgstr ""
+
+#: includes/constants.php:35
+msgid "a specific person, place, or thing"
+msgstr ""
+
+#: includes/constants.php:36
+msgid "Write a company profile about"
+msgstr ""
+
+#: includes/constants.php:36
+msgid "a specific business or organization"
+msgstr ""
+
+#: includes/constants.php:37
+msgid "Write a guest post for"
+msgstr ""
+
+#: includes/constants.php:37
+msgid "a specific blog or publication"
+msgstr ""
+
+#: includes/constants.php:38
+msgid "Write a comparison article on"
+msgstr ""
+
+#: includes/constants.php:38
+msgid "two or more products or services"
+msgstr ""
+
+#: includes/constants.php:39
+msgid "Write an interview article with"
+msgstr ""
+
+#: includes/constants.php:39
+msgid "a specific person or expert"
+msgstr ""
+
+#: includes/constants.php:40
+msgid "Write an opinion piece on"
+msgstr ""
+
+#: includes/constants.php:40
+msgid "a specific topic or issue"
+msgstr ""
+
+#: includes/constants.php:41
+msgid "Write an article outline for"
+msgstr ""
+
+#: includes/constants.php:41
+msgid "a specific topic or article idea"
+msgstr ""
+
+#: includes/constants.php:46
+msgid "Fix spelling and grammar"
+msgstr ""
+
+#: includes/constants.php:47
+msgid "Simplify language"
+msgstr ""
+
+#: includes/constants.php:48
+msgid "Make longer"
+msgstr ""
+
+#: includes/constants.php:49
+msgid "Make shorter"
+msgstr ""
+
+#: includes/constants.php:50
+msgid "Improve writing"
+msgstr ""
+
+#: includes/constants.php:51
+msgid "Paraphrase"
+msgstr ""
+
+#: includes/constants.php:52
+msgid "Add more detail"
+msgstr ""
+
+#: includes/constants.php:53
+msgid "Remove redundancy"
+msgstr ""
+
+#: includes/constants.php:54
+msgid "Clarify meaning"
+msgstr ""
+
+#: includes/constants.php:55
+msgid "Strengthen argument"
+msgstr ""
+
+#: includes/constants.php:56
+msgid "Emphasize keywords"
+msgstr ""
+
+#: includes/constants.php:67
+msgid "Heading"
+msgstr ""
+
+#: includes/constants.php:68
+msgid "Tagline"
+msgstr ""
+
+#: includes/constants.php:69
+msgid "Introduction"
+msgstr ""
+
+#: includes/constants.php:70
+msgid "Summary"
+msgstr ""
+
+#: includes/constants.php:74
+msgid "Summarize"
+msgstr ""
+
+#: includes/constants.php:75
+msgid "List Key Takeaways"
+msgstr ""
+
+#: includes/constants.php:76
+msgid "Find Action Items"
+msgstr ""
+
+#: includes/constants.php:77
+msgid "Explain"
+msgstr ""
+
+#: includes/constants.php:78
+msgid "Elaborate"
+msgstr ""
+
+#: includes/constants.php:79
+msgid "Find Main Idea"
+msgstr ""
+
+#: includes/constants.php:80
+msgid "Provide Examples"
+msgstr ""
+
+#: includes/constants.php:81
+msgid "Complete with sources"
+msgstr ""
+
+#: includes/constants.php:82
+msgid "Evaluate and Provide Feedback"
+msgstr ""
+
+#: includes/constants.php:83
+msgid "Write a Conclusion"
+msgstr ""
+
+#: includes/constants.php:110
+msgid "Journalistic"
+msgstr ""
+
+#: includes/constants.php:111
+msgid "Academic"
+msgstr ""
+
+#: includes/constants.php:112
+msgid "Creative"
+msgstr ""
+
+#: includes/constants.php:113
+msgid "Technical"
+msgstr ""
+
+#: includes/constants.php:114
+msgid "Business"
+msgstr ""
+
+#: includes/constants.php:115
+msgid "Scientific"
+msgstr ""
+
+#: includes/constants.php:116
+msgid "Casual"
+msgstr ""
+
+#: includes/constants.php:117 includes/constants.php:150
+msgid "Formal"
+msgstr ""
+
+#: includes/constants.php:118
+msgid "Narrative"
+msgstr ""
+
+#: includes/constants.php:119
+msgid "Descriptive"
+msgstr ""
+
+#: includes/constants.php:120 includes/constants.php:163
+msgid "Persuasive"
+msgstr ""
+
+#: includes/constants.php:121
+msgid "Expository"
+msgstr ""
+
+#: includes/constants.php:122 includes/constants.php:180
+msgid "Analytical"
+msgstr ""
+
+#: includes/constants.php:123 includes/constants.php:182
+msgid "Critical"
+msgstr ""
+
+#: includes/constants.php:124 includes/constants.php:160
+msgid "Conversational"
+msgstr ""
+
+#: includes/constants.php:125 includes/constants.php:139
+msgid "Professional"
+msgstr ""
+
+#: includes/constants.php:126 includes/constants.php:153 includes/constants.php:167
+msgid "Humorous"
+msgstr ""
+
+#: includes/constants.php:127
+msgid "Instructional"
+msgstr ""
+
+#: includes/constants.php:128
+msgid "Inspirational"
+msgstr ""
+
+#: includes/constants.php:129
+msgid "Motivational"
+msgstr ""
+
+#: includes/constants.php:140
+msgid "Cheerful"
+msgstr ""
+
+#: includes/constants.php:141
+msgid "Excited"
+msgstr ""
+
+#: includes/constants.php:142 includes/constants.php:179
+msgid "Optimistic"
+msgstr ""
+
+#: includes/constants.php:143
+msgid "Confident"
+msgstr ""
+
+#: includes/constants.php:144
+msgid "Sarcastic"
+msgstr ""
+
+#: includes/constants.php:145
+msgid "Sincere"
+msgstr ""
+
+#: includes/constants.php:146
+msgid "Sympathetic"
+msgstr ""
+
+#: includes/constants.php:147
+msgid "Concerned"
+msgstr ""
+
+#: includes/constants.php:148
+msgid "Caring"
+msgstr ""
+
+#: includes/constants.php:149
+msgid "Neutral"
+msgstr ""
+
+#: includes/constants.php:151 includes/constants.php:162
+msgid "Authoritative"
+msgstr ""
+
+#: includes/constants.php:152
+msgid "Serious"
+msgstr ""
+
+#: includes/constants.php:154
+msgid "Playful"
+msgstr ""
+
+#: includes/constants.php:155
+msgid "Friendly"
+msgstr ""
+
+#: includes/constants.php:156
+msgid "Warm"
+msgstr ""
+
+#: includes/constants.php:157
+msgid "Cold"
+msgstr ""
+
+#: includes/constants.php:158
+msgid "Impersonal"
+msgstr ""
+
+#: includes/constants.php:159
+msgid "Informative/Educational"
+msgstr ""
+
+#: includes/constants.php:161
+msgid "Professional/Formal"
+msgstr ""
+
+#: includes/constants.php:164
+msgid "Inspirational/Motivational"
+msgstr ""
+
+#: includes/constants.php:165
+msgid "Entertaining"
+msgstr ""
+
+#: includes/constants.php:166
+msgid "Controversial"
+msgstr ""
+
+#: includes/constants.php:168
+msgid "Empathetic"
+msgstr ""
+
+#: includes/constants.php:169
+msgid "Personal"
+msgstr ""
+
+#: includes/constants.php:170
+msgid "Storytelling"
+msgstr ""
+
+#: includes/constants.php:171
+msgid "Thought-provoking"
+msgstr ""
+
+#: includes/constants.php:172
+msgid "Authentic"
+msgstr ""
+
+#: includes/constants.php:173
+msgid "Trustworthy"
+msgstr ""
+
+#: includes/constants.php:174
+msgid "Authorial"
+msgstr ""
+
+#: includes/constants.php:175
+msgid "Collaborative"
+msgstr ""
+
+#: includes/constants.php:176
+msgid "Problem-solving"
+msgstr ""
+
+#: includes/constants.php:177
+msgid "Encouraging"
+msgstr ""
+
+#: includes/constants.php:178
+msgid "Straightforward"
+msgstr ""
+
+#: includes/constants.php:181
+msgid "Objective"
+msgstr ""
+
+#: includes/constants.php:183
+msgid "Simplified"
+msgstr ""
+
+#: includes/constants.php:184
+msgid "Complex"
+msgstr ""
+
+#: includes/constants.php:185
+msgid "Curious"
+msgstr ""
+
+#: includes/constants.php:186
+msgid "Inspiring"
+msgstr ""
+
+#: includes/constants.php:187
+msgid "Motivating"
+msgstr ""
+
+#: includes/constants.php:208
+msgid "Type \"AI+Enter\" for AI, or \"/\" to choose a block"
+msgstr ""
+
+#: includes/init_freemius.php:52
+#, php-format
+msgid "Hey %1$s"
+msgstr ""
+
+#: includes/init_freemius.php:53
+#, php-format
+msgid ""
+"Please help us improve %2$s! If you opt-in, some data about your usage of %2$s will be "
+"sent to %5$s. If you skip this, that's okay! %2$s will still work just fine."
+msgstr ""
+
+#: includes/settings.php:12
+msgid "Aiify Blocks"
+msgstr ""
+
+#: includes/settings.php:19
+#, php-format
+msgid ""
+"Welcome to Aiify Blocks, feel to <a href=\"%s\" >contact us</a> if you have any "
+"question."
+msgstr ""
+
+#: includes/settings.php:23
+msgid "Aiify Blocks Settings"
+msgstr ""
+
+#: includes/settings.php:31
+#, php-format
+msgid "Please insert a valid %s"
+msgstr ""
+
+#: includes/settings.php:40
+msgid "Open AI Settings"
+msgstr ""
+
+#: includes/settings.php:45
+msgid "Your Open AI Key"
+msgstr ""
+
+#: includes/settings.php:48
+#, php-format
+msgid "You can get your key here : %s"
+msgstr ""
+
+#: includes/settings.php:54
+msgid "Temparature"
+msgstr ""
+
+#: includes/settings.php:61
+msgid ""
+"Lower temperature means model generates repetitive text like training data. Higher "
+"temperature leads to more varied and creative text."
+msgstr ""
+
+#: includes/settings.php:67
+msgid "Frequency penalty"
+msgstr ""
+
+#: includes/settings.php:74
+msgid ""
+"A frequency penalty of 0.5 reduces the likelihood of the model using frequently seen "
+"words or phrases by 50%. A penalty of 1 will eliminate them completely."
+msgstr ""
+
+#: includes/settings.php:79
+msgid "Presence penalty"
+msgstr ""
+
+#: includes/settings.php:86
+msgid ""
+"With a presence penalty of 0.5, the model reduces the chance of generating words or "
+"phrases not in the training data by 50%. A penalty of 1 avoids all new words or "
+"phrases."
+msgstr ""
+
+#: includes/settings.php:95
+msgid "Writing Settings"
+msgstr ""
+
+#: includes/settings.php:101
+msgid "Writing Style"
+msgstr ""
+
+#: includes/settings.php:108
+msgid "Writing Tone"
+msgstr ""
+
+#: includes/settings.php:115
+msgid "Maximum words"
+msgstr ""

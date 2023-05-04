@@ -1,0 +1,770 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: aiify\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-04 23:30+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Rahal <rahal.aboulfeth@gmail.com>\n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.2.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;esc_attr_e;esc_attr__;esc_html__;esc_html_e\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: node_modules\n"
+"X-Poedit-SearchPathExcluded-1: vendor\n"
+
+#: aiify.php:42
+#, fuzzy
+#| msgid ""
+#| "To start using AIIFY Blocks, please add this line to your theme function."
+#| "php or to wp-config.php :"
+msgid "To start using AIIFY Blocks, please setup you OpenAi Key"
+msgstr ""
+"Para comenzar a usar AIIFY Blocks, agregue esta línea a su tema function.php "
+"o wp-config.php:"
+
+#: aiify.php:43
+#, fuzzy
+#| msgid "Aiify Settings"
+msgid "Go to Aiify Blocks settings"
+msgstr "Ajustes de Aiify"
+
+#: aiify/src/aiify__premium_only.js:32
+msgid "How would you like to edit this text?"
+msgstr "¿Cómo le gustaría editar este texto?"
+
+#: aiify/src/aiify__premium_only.js:36
+msgid "You can ask for specific edits like : Translate to german"
+msgstr "Puede solicitar ediciones específicas como: Traducir al alemán"
+
+#: aiify/src/aiify__premium_only.js:39
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: aiify/src/aiify__premium_only.js:42
+msgid "Edit"
+msgstr "Editar"
+
+#: aiify/src/edit.js:89
+msgid "Select a content type"
+msgstr "Seleccione un tipo de contenido"
+
+#: aiify/src/edit.js:106
+msgid "What do you want to write today?"
+msgstr "¿Qué quieres escribir hoy?"
+
+#: aiify/src/edit.js:114
+msgid "Write"
+msgstr "escribir"
+
+#: aiify/src/edit.js:115
+msgid "Clear"
+msgstr "Borrar"
+
+#: aiify/src/panel.js:31
+msgid "Max words to generate"
+msgstr "Mots max à générer"
+
+#: aiify/src/panel.js:32
+msgid "Do not exceed this value"
+msgstr "Ne pas dépasser cette valeur"
+
+#: aiify/src/panel.js:40
+msgid "Select writing style"
+msgstr "Seleccione el estilo de escritura"
+
+#: aiify/src/panel.js:52
+msgid "Select writing tone"
+msgstr "Seleccionar tono de escritura"
+
+#: aiify/src/panel.js:70
+msgid "Aiify Settings"
+msgstr "Ajustes de Aiify"
+
+#: aiify/src/toolbar.js:113
+msgid "Custom edit"
+msgstr "Edición personalizada"
+
+#: aiify/src/toolbar.js:150
+msgid "Aiify me"
+msgstr "Ayúdame"
+
+#: aiify/src/toolbar.js:154
+msgid "Review or edit this block"
+msgstr "Revisar o editar este bloque"
+
+#: aiify/src/toolbar.js:157
+msgid "Generate and prepend based on this block"
+msgstr "Generar y anteponer en base a este bloque"
+
+#: aiify/src/toolbar.js:160
+msgid "Generate and append based on this block"
+msgstr "Generar y agregar en base a este bloque"
+
+#: aiify/src/toolbar.js:169
+msgid "Custom command"
+msgstr "Comando personalizado"
+
+#: aiify/src/tools.js:112
+msgid "Please wait..."
+msgstr "Por favor espera..."
+
+#: includes/constants.php:16
+msgid "Write a blog post about"
+msgstr "Escribe una entrada de blog sobre"
+
+#: includes/constants.php:16
+msgid "a topic"
+msgstr "un tema"
+
+#: includes/constants.php:17
+msgid "Write a press release about"
+msgstr "Escriba un comunicado de prensa sobre"
+
+#: includes/constants.php:17
+msgid "a news event"
+msgstr "un evento de noticias"
+
+#: includes/constants.php:18
+msgid "Write a social media post about"
+msgstr "Escribe una publicación en las redes sociales sobre"
+
+#: includes/constants.php:18
+msgid "a specific aspect of your product or service"
+msgstr "un aspecto específico de su producto o servicio"
+
+#: includes/constants.php:19
+msgid "Write a product description for"
+msgstr "Escriba una descripción del producto para"
+
+#: includes/constants.php:19
+msgid "a specific retailer or audience"
+msgstr "un minorista o público específico"
+
+#: includes/constants.php:20
+msgid "Write an email newsletter about"
+msgstr "Escriba un boletín de correo electrónico sobre"
+
+#: includes/constants.php:20
+msgid "news or updates related to your business"
+msgstr "noticias o actualizaciones relacionadas con su negocio"
+
+#: includes/constants.php:21
+msgid "Write website copy for"
+msgstr "Escriba una copia del sitio web para"
+
+#: includes/constants.php:21
+msgid "a specific page or section of your website"
+msgstr "una página o sección específica de su sitio web"
+
+#: includes/constants.php:22
+msgid "Write a video script for"
+msgstr "Escribe un guión de video para"
+
+#: includes/constants.php:22
+msgid "a promotional or instructional video"
+msgstr "un video promocional o instructivo"
+
+#: includes/constants.php:23
+msgid "Write a whitepaper on"
+msgstr "Escriba un documento técnico sobre"
+
+#: includes/constants.php:23
+msgid "a particular topic or industry trend"
+msgstr "un tema en particular o una tendencia de la industria"
+
+#: includes/constants.php:24
+msgid "Write a case study about"
+msgstr "Escriba un estudio de caso sobre"
+
+#: includes/constants.php:24
+msgid "a specific customer or business challenge"
+msgstr "un cliente específico o un desafío empresarial"
+
+#: includes/constants.php:25
+msgid "Write an e-book on"
+msgstr "Escribir un libro electrónico en"
+
+#: includes/constants.php:25
+msgid "a specific topic or industry"
+msgstr "un tema o industria específica"
+
+#: includes/constants.php:26
+msgid "Write an infographic about"
+msgstr "Escribe una infografía sobre"
+
+#: includes/constants.php:26
+msgid "a specific topic or data set"
+msgstr "un tema específico o conjunto de datos"
+
+#: includes/constants.php:27
+msgid "Write a sales letter for"
+msgstr "Escriba una carta de ventas para"
+
+#: includes/constants.php:27 includes/constants.php:29
+msgid "a specific product or service"
+msgstr "un producto o servicio específico"
+
+#: includes/constants.php:28
+msgid "Write a landing page for"
+msgstr "Escriba una página de destino para"
+
+#: includes/constants.php:28
+msgid "a specific offer or promotion"
+msgstr "una oferta o promoción específica"
+
+#: includes/constants.php:29
+msgid "Write a product review for"
+msgstr "Escriba una reseña del producto para"
+
+#: includes/constants.php:30
+msgid "Write a how-to guide for"
+msgstr "Escriba una guía práctica para"
+
+#: includes/constants.php:30
+msgid "a specific task or process"
+msgstr "una tarea o proceso específico"
+
+#: includes/constants.php:31
+msgid "Write a listicle about"
+msgstr "Escribe una lista sobre"
+
+#: includes/constants.php:31
+msgid "a specific topic or set of related items"
+msgstr "un tema específico o un conjunto de elementos relacionados"
+
+#: includes/constants.php:32
+msgid "Write a research paper on"
+msgstr "Escribe un trabajo de investigación sobre"
+
+#: includes/constants.php:32
+msgid "a specific topic or question"
+msgstr "un tema o pregunta específica"
+
+#: includes/constants.php:33
+msgid "Write a personal essay about"
+msgstr "Escribe un ensayo personal sobre"
+
+#: includes/constants.php:33
+msgid "a personal experience or perspective"
+msgstr "una experiencia o perspectiva personal"
+
+#: includes/constants.php:34
+msgid "Write a news article about"
+msgstr "Escribe un artículo de noticias sobre"
+
+#: includes/constants.php:34
+msgid "a specific news event"
+msgstr "un evento noticioso específico"
+
+#: includes/constants.php:35
+msgid "Write a feature article about"
+msgstr "Escriba un artículo destacado sobre"
+
+#: includes/constants.php:35
+msgid "a specific person, place, or thing"
+msgstr "una persona, lugar o cosa específica"
+
+#: includes/constants.php:36
+msgid "Write a company profile about"
+msgstr "Escriba un perfil de empresa sobre"
+
+#: includes/constants.php:36
+msgid "a specific business or organization"
+msgstr "una empresa u organización específica"
+
+#: includes/constants.php:37
+msgid "Write a guest post for"
+msgstr "Escribe una publicación de invitado para"
+
+#: includes/constants.php:37
+msgid "a specific blog or publication"
+msgstr "un blog o publicación específica"
+
+#: includes/constants.php:38
+msgid "Write a comparison article on"
+msgstr "Escribe un artículo comparativo sobre"
+
+#: includes/constants.php:38
+msgid "two or more products or services"
+msgstr "dos o más productos o servicios"
+
+#: includes/constants.php:39
+msgid "Write an interview article with"
+msgstr "Escribir un artículo de entrevista con"
+
+#: includes/constants.php:39
+msgid "a specific person or expert"
+msgstr "una persona específica o un experto"
+
+#: includes/constants.php:40
+msgid "Write an opinion piece on"
+msgstr "Escribe un artículo de opinión sobre"
+
+#: includes/constants.php:40
+msgid "a specific topic or issue"
+msgstr "un tema o problema específico"
+
+#: includes/constants.php:41
+msgid "Write an article outline for"
+msgstr "Escribir un esquema de artículo para"
+
+#: includes/constants.php:41
+msgid "a specific topic or article idea"
+msgstr "un tema específico o idea de artículo"
+
+#: includes/constants.php:46
+msgid "Fix spelling and grammar"
+msgstr "corregir la ortografía y la gramática"
+
+#: includes/constants.php:47
+msgid "Simplify language"
+msgstr "simplificar el lenguaje"
+
+#: includes/constants.php:48
+msgid "Make longer"
+msgstr "Hacer más largo"
+
+#: includes/constants.php:49
+msgid "Make shorter"
+msgstr "acortar"
+
+#: includes/constants.php:50
+msgid "Improve writing"
+msgstr "mejorar la escritura"
+
+#: includes/constants.php:51
+msgid "Paraphrase"
+msgstr "paráfrasis"
+
+#: includes/constants.php:52
+msgid "Add more detail"
+msgstr "Añadir más detalles"
+
+#: includes/constants.php:53
+msgid "Remove redundancy"
+msgstr "Eliminar redundancia"
+
+#: includes/constants.php:54
+msgid "Clarify meaning"
+msgstr "Aclarar significado"
+
+#: includes/constants.php:55
+msgid "Strengthen argument"
+msgstr "Fortalecer el argumento"
+
+#: includes/constants.php:56
+msgid "Emphasize keywords"
+msgstr "Enfatizar palabras clave"
+
+#: includes/constants.php:67
+msgid "Heading"
+msgstr "Rumbo"
+
+#: includes/constants.php:68
+msgid "Tagline"
+msgstr "Lema"
+
+#: includes/constants.php:69
+msgid "Introduction"
+msgstr "Introducción"
+
+#: includes/constants.php:70
+msgid "Summary"
+msgstr "Resumen"
+
+#: includes/constants.php:74
+msgid "Summarize"
+msgstr "Resumir"
+
+#: includes/constants.php:75
+msgid "List Key Takeaways"
+msgstr "Lista de conclusiones clave"
+
+#: includes/constants.php:76
+msgid "Find Action Items"
+msgstr "Buscar elementos de acción"
+
+#: includes/constants.php:77
+msgid "Explain"
+msgstr "Explicar"
+
+#: includes/constants.php:78
+msgid "Elaborate"
+msgstr "Elaborado"
+
+#: includes/constants.php:79
+msgid "Find Main Idea"
+msgstr "Buscar idea principal"
+
+#: includes/constants.php:80
+msgid "Provide Examples"
+msgstr "proporcione ejemplos"
+
+#: includes/constants.php:81
+msgid "Complete with sources"
+msgstr "Completo con fuentes"
+
+#: includes/constants.php:82
+msgid "Evaluate and Provide Feedback"
+msgstr "Evaluar y proporcionar retroalimentación"
+
+#: includes/constants.php:83
+msgid "Write a Conclusion"
+msgstr "Escribe una Conclusión"
+
+#: includes/constants.php:110
+msgid "Journalistic"
+msgstr "Periodístico"
+
+#: includes/constants.php:111
+msgid "Academic"
+msgstr "Académico"
+
+#: includes/constants.php:112
+msgid "Creative"
+msgstr "Creativo"
+
+#: includes/constants.php:113
+msgid "Technical"
+msgstr "Técnico"
+
+#: includes/constants.php:114
+msgid "Business"
+msgstr "Negocios"
+
+#: includes/constants.php:115
+msgid "Scientific"
+msgstr "Científico"
+
+#: includes/constants.php:116
+msgid "Casual"
+msgstr "Informal"
+
+#: includes/constants.php:117 includes/constants.php:150
+msgid "Formal"
+msgstr "formal"
+
+#: includes/constants.php:118
+msgid "Narrative"
+msgstr "Narrativa"
+
+#: includes/constants.php:119
+msgid "Descriptive"
+msgstr "Descriptivo"
+
+#: includes/constants.php:120 includes/constants.php:163
+msgid "Persuasive"
+msgstr "Persuasivo"
+
+#: includes/constants.php:121
+msgid "Expository"
+msgstr "Expositivo"
+
+#: includes/constants.php:122 includes/constants.php:180
+msgid "Analytical"
+msgstr "Analítico"
+
+#: includes/constants.php:123 includes/constants.php:182
+msgid "Critical"
+msgstr "crítico"
+
+#: includes/constants.php:124 includes/constants.php:160
+msgid "Conversational"
+msgstr "Conversacional"
+
+#: includes/constants.php:125 includes/constants.php:139
+msgid "Professional"
+msgstr "Profesional"
+
+#: includes/constants.php:126 includes/constants.php:153
+#: includes/constants.php:167
+msgid "Humorous"
+msgstr "Humoroso"
+
+#: includes/constants.php:127
+msgid "Instructional"
+msgstr "Instructivo"
+
+#: includes/constants.php:128
+msgid "Inspirational"
+msgstr "Inspirador"
+
+#: includes/constants.php:129
+msgid "Motivational"
+msgstr "Motivacional"
+
+#: includes/constants.php:140
+msgid "Cheerful"
+msgstr "Alegre"
+
+#: includes/constants.php:141
+msgid "Excited"
+msgstr "Emocionado"
+
+#: includes/constants.php:142 includes/constants.php:179
+msgid "Optimistic"
+msgstr "Optimista"
+
+#: includes/constants.php:143
+msgid "Confident"
+msgstr "Confiado"
+
+#: includes/constants.php:144
+msgid "Sarcastic"
+msgstr "sarcástico"
+
+#: includes/constants.php:145
+msgid "Sincere"
+msgstr "Sincero"
+
+#: includes/constants.php:146
+msgid "Sympathetic"
+msgstr "Simpático"
+
+#: includes/constants.php:147
+msgid "Concerned"
+msgstr "Preocupado"
+
+#: includes/constants.php:148
+msgid "Caring"
+msgstr "Cuidado"
+
+#: includes/constants.php:149
+msgid "Neutral"
+msgstr "Neutro"
+
+#: includes/constants.php:151 includes/constants.php:162
+msgid "Authoritative"
+msgstr "Autoritario"
+
+#: includes/constants.php:152
+msgid "Serious"
+msgstr "Serio"
+
+#: includes/constants.php:154
+msgid "Playful"
+msgstr "juguetón"
+
+#: includes/constants.php:155
+msgid "Friendly"
+msgstr "amistoso"
+
+#: includes/constants.php:156
+msgid "Warm"
+msgstr "cálido"
+
+#: includes/constants.php:157
+msgid "Cold"
+msgstr "frío"
+
+#: includes/constants.php:158
+msgid "Impersonal"
+msgstr "impersonal"
+
+#: includes/constants.php:159
+msgid "Informative/Educational"
+msgstr "Informativo/Educativo"
+
+#: includes/constants.php:161
+msgid "Professional/Formal"
+msgstr "Profesional/Formal"
+
+#: includes/constants.php:164
+msgid "Inspirational/Motivational"
+msgstr "Inspirador/Motivador"
+
+#: includes/constants.php:165
+msgid "Entertaining"
+msgstr "Entretenido"
+
+#: includes/constants.php:166
+msgid "Controversial"
+msgstr "Polémico"
+
+#: includes/constants.php:168
+msgid "Empathetic"
+msgstr "empático"
+
+#: includes/constants.php:169
+msgid "Personal"
+msgstr ""
+
+#: includes/constants.php:170
+msgid "Storytelling"
+msgstr "Narración"
+
+#: includes/constants.php:171
+msgid "Thought-provoking"
+msgstr "Incitador a la reflexión"
+
+#: includes/constants.php:172
+msgid "Authentic"
+msgstr "Auténtico"
+
+#: includes/constants.php:173
+msgid "Trustworthy"
+msgstr "Digno de confianza"
+
+#: includes/constants.php:174
+msgid "Authorial"
+msgstr "Autor"
+
+#: includes/constants.php:175
+msgid "Collaborative"
+msgstr "Colaborativo"
+
+#: includes/constants.php:176
+msgid "Problem-solving"
+msgstr "Resolución de problemas"
+
+#: includes/constants.php:177
+msgid "Encouraging"
+msgstr "Alentador"
+
+#: includes/constants.php:178
+msgid "Straightforward"
+msgstr "Sencillo"
+
+#: includes/constants.php:181
+msgid "Objective"
+msgstr "Objetivo"
+
+#: includes/constants.php:183
+msgid "Simplified"
+msgstr "Simplificado"
+
+#: includes/constants.php:184
+msgid "Complex"
+msgstr "Complejo"
+
+#: includes/constants.php:185
+msgid "Curious"
+msgstr "Curioso"
+
+#: includes/constants.php:186
+msgid "Inspiring"
+msgstr "Inspirador"
+
+#: includes/constants.php:187
+msgid "Motivating"
+msgstr "Motivar"
+
+#: includes/constants.php:208
+msgid "Type \"AI+Enter\" for AI, or \"/\" to choose a block"
+msgstr ""
+"Escriba “AI+Enter” para inteligencia artificial, o “/“ para elegir un bloque"
+
+#: includes/init_freemius.php:52
+#, php-format
+msgid "Hey %1$s"
+msgstr "Hola %1$s"
+
+#: includes/init_freemius.php:53
+#, php-format
+msgid ""
+"Please help us improve %2$s! If you opt-in, some data about your usage of "
+"%2$s will be sent to %5$s. If you skip this, that's okay! %2$s will still "
+"work just fine."
+msgstr ""
+"¡Ayúdanos a mejorar %2$s! Si decides participar, se enviarán algunos datos "
+"sobre cómo usas %2$s a %5$s. Si decides no hacerlo, ¡no hay problema! %2$s "
+"seguirá funcionando perfectamente bien."
+
+#: includes/settings.php:12
+#, fuzzy
+#| msgid "Aiify me"
+msgid "Aiify Blocks"
+msgstr "Ayúdame"
+
+#: includes/settings.php:19
+#, php-format
+msgid ""
+"Welcome to Aiify Blocks, feel to <a href=\"%s\" >contact us</a> if you have "
+"any question."
+msgstr ""
+
+#: includes/settings.php:23
+#, fuzzy
+#| msgid "Aiify Settings"
+msgid "Aiify Blocks Settings"
+msgstr "Ajustes de Aiify"
+
+#: includes/settings.php:31
+#, php-format
+msgid "Please insert a valid %s"
+msgstr ""
+
+#: includes/settings.php:40
+#, fuzzy
+#| msgid "Aiify Settings"
+msgid "Open AI Settings"
+msgstr "Ajustes de Aiify"
+
+#: includes/settings.php:45
+msgid "Your Open AI Key"
+msgstr ""
+
+#: includes/settings.php:48
+#, php-format
+msgid "You can get your key here : %s"
+msgstr "Puede obtener su clave aquí: %s"
+
+#: includes/settings.php:54
+msgid "Temparature"
+msgstr ""
+
+#: includes/settings.php:61
+msgid ""
+"Lower temperature means model generates repetitive text like training data. "
+"Higher temperature leads to more varied and creative text."
+msgstr ""
+
+#: includes/settings.php:67
+msgid "Frequency penalty"
+msgstr ""
+
+#: includes/settings.php:74
+msgid ""
+"A frequency penalty of 0.5 reduces the likelihood of the model using "
+"frequently seen words or phrases by 50%. A penalty of 1 will eliminate them "
+"completely."
+msgstr ""
+
+#: includes/settings.php:79
+msgid "Presence penalty"
+msgstr ""
+
+#: includes/settings.php:86
+msgid ""
+"With a presence penalty of 0.5, the model reduces the chance of generating "
+"words or phrases not in the training data by 50%. A penalty of 1 avoids all "
+"new words or phrases."
+msgstr ""
+
+#: includes/settings.php:95
+#, fuzzy
+#| msgid "Aiify Settings"
+msgid "Writing Settings"
+msgstr "Ajustes de Aiify"
+
+#: includes/settings.php:101
+#, fuzzy
+#| msgid "Select writing style"
+msgid "Writing Style"
+msgstr "Seleccione el estilo de escritura"
+
+#: includes/settings.php:108
+#, fuzzy
+#| msgid "Select writing tone"
+msgid "Writing Tone"
+msgstr "Seleccionar tono de escritura"
+
+#: includes/settings.php:115
+msgid "Maximum words"
+msgstr ""

@@ -1,0 +1,13 @@
+{
+    "require": {
+        "orhanerday/open-ai": "^4.7",
+        "freemius/wordpress-sdk": "^2.5",
+        "ahmadawais/wp-oop-settings-api": "dev-master"
+    } ,
+    "repositories": [
+        {
+            "type": "git",
+            "url":  "https://github.com/Youniwemi/WP-OOP-Settings-API"
+        }
+    ]
+}

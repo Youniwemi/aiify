@@ -1,0 +1,28 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "aiify/aiify",
+	"version": "0.0.3",
+	"title": "Aiify",
+	"category": "text",
+	"icon": "superhero",
+	"description": "Generate AI content using ChatGPT",
+	"keywords": [
+	    "chatgpt",
+	    "ai",
+	    "gpt",
+	    "artificial-intelligence",
+	    "content",
+	    "create",
+	    "generate",
+	    "edit"
+	  ],
+	"supports": {
+		"inserter": true,
+    	"multiple": true,
+		"reusable": false,
+    	"customClassName": false
+	},
+	"textdomain": "aiify",
+	"editorScript": "file:./build/index.js"
+}

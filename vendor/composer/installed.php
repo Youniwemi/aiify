@@ -1,0 +1,52 @@
+<?php return array(
+    'root' => array(
+        'name' => '__root__',
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
+        'reference' => '455d89dbd2e8e8d03f5b8fffb1b31950e96b0828',
+        'type' => 'library',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'dev' => true,
+    ),
+    'versions' => array(
+        '__root__' => array(
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'reference' => '455d89dbd2e8e8d03f5b8fffb1b31950e96b0828',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'ahmadawais/wp-oop-settings-api' => array(
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'reference' => '2907292151dfbc7d412b0c59c9893d0d30a385c7',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../ahmadawais/wp-oop-settings-api',
+            'aliases' => array(
+                0 => '9999999-dev',
+            ),
+            'dev_requirement' => false,
+        ),
+        'freemius/wordpress-sdk' => array(
+            'pretty_version' => '2.5.7',
+            'version' => '2.5.7.0',
+            'reference' => '78b876e227905373b94fecdd5e5449bcc4d63407',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../freemius/wordpress-sdk',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'orhanerday/open-ai' => array(
+            'pretty_version' => '4.7.1',
+            'version' => '4.7.1.0',
+            'reference' => 'd2d96d0521ef3118cc4f33a5d54718b62aedd336',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../orhanerday/open-ai',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+    ),
+);
