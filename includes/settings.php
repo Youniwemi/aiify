@@ -49,6 +49,14 @@ function settings()
 
             ] ,
             [
+                'id' => 'CHAT_MODEL',
+                'type' => 'select',
+                'default' => 'gpt-3.5-turbo' ,
+                'title' => __('Chat Model', 'aiify') ,
+                'options' => AIIFY_CHAT_MODELS,
+                'description' =>  sprintf(__("GPT-4 is currently in a limited beta and only accessible to those who have been granted access. Please join the <a target='_blank' href='%s'>waitlist</a> to get access when capacity is available.", 'aiify'), 'https://openai.com/waitlist/gpt-4-api')
+            ] ,
+            [
                 'id' => 'TEMPERATURE',
                 'type' => 'range',
                 'title' => __('Temparature', 'aiify') ,

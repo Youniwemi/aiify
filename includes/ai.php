@@ -30,7 +30,11 @@ add_action('wp_ajax_open_ai', function () {
 
         $command = "Now, ";
         $command .= isset($commads[ $prompt ]) ? $commads[$prompt] : $prompt ;
-        $command .= ". Do not translate to english, respond in the same language variety or dialect as the following text and do your best to respect the expected Markdown formatting (headings, lists, bold, emphasize, bold, quotes) :";
+        if (isset(AIIFY_EDIT_PROMPTS[$prompt])) {
+            // Do not change structure
+            $command .= " Do not change its structure (if the input text is a paragraph, please respond with a paragraph)." ;
+        }
+        $command .= " Do not translate to english, respond in the same language variety or dialect as the following text and do your best to respect the expected Markdown formatting (headings, lists, bold, emphasize, bold, quotes) :";
         $prompt = "[$setup]\n\n".AIIFY_EDIT_TO_THE_POINT.$command. "\n\n" .'"""'."\n". $edit."\n".'"""';
     } else {
         $setup .= " Do your best to create unique content free of plagiarism that respects the expected Markdown formatting (headings, lists, bold, emphasize, bold, quotes)";
@@ -46,9 +50,16 @@ add_action('wp_ajax_open_ai', function () {
     // $max_response = $words - $count_words_input;
 
     $isStream = !isset($_GET['nostream']);
+    $method =  substr(AIIFY_CHAT_MODEL, 0, 3) == 'gpt' ? 'chat' : 'completion';
     $opts = [
        'model' => AIIFY_CHAT_MODEL ,
-       'messages' =>  [
+       'temperature' => (float) AIIFY_TEMPERATURE,
+       //'max_tokens' => $maxTokens + intval($count_words_input/AIIFY_TOKEN_WORD_RATIO) ,
+       'frequency_penalty' => (float) AIIFY_FREQUENCY_PENALTY,
+       'presence_penalty' => (float) AIIFY_PRESENCE_PENALTY,
+    ];
+    if ($method == 'chat') {
+        $opts['messages'] = [
            [
                "role" => "system",
                "content" => AIIFY_SYSTEM_PROMPT
@@ -61,12 +72,10 @@ add_action('wp_ajax_open_ai', function () {
                "role" => "user",
                "content"=> $prompt
            ]
-       ],
-       'temperature' => (float) AIIFY_TEMPERATURE,
-       //'max_tokens' => $maxTokens + intval($count_words_input/AIIFY_TOKEN_WORD_RATIO) ,
-       'frequency_penalty' => (float) AIIFY_FREQUENCY_PENALTY,
-       'presence_penalty' => (float) AIIFY_PRESENCE_PENALTY,
-    ];
+       ];
+    } else {
+        $opts['prompt'] = AIIFY_SYSTEM_PROMPT. "\n\n".AIIFY_SYSTEM_PROMPT_FORMATING."\n\n" .  $prompt;
+    }
 
     if ($isStream) {
         $opts["stream"] = true;
@@ -75,7 +84,10 @@ add_action('wp_ajax_open_ai', function () {
     }
 
 
-    $complete = $open_ai->chat($opts, function ($curl_info, $data) use ($opts) {
+
+
+
+    $complete = $open_ai->$method($opts, function ($curl_info, $data) use ($opts) {
         static $sentDebug;
         // add error
         if ($obj = json_decode($data) and $obj->error->message != "") {

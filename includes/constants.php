@@ -2,17 +2,20 @@
 
 namespace AIIFY;
 
-// some defaults
-define('AIIFY_CHAT_MODEL', 'gpt-3.5-turbo');
-//define('AIIFY_CHAT_MODEL', 'gpt-4');
 define('AIIFY_MAX_TOKENS', 256);
-define('AIIFY_MAX_WORDS', 1000);
 define('AIIFY_TOKEN_WORD_RATIO', 0.6);
 
 
+// Availabe chat models
+define('AIIFY_CHAT_MODELS', [
+   "gpt-3.5-turbo" => "gpt-3.5-turbo",
+   "gpt-4" => "gpt-4",
+   // "text-davinci-003" => 'text-davinci-003' ( disabled completions for now as prompting is not really compatible )
+]);
+
 // Those prompt are use facing prompts, they need to be translated
 define('AIIFY_WRITER_PROMPTS', [
-   "" => "",
+   '' => '',
   __("Write a blog post about", "aiify") => __("a topic", "aiify"),
    __("Write a press release about", "aiify") => __("a news event", "aiify"),
    __("Write a social media post about", "aiify") => __("a specific aspect of your product or service", "aiify"),

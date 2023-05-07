@@ -5,7 +5,7 @@ Requires at least: 5.0
 Tested up to: 6.2
 Requires PHP: 7.4
 License: GPL
-Stable tag: 0.0.6
+Stable tag: 0.0.7
 
 Transform your content with AI-powered editing and generation. Aiify Blocks is the ultimate tool for writers, bloggers, and anyone who needs high-quality content fast. With easy integration into the WordPress block editor, Aiify Blocks helps you generate new content and enhance existing text with AI technology.
 
@@ -14,7 +14,7 @@ Transform your content with AI-powered editing and generation. Aiify Blocks is t
 
 Simplify your content creation process with **Aiify Blocks**, the AI-powered **WordPress plugin** that allows you to **generate new content** and **enhance existing text** using the power of **ChatGPT 3 & 4 models**. With **ultra-customizable** generation and **seamless integration** with the WordPress **block editor**, you can easily insert AI-generated content directly into your **pages** and **articles**, complete with structured **headings**, **lists**, **bold keywords**, and more. **Aiify Blocks** is perfect for **bloggers**, **writers**, and anyone looking to elevate their content game.
 
-Effortlessly create **compelling** and **SEO-optimized content** with **Aiify Blocks**. Our AI-powered plugin for **WordPress** simplifies the **content generation** and **editing process**, with the ability to **highlight keywords**, **insert lists**, and more. **Aiify Blocks** is **compatible** with the block editor and can be used directly from the **WordPress customizer**, streamlining your content creation process and enhancing the quality of your website's copy.
+Effortlessly create **compelling** and **SEO-optimized content** with **Aiify Blocks**. Our AI-powered plugin for **WordPress** simplifies the **content generation** and **editing process**, with the ability to **highlight keywords**, **insert lists**, and more. **Aiify Blocks** is compatible with the block editor and can be used directly from the **WordPress customizer** or the FSE (full site editor), streamlining your content creation process and enhancing the quality of your website's copy.
 
 
 == OPEN AI ==
@@ -63,6 +63,12 @@ To create new content with Aiify Blocks, simply add Aiify Block to your page, po
 
 When selecting the Aiify Block or any Aiify Enhanced Block, you'll see customization options in the editor's side panel. From there, you can adjust the maximum words, tone, and style.
 
+= Is this plugin compatible with the classic editor =
+
+Sorry, for now, this plugin is only usable via the block editor (Gutenberg), it can't be used to write and edit content the classic editor.
+
+How ever, it can be used in Full Site Editor if your theme is FSE compatible
+
 = Aiify plugin is great, how can I show my appreciation? =
 
 We're glad you love our plugin! You can show your support by subscribing to the pro version, which allows you to:
@@ -72,9 +78,20 @@ We're glad you love our plugin! You can show your support by subscribing to the 
 == Installation ==
 1. Upload the plugin to your plugins folder: 'wp-content/plugins/'
 2. Activate the 'Aiify Blocks' plugin from the Plugins admin panel.
-3. Customize your installation in the "Settings" Page ( Then send a test email )
+3. Customize your installation in the "Settings" Page ( setup Open AI API key )
+4. Enjoy
+
+
+== Screenshots ==
+1. Create new content with ChatGpt
+2. Edit and enhance existing blocks
+3. Aiify blocks Open API setting 
+4. Aiify blocks writing setting
 
 == Changelog ==
+= 0.0.7 : Added support to ChatGpt4 model =
+- Possibility select chatgpt4 model (if access is granted)
+- Better edit prompts
 = 0.0.6 : Added settings page =
 - Possibility to setup API key
 - Fine tune API settings ( temparature, frequency penalty, presence penalty )
