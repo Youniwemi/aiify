@@ -4,7 +4,7 @@ namespace AIIFY;
 
 require AIIFY_VENDOR . '/autoload.php';
 
-class Settings extends \WP_OSA
+class Settings extends \WP_Settings_Kit
 {
     protected $settings_name = 'aiify';
     public function admin_menu()

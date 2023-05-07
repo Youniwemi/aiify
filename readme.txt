@@ -5,7 +5,7 @@ Requires at least: 5.0
 Tested up to: 6.2
 Requires PHP: 7.4
 License: GPL
-Stable tag: 0.0.7
+Stable tag: 0.0.8
 
 Transform your content with AI-powered editing and generation. Aiify Blocks is the ultimate tool for writers, bloggers, and anyone who needs high-quality content fast. With easy integration into the WordPress block editor, Aiify Blocks helps you generate new content and enhance existing text with AI technology.
 
@@ -65,9 +65,7 @@ When selecting the Aiify Block or any Aiify Enhanced Block, you'll see customiza
 
 = Is this plugin compatible with the classic editor =
 
-Sorry, for now, this plugin is only usable via the block editor (Gutenberg), it can't be used to write and edit content the classic editor.
-
-How ever, it can be used in Full Site Editor if your theme is FSE compatible
+Sorry, for now, this plugin is only usable via the block editor (Gutenberg). It can't be used to write and edit content in the classic editor. However, it can be used in Full Site Editor if your theme is FSE compatible.
 
 = Aiify plugin is great, how can I show my appreciation? =
 
@@ -88,7 +86,17 @@ We're glad you love our plugin! You can show your support by subscribing to the 
 3. Aiify blocks Open API setting 
 4. Aiify blocks writing setting
 
+== Credits ==
+Big Thanks to : 
+- [orhanerday](https://github.com/orhanerday/open-ai) for great library "OpenAI GPT-3 Api Client in PHP"
+- [SamHerbert](https://github.com/SamHerbert/SVG-Loaders) for the smooth svg animation
+- [Freemius](https://github.com/SamHerbert/SVG-Loaders) for the smooth svg animation
+- [Youniwemi](https://packagist.org/packages/youniwemi/wp-settings-kit) for wp-settings-kit - the lightweight library for easily creating WordPress settings pages and Post metaboxes 
+
+
 == Changelog ==
+= 0.0.8 : Added credits and updated translations and dependencies =
+- Thanks to orhanerday, SamHerbert, Freemius
 = 0.0.7 : Added support to ChatGpt4 model =
 - Possibility select chatgpt4 model (if access is granted)
 - Better edit prompts

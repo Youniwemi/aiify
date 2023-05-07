@@ -6,5 +6,5 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'cfb03dbdb221e442e2d454763906fa48' => $vendorDir . '/ahmadawais/wp-oop-settings-api/class-wp-osa.php',
+    '0d4507a35308200d41425eaae4b516fa' => $vendorDir . '/youniwemi/wp-settings-kit/class-wp-settings-kit.php',
 );

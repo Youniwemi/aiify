@@ -11,7 +11,7 @@
                 "plural-forms": "nplurals=2; plural=(n > 1);"
             },
             "Select a content type": [
-                "S\u00e9lectionner le style d'\u00e9criture"
+                ""
             ],
             "What do you want to write today?": [
                 "O que voc\u00ea quer escrever hoje?"
@@ -29,10 +29,10 @@
                 "N\u00e3o exceda este valor"
             ],
             "Select writing style": [
-                "S\u00e9lectionner le style d'\u00e9criture"
+                ""
             ],
             "Select writing tone": [
-                "S\u00e9lectionner la tonalit\u00e9 d'\u00e9criture"
+                ""
             ],
             "Aiify Settings": [
                 "Param\u00e8tres Aiify"
@@ -41,7 +41,7 @@
                 "Edi\u00e7\u00e3o personalizada"
             ],
             "Aiify me": [
-                "Aiifique-me"
+                ""
             ],
             "Review or edit this block": [
                 "Revisar ou editar este bloco"

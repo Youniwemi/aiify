@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2023-05-04 23:27+0100\n"
+"POT-Creation-Date: 2023-05-07 19:38+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Rahal <rahal.aboulfeth@gmail.com>\n"
 "Language-Team: \n"
@@ -19,8 +19,8 @@ msgstr ""
 #: aiify.php:42
 msgid "To start using AIIFY Blocks, please setup you OpenAi Key"
 msgstr ""
-"Pour commencer à utiliser les blocs AIIFY, veuillez configurer votre clé "
-"OpenAI"
+"Pour commencer à utiliser les blocs AIIFY, veuillez configurer votre clé OpenAiPour "
+"commencer à utiliser les blocs AIIFY, veuillez configurer votre clé OpenAI"
 
 #: aiify.php:43
 msgid "Go to Aiify Blocks settings"
@@ -33,9 +33,9 @@ msgstr "Comment souhaitez-vous modifier ce texte ?"
 #: aiify/src/aiify__premium_only.js:36
 msgid "You can ask for specific edits like : Translate to german"
 msgstr ""
-"Vous pouvez demander des modifications spécifiques telles que : Traduire en "
-"allemandVous pouvez demander des modifications spécifiques telles que : "
-"Traduire en allemand"
+"Vous pouvez demander des modifications spécifiques telles que : Traduire en allemandVous "
+"pouvez demander des modifications spécifiques telles que : Traduire en allemandVous pouvez "
+"demander des modifications spécifiques telles que : Traduire en allemand"
 
 #: aiify/src/aiify__premium_only.js:39
 msgid "Cancel"
@@ -109,548 +109,547 @@ msgstr "Commande personnalisée"
 msgid "Please wait..."
 msgstr "Veuillez patienter..."
 
-#: includes/constants.php:16
+#: includes/constants.php:19
 msgid "Write a blog post about"
 msgstr "Rédigez un article de blog sur"
 
-#: includes/constants.php:16
+#: includes/constants.php:19
 msgid "a topic"
 msgstr "un sujet"
 
-#: includes/constants.php:17
+#: includes/constants.php:20
 msgid "Write a press release about"
 msgstr "Rédigez un communiqué de presse sur"
 
-#: includes/constants.php:17
+#: includes/constants.php:20
 msgid "a news event"
 msgstr "un événement d'actualité"
 
-#: includes/constants.php:18
+#: includes/constants.php:21
 msgid "Write a social media post about"
 msgstr "Rédigez un article sur les réseaux sociaux à propos de"
 
-#: includes/constants.php:18
+#: includes/constants.php:21
 msgid "a specific aspect of your product or service"
 msgstr "un aspect spécifique de votre produit ou service"
 
-#: includes/constants.php:19
+#: includes/constants.php:22
 msgid "Write a product description for"
 msgstr "Rédigez une description de produit pour"
 
-#: includes/constants.php:19
+#: includes/constants.php:22
 msgid "a specific retailer or audience"
 msgstr "un détaillant ou un public spécifique"
 
-#: includes/constants.php:20
+#: includes/constants.php:23
 msgid "Write an email newsletter about"
 msgstr "Rédigez une newsletter par e-mail sur"
 
-#: includes/constants.php:20
+#: includes/constants.php:23
 msgid "news or updates related to your business"
 msgstr "nouvelles ou mises à jour liées à votre entreprise"
 
-#: includes/constants.php:21
+#: includes/constants.php:24
 msgid "Write website copy for"
 msgstr "Rédiger une copie du site Web pour"
 
-#: includes/constants.php:21
+#: includes/constants.php:24
 msgid "a specific page or section of your website"
 msgstr "une page ou une section spécifique de votre site Web"
 
-#: includes/constants.php:22
+#: includes/constants.php:25
 msgid "Write a video script for"
 msgstr "Écrire un script vidéo pour"
 
-#: includes/constants.php:22
+#: includes/constants.php:25
 msgid "a promotional or instructional video"
 msgstr "une vidéo promotionnelle ou pédagogique"
 
-#: includes/constants.php:23
+#: includes/constants.php:26
 msgid "Write a whitepaper on"
 msgstr "Rédigez un livre blanc sur"
 
-#: includes/constants.php:23
+#: includes/constants.php:26
 msgid "a particular topic or industry trend"
 msgstr "un sujet particulier ou une tendance de l'industrie"
 
-#: includes/constants.php:24
+#: includes/constants.php:27
 msgid "Write a case study about"
 msgstr "Rédigez une étude de cas sur"
 
-#: includes/constants.php:24
+#: includes/constants.php:27
 msgid "a specific customer or business challenge"
 msgstr "un client ou un défi commercial spécifique"
 
-#: includes/constants.php:25
+#: includes/constants.php:28
 msgid "Write an e-book on"
 msgstr "Écrire un livre électronique sur"
 
-#: includes/constants.php:25
+#: includes/constants.php:28
 msgid "a specific topic or industry"
 msgstr "un sujet ou une industrie spécifique"
 
-#: includes/constants.php:26
+#: includes/constants.php:29
 msgid "Write an infographic about"
 msgstr "Rédigez une infographie sur"
 
-#: includes/constants.php:26
+#: includes/constants.php:29
 msgid "a specific topic or data set"
 msgstr "un sujet ou un ensemble de données spécifique"
 
-#: includes/constants.php:27
+#: includes/constants.php:30
 msgid "Write a sales letter for"
 msgstr "Rédigez une lettre de vente pour"
 
-#: includes/constants.php:27 includes/constants.php:29
+#: includes/constants.php:30 includes/constants.php:32
 msgid "a specific product or service"
 msgstr "un produit ou un service spécifique"
 
-#: includes/constants.php:28
+#: includes/constants.php:31
 msgid "Write a landing page for"
 msgstr "Rédigez une page de destination pour"
 
-#: includes/constants.php:28
+#: includes/constants.php:31
 msgid "a specific offer or promotion"
 msgstr "une offre ou une promotion spécifique"
 
-#: includes/constants.php:29
+#: includes/constants.php:32
 msgid "Write a product review for"
 msgstr "Rédiger une critique de produit pour"
 
-#: includes/constants.php:30
+#: includes/constants.php:33
 msgid "Write a how-to guide for"
 msgstr "Rédiger un guide pratique pour"
 
-#: includes/constants.php:30
+#: includes/constants.php:33
 msgid "a specific task or process"
 msgstr "une tâche ou un processus spécifique"
 
-#: includes/constants.php:31
+#: includes/constants.php:34
 msgid "Write a listicle about"
 msgstr "Écrivez une liste sur"
 
-#: includes/constants.php:31
+#: includes/constants.php:34
 msgid "a specific topic or set of related items"
 msgstr "un sujet spécifique ou un ensemble d'éléments connexes"
 
-#: includes/constants.php:32
+#: includes/constants.php:35
 msgid "Write a research paper on"
 msgstr "Rédiger un article de recherche sur"
 
-#: includes/constants.php:32
+#: includes/constants.php:35
 msgid "a specific topic or question"
 msgstr "un sujet ou une question spécifique"
 
-#: includes/constants.php:33
+#: includes/constants.php:36
 msgid "Write a personal essay about"
 msgstr "Rédigez un essai personnel sur"
 
-#: includes/constants.php:33
+#: includes/constants.php:36
 msgid "a personal experience or perspective"
 msgstr "une expérience ou un point de vue personnel"
 
-#: includes/constants.php:34
+#: includes/constants.php:37
 msgid "Write a news article about"
 msgstr "Rédiger un article sur"
 
-#: includes/constants.php:34
+#: includes/constants.php:37
 msgid "a specific news event"
 msgstr "un événement d'actualité spécifique"
 
-#: includes/constants.php:35
+#: includes/constants.php:38
 msgid "Write a feature article about"
 msgstr "Rédiger un article de fond sur"
 
-#: includes/constants.php:35
+#: includes/constants.php:38
 msgid "a specific person, place, or thing"
 msgstr "une personne, un lieu ou une chose spécifique"
 
-#: includes/constants.php:36
+#: includes/constants.php:39
 msgid "Write a company profile about"
 msgstr "Rédigez un profil d'entreprise sur"
 
-#: includes/constants.php:36
+#: includes/constants.php:39
 msgid "a specific business or organization"
 msgstr "une entreprise ou une organisation spécifique"
 
-#: includes/constants.php:37
+#: includes/constants.php:40
 msgid "Write a guest post for"
 msgstr "Rédigez un article invité pour"
 
-#: includes/constants.php:37
+#: includes/constants.php:40
 msgid "a specific blog or publication"
 msgstr "un blog ou une publication spécifique"
 
-#: includes/constants.php:38
+#: includes/constants.php:41
 msgid "Write a comparison article on"
 msgstr "Rédigez un article de comparaison sur"
 
-#: includes/constants.php:38
+#: includes/constants.php:41
 msgid "two or more products or services"
 msgstr "deux ou plusieurs produits ou services"
 
-#: includes/constants.php:39
+#: includes/constants.php:42
 msgid "Write an interview article with"
 msgstr "Écrire un article d'entrevue avec"
 
-#: includes/constants.php:39
+#: includes/constants.php:42
 msgid "a specific person or expert"
 msgstr "une personne ou un expert spécifique"
 
-#: includes/constants.php:40
+#: includes/constants.php:43
 msgid "Write an opinion piece on"
 msgstr "Rédigez un article d'opinion sur"
 
-#: includes/constants.php:40
+#: includes/constants.php:43
 msgid "a specific topic or issue"
 msgstr "un sujet ou un problème spécifique"
 
-#: includes/constants.php:41
+#: includes/constants.php:44
 msgid "Write an article outline for"
 msgstr "Rédiger un plan d'article pour"
 
-#: includes/constants.php:41
+#: includes/constants.php:44
 msgid "a specific topic or article idea"
 msgstr "un sujet spécifique ou une idée d'article"
 
-#: includes/constants.php:46
+#: includes/constants.php:49
 msgid "Fix spelling and grammar"
 msgstr "Corriger l'orthographe et la grammaire"
 
-#: includes/constants.php:47
+#: includes/constants.php:50
 msgid "Simplify language"
 msgstr "Simplifier le langage"
 
-#: includes/constants.php:48
+#: includes/constants.php:51
 msgid "Make longer"
 msgstr "Rallonger"
 
-#: includes/constants.php:49
+#: includes/constants.php:52
 msgid "Make shorter"
 msgstr "Rendre plus court"
 
-#: includes/constants.php:50
+#: includes/constants.php:53
 msgid "Improve writing"
 msgstr "Améliorer l'écriture"
 
-#: includes/constants.php:51
+#: includes/constants.php:54
 msgid "Paraphrase"
 msgstr "Paraphraser"
 
-#: includes/constants.php:52
+#: includes/constants.php:55
 msgid "Add more detail"
 msgstr "Ajouter plus de détails"
 
-#: includes/constants.php:53
+#: includes/constants.php:56
 msgid "Remove redundancy"
 msgstr "Supprimer la redondance"
 
-#: includes/constants.php:54
+#: includes/constants.php:57
 msgid "Clarify meaning"
 msgstr "Clarifier le sens"
 
-#: includes/constants.php:55
+#: includes/constants.php:58
 msgid "Strengthen argument"
 msgstr "Renforcer l'argument"
 
-#: includes/constants.php:56
+#: includes/constants.php:59
 msgid "Emphasize keywords"
 msgstr "Mettre l'accent sur les mots-clés"
 
-#: includes/constants.php:67
+#: includes/constants.php:70
 msgid "Heading"
 msgstr "Cap"
 
-#: includes/constants.php:68
+#: includes/constants.php:71
 msgid "Tagline"
 msgstr "Slogan"
 
-#: includes/constants.php:69
+#: includes/constants.php:72
 msgid "Introduction"
 msgstr "Présentation"
 
-#: includes/constants.php:70
+#: includes/constants.php:73
 msgid "Summary"
 msgstr "Résumé"
 
-#: includes/constants.php:74
+#: includes/constants.php:77
 msgid "Summarize"
 msgstr "Résumer"
 
-#: includes/constants.php:75
+#: includes/constants.php:78
 msgid "List Key Takeaways"
 msgstr "Liste des éléments clés à retenir"
 
-#: includes/constants.php:76
+#: includes/constants.php:79
 msgid "Find Action Items"
 msgstr "Rechercher des éléments d'action"
 
-#: includes/constants.php:77
+#: includes/constants.php:80
 msgid "Explain"
 msgstr "Expliquez"
 
-#: includes/constants.php:78
+#: includes/constants.php:81
 msgid "Elaborate"
 msgstr "Élaborer"
 
-#: includes/constants.php:79
+#: includes/constants.php:82
 msgid "Find Main Idea"
 msgstr "Rechercher l'idée principale"
 
-#: includes/constants.php:80
+#: includes/constants.php:83
 msgid "Provide Examples"
 msgstr "Fournir des exemples"
 
-#: includes/constants.php:81
+#: includes/constants.php:84
 msgid "Complete with sources"
 msgstr "Complète avec les sources"
 
-#: includes/constants.php:82
+#: includes/constants.php:85
 msgid "Evaluate and Provide Feedback"
 msgstr "Évaluer et fournir des commentaires"
 
-#: includes/constants.php:83
+#: includes/constants.php:86
 msgid "Write a Conclusion"
 msgstr "Rédiger une conclusion"
 
-#: includes/constants.php:110
+#: includes/constants.php:113
 msgid "Journalistic"
 msgstr "Journalistique"
 
-#: includes/constants.php:111
+#: includes/constants.php:114
 msgid "Academic"
 msgstr "Académique"
 
-#: includes/constants.php:112
+#: includes/constants.php:115
 msgid "Creative"
 msgstr "Création"
 
-#: includes/constants.php:113
+#: includes/constants.php:116
 msgid "Technical"
 msgstr "Technique"
 
-#: includes/constants.php:114
+#: includes/constants.php:117
 msgid "Business"
 msgstr "Affaires"
 
-#: includes/constants.php:115
+#: includes/constants.php:118
 msgid "Scientific"
 msgstr "Scientifique"
 
-#: includes/constants.php:116
+#: includes/constants.php:119
 msgid "Casual"
 msgstr "Décontracté"
 
-#: includes/constants.php:117 includes/constants.php:150
+#: includes/constants.php:120 includes/constants.php:153
 msgid "Formal"
 msgstr "Formel"
 
-#: includes/constants.php:118
+#: includes/constants.php:121
 msgid "Narrative"
 msgstr "Récit"
 
-#: includes/constants.php:119
+#: includes/constants.php:122
 msgid "Descriptive"
 msgstr "Descriptif"
 
-#: includes/constants.php:120 includes/constants.php:163
+#: includes/constants.php:123 includes/constants.php:166
 msgid "Persuasive"
 msgstr "Persuasif"
 
-#: includes/constants.php:121
+#: includes/constants.php:124
 msgid "Expository"
 msgstr "Exposé"
 
-#: includes/constants.php:122 includes/constants.php:180
+#: includes/constants.php:125 includes/constants.php:183
 msgid "Analytical"
 msgstr "Analytique"
 
-#: includes/constants.php:123 includes/constants.php:182
+#: includes/constants.php:126 includes/constants.php:185
 msgid "Critical"
 msgstr "Critique"
 
-#: includes/constants.php:124 includes/constants.php:160
+#: includes/constants.php:127 includes/constants.php:163
 msgid "Conversational"
 msgstr "Conversationnel"
 
-#: includes/constants.php:125 includes/constants.php:139
+#: includes/constants.php:128 includes/constants.php:142
 msgid "Professional"
 msgstr "Professionnel"
 
-#: includes/constants.php:126 includes/constants.php:153
-#: includes/constants.php:167
+#: includes/constants.php:129 includes/constants.php:156 includes/constants.php:170
 msgid "Humorous"
 msgstr "Humoristique"
 
-#: includes/constants.php:127
+#: includes/constants.php:130
 msgid "Instructional"
 msgstr "Instruction"
 
-#: includes/constants.php:128
+#: includes/constants.php:131
 msgid "Inspirational"
 msgstr "Inspiré"
 
-#: includes/constants.php:129
+#: includes/constants.php:132
 msgid "Motivational"
 msgstr "Motivation"
 
-#: includes/constants.php:140
+#: includes/constants.php:143
 msgid "Cheerful"
 msgstr "Gai"
 
-#: includes/constants.php:141
+#: includes/constants.php:144
 msgid "Excited"
 msgstr "Excité"
 
-#: includes/constants.php:142 includes/constants.php:179
+#: includes/constants.php:145 includes/constants.php:182
 msgid "Optimistic"
 msgstr "Optimiste"
 
-#: includes/constants.php:143
+#: includes/constants.php:146
 msgid "Confident"
 msgstr "Confiant"
 
-#: includes/constants.php:144
+#: includes/constants.php:147
 msgid "Sarcastic"
 msgstr "Sarcastique"
 
-#: includes/constants.php:145
+#: includes/constants.php:148
 msgid "Sincere"
 msgstr "Sincère"
 
-#: includes/constants.php:146
+#: includes/constants.php:149
 msgid "Sympathetic"
 msgstr "Sympathique"
 
-#: includes/constants.php:147
+#: includes/constants.php:150
 msgid "Concerned"
 msgstr "Préoccupé"
 
-#: includes/constants.php:148
+#: includes/constants.php:151
 msgid "Caring"
 msgstr "Prendre soin"
 
-#: includes/constants.php:149
+#: includes/constants.php:152
 msgid "Neutral"
 msgstr "Neutre"
 
-#: includes/constants.php:151 includes/constants.php:162
+#: includes/constants.php:154 includes/constants.php:165
 msgid "Authoritative"
 msgstr "Faisant autorité"
 
-#: includes/constants.php:152
+#: includes/constants.php:155
 msgid "Serious"
 msgstr "Sérieux"
 
-#: includes/constants.php:154
+#: includes/constants.php:157
 msgid "Playful"
 msgstr "Ludique"
 
-#: includes/constants.php:155
+#: includes/constants.php:158
 msgid "Friendly"
 msgstr "Amical"
 
-#: includes/constants.php:156
+#: includes/constants.php:159
 msgid "Warm"
 msgstr "Chaud"
 
-#: includes/constants.php:157
+#: includes/constants.php:160
 msgid "Cold"
 msgstr "Froid"
 
-#: includes/constants.php:158
+#: includes/constants.php:161
 msgid "Impersonal"
 msgstr "Impersonnel"
 
-#: includes/constants.php:159
+#: includes/constants.php:162
 msgid "Informative/Educational"
 msgstr "Informatif/Éducatif"
 
-#: includes/constants.php:161
+#: includes/constants.php:164
 msgid "Professional/Formal"
 msgstr "Professionnel/Formel"
 
-#: includes/constants.php:164
+#: includes/constants.php:167
 msgid "Inspirational/Motivational"
 msgstr "Inspirant/motivant"
 
-#: includes/constants.php:165
+#: includes/constants.php:168
 msgid "Entertaining"
 msgstr "Divertissant"
 
-#: includes/constants.php:166
+#: includes/constants.php:169
 msgid "Controversial"
 msgstr "Controversé"
 
-#: includes/constants.php:168
+#: includes/constants.php:171
 msgid "Empathetic"
 msgstr "Empathique"
 
-#: includes/constants.php:169
+#: includes/constants.php:172
 msgid "Personal"
 msgstr "Personnel"
 
-#: includes/constants.php:170
+#: includes/constants.php:173
 msgid "Storytelling"
 msgstr "Contes"
 
-#: includes/constants.php:171
+#: includes/constants.php:174
 msgid "Thought-provoking"
 msgstr "Provoquer la réflexion"
 
-#: includes/constants.php:172
+#: includes/constants.php:175
 msgid "Authentic"
 msgstr "Authentique"
 
-#: includes/constants.php:173
+#: includes/constants.php:176
 msgid "Trustworthy"
 msgstr "Digne de confiance"
 
-#: includes/constants.php:174
+#: includes/constants.php:177
 msgid "Authorial"
 msgstr "Auteur"
 
-#: includes/constants.php:175
+#: includes/constants.php:178
 msgid "Collaborative"
 msgstr "Collaboratif"
 
-#: includes/constants.php:176
+#: includes/constants.php:179
 msgid "Problem-solving"
 msgstr "Résolution de problèmes"
 
-#: includes/constants.php:177
+#: includes/constants.php:180
 msgid "Encouraging"
 msgstr "Encourageant"
 
-#: includes/constants.php:178
+#: includes/constants.php:181
 msgid "Straightforward"
 msgstr "Simple"
 
-#: includes/constants.php:181
+#: includes/constants.php:184
 msgid "Objective"
 msgstr "Objectif"
 
-#: includes/constants.php:183
+#: includes/constants.php:186
 msgid "Simplified"
 msgstr "Simplifié"
 
-#: includes/constants.php:184
+#: includes/constants.php:187
 msgid "Complex"
 msgstr "Complexe"
 
-#: includes/constants.php:185
+#: includes/constants.php:188
 msgid "Curious"
 msgstr "Curieux"
 
-#: includes/constants.php:186
+#: includes/constants.php:189
 msgid "Inspiring"
 msgstr "Inspirant"
 
-#: includes/constants.php:187
+#: includes/constants.php:190
 msgid "Motivating"
 msgstr "Motivation"
 
-#: includes/constants.php:208
+#: includes/constants.php:211
 msgid "Type \"AI+Enter\" for AI, or \"/\" to choose a block"
 msgstr "Tapez “AI+Entrée” pour utiliser l’IA, ou “/“ pour choisir un bloc"
 
@@ -662,13 +661,12 @@ msgstr "Salut %1$s"
 #: includes/init_freemius.php:53
 #, php-format
 msgid ""
-"Please help us improve %2$s! If you opt-in, some data about your usage of "
-"%2$s will be sent to %5$s. If you skip this, that's okay! %2$s will still "
-"work just fine."
+"Please help us improve %2$s! If you opt-in, some data about your usage of %2$s will be "
+"sent to %5$s. If you skip this, that's okay! %2$s will still work just fine."
 msgstr ""
-"Aidez nous svp à améliorer  %2$s! Si vous acceptez, certaines données de "
-"votre usage de  %2$s! Seront envoyées à %5$s. Si vous n’acceptez pas, c’est "
-"cool! %2$s fonctionnera correctement."
+"Aidez nous svp à améliorer  %2$s! Si vous acceptez, certaines données de votre usage de  "
+"%2$s! Seront envoyées à %5$s. Si vous n’acceptez pas, c’est cool! %2$s fonctionnera "
+"correctement."
 
 #: includes/settings.php:12
 msgid "Aiify Blocks"
@@ -677,8 +675,7 @@ msgstr "Aiify Blocks"
 #: includes/settings.php:19
 #, php-format
 msgid ""
-"Welcome to Aiify Blocks, feel to <a href=\"%s\" >contact us</a> if you have "
-"any question."
+"Welcome to Aiify Blocks, feel to <a href=\"%s\" >contact us</a> if you have any question."
 msgstr ""
 
 #: includes/settings.php:23
@@ -688,7 +685,7 @@ msgstr "Paramètres Aiify Blocks"
 #: includes/settings.php:31
 #, php-format
 msgid "Please insert a valid %s"
-msgstr ""
+msgstr "Veuillez insérer un %s valide"
 
 #: includes/settings.php:40
 msgid "Open AI Settings"
@@ -696,57 +693,67 @@ msgstr "Paramètres Open AI"
 
 #: includes/settings.php:45
 msgid "Your Open AI Key"
-msgstr ""
+msgstr "Votre clé AI ouverte"
 
 #: includes/settings.php:48
 #, php-format
 msgid "You can get your key here : %s"
 msgstr "Vous pouvez obtenir votre clé ici : %s"
 
-#: includes/settings.php:54
+#: includes/settings.php:55
+msgid "Chat Model"
+msgstr "Modèle de conversation"
+
+#: includes/settings.php:57
+#, php-format
+msgid ""
+"GPT-4 is currently in a limited beta and only accessible to those who have been granted "
+"access. Please join the <a target='_blank' href='%s'>waitlist</a> to get access when "
+"capacity is available."
+msgstr ""
+
+#: includes/settings.php:62
 msgid "Temparature"
-msgstr ""
+msgstr "Température"
 
-#: includes/settings.php:61
+#: includes/settings.php:69
 msgid ""
-"Lower temperature means model generates repetitive text like training data. "
-"Higher temperature leads to more varied and creative text."
+"Lower temperature means model generates repetitive text like training data. Higher "
+"temperature leads to more varied and creative text."
 msgstr ""
 
-#: includes/settings.php:67
+#: includes/settings.php:75
 msgid "Frequency penalty"
-msgstr ""
+msgstr "Pénalité de fréquence"
 
-#: includes/settings.php:74
+#: includes/settings.php:82
 msgid ""
-"A frequency penalty of 0.5 reduces the likelihood of the model using "
-"frequently seen words or phrases by 50%. A penalty of 1 will eliminate them "
-"completely."
+"A frequency penalty of 0.5 reduces the likelihood of the model using frequently seen words "
+"or phrases by 50%. A penalty of 1 will eliminate them completely."
 msgstr ""
 
-#: includes/settings.php:79
+#: includes/settings.php:87
 msgid "Presence penalty"
-msgstr ""
+msgstr "Pénalité de présence"
 
-#: includes/settings.php:86
+#: includes/settings.php:94
 msgid ""
-"With a presence penalty of 0.5, the model reduces the chance of generating "
-"words or phrases not in the training data by 50%. A penalty of 1 avoids all "
-"new words or phrases."
+"With a presence penalty of 0.5, the model reduces the chance of generating words or "
+"phrases not in the training data by 50%. A penalty of 1 avoids all new words or phrases."
 msgstr ""
 
-#: includes/settings.php:95
+#: includes/settings.php:103
 msgid "Writing Settings"
 msgstr "Paramètres Redaction"
 
-#: includes/settings.php:101
+#: includes/settings.php:109
 msgid "Writing Style"
 msgstr "Style d'écriture"
 
-#: includes/settings.php:108
+#: includes/settings.php:116
 msgid "Writing Tone"
 msgstr "Tonalité d'écriture"
 
-#: includes/settings.php:115
+#: includes/settings.php:123
 msgid "Maximum words"
-msgstr ""
+msgstr "Mots maximum"

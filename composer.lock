@@ -4,29 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4f07c851319e53139fc3ff5553a80c1c",
+    "content-hash": "1d29dd1edcd6a962de78f3db79030699",
     "packages": [
-        {
-            "name": "ahmadawais/wp-oop-settings-api",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Youniwemi/WP-OOP-Settings-API",
-                "reference": "2907292151dfbc7d412b0c59c9893d0d30a385c7"
-            },
-            "default-branch": true,
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "class-wp-osa.php"
-                ]
-            },
-            "license": [
-                "GPL-2.0"
-            ],
-            "description": "WP-OOP-Settings-API is a Settings API wrapper built with Object Oriented Programming practices.",
-            "time": "2023-05-04T21:57:43+00:00"
-        },
         {
             "name": "freemius/wordpress-sdk",
             "version": "2.5.7",
@@ -124,14 +103,45 @@
                 }
             ],
             "time": "2023-03-08T08:04:02+00:00"
+        },
+        {
+            "name": "youniwemi/wp-settings-kit",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Youniwemi/WP-OOP-Settings-API.git",
+                "reference": "7071d0bda386510c214b80408671321c72aa4d36"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Youniwemi/WP-OOP-Settings-API/zipball/7071d0bda386510c214b80408671321c72aa4d36",
+                "reference": "7071d0bda386510c214b80408671321c72aa4d36",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "class-wp-settings-kit.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0"
+            ],
+            "description": "WP Settings Kit is a lightweight library for easily creating WordPress settings pages and Post metaboxes.",
+            "support": {
+                "source": "https://github.com/Youniwemi/WP-OOP-Settings-API/tree/1.1.0"
+            },
+            "time": "2023-05-07T17:06:39+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "ahmadawais/wp-oop-settings-api": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
