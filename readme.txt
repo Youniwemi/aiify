@@ -2,7 +2,7 @@
 Contributors: rahal.aboulfeth
 Tags: chatgpt, ai, block, seo, openai, content, copywriting
 Requires at least: 5.0
-Tested up to: 6.2
+Tested up to: 6.2.2
 Requires PHP: 7.4
 License: GPL
 Stable tag: 0.0.9
