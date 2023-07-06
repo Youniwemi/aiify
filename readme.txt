@@ -1,13 +1,13 @@
-===  Aiify Blocks - ChatGPT AI Content Editing and Generation Blocks ===
+===  Aiify Blocks - ChatGPT AI Copywriting, Content Writing, Rewriting and Editing ===
 Contributors: rahal.aboulfeth
-Tags: chatgpt, ai, seo, block-editor, openai, content
+Tags: chatgpt, ai, block, seo, openai, content, copywriting
 Requires at least: 5.0
 Tested up to: 6.2
 Requires PHP: 7.4
 License: GPL
-Stable tag: 0.0.8
+Stable tag: 0.0.9
 
-Transform your content with AI-powered editing and generation. Aiify Blocks is the ultimate tool for writers, bloggers, and anyone who needs high-quality content fast. With easy integration into the WordPress block editor, Aiify Blocks helps you generate new content and enhance existing text with AI technology.
+Create high-quality content quickly with AI-powered copywriting, and optimize your existing content with advanced editing capabilities. Aiify Blocks uses ChatGPT AI technology within the WordPress block editor to help you generate new content and enhance your existing text for SEO and conversions.
 
 == Description ==
 
@@ -15,6 +15,7 @@ Transform your content with AI-powered editing and generation. Aiify Blocks is t
 Simplify your content creation process with **Aiify Blocks**, the AI-powered **WordPress plugin** that allows you to **generate new content** and **enhance existing text** using the power of **ChatGPT 3 & 4 models**. With **ultra-customizable** generation and **seamless integration** with the WordPress **block editor**, you can easily insert AI-generated content directly into your **pages** and **articles**, complete with structured **headings**, **lists**, **bold keywords**, and more. **Aiify Blocks** is perfect for **bloggers**, **writers**, and anyone looking to elevate their content game.
 
 Effortlessly create **compelling** and **SEO-optimized content** with **Aiify Blocks**. Our AI-powered plugin for **WordPress** simplifies the **content generation** and **editing process**, with the ability to **highlight keywords**, **insert lists**, and more. **Aiify Blocks** is compatible with the block editor and can be used directly from the **WordPress customizer** or the FSE (full site editor), streamlining your content creation process and enhancing the quality of your website's copy.
+
 
 
 == OPEN AI ==
@@ -46,6 +47,18 @@ Preconfigured prompts for SEO-optimized and engaging generated content
 Create high-quality content that engages and converts your audience
 
 == Frequently Asked Questions ==
+
+= What is content copywriting? =
+
+Copywriting involves crafting persuasive written content with the goal of driving a specific action or response from the reader. It typically focuses on marketing or advertising purposes and requires an understanding of the target audience, as well as clear and engaging language. 
+
+= What is rewriting, editing and the difference between them ? =
+
+Editing involves reviewing and making changes to an existing piece of writing in order to improve its clarity, accuracy, and effectiveness. This can involve correcting grammar and spelling errors, reorganizing sentences or paragraphs for better flow, and polishing the language to make it more engaging for the reader.
+
+Rewriting, on the other hand, involves revising the content of a piece of writing more extensively. This can include making substantial changes to the structure, tone, or focus of the piece in order to improve its overall quality and effectiveness.
+
+While editing may involve some rewriting, the two processes are not necessarily interchangeable. Editing may focus more on fine-tuning and polishing an already-existing piece of writing, while rewriting involves making more substantive changes to the content itself.
 
 = How do I get an OpenAI API key? =
 
@@ -95,6 +108,9 @@ Big Thanks to :
 
 
 == Changelog ==
+= 0.0.9 : Updated dependencies =
+- Updated freemius to latest version
+- Updated orhanerday/open-ai
 = 0.0.8 : Added credits and updated translations and dependencies =
 - Thanks to orhanerday, SamHerbert, Freemius
 = 0.0.7 : Added support to ChatGpt4 model =

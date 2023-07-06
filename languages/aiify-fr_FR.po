@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.3\n"
 "X-Poedit-KeywordsList: __;_e;esc_attr_e;esc_attr__;esc_html__;esc_html_e\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -18,9 +18,7 @@ msgstr ""
 
 #: aiify.php:42
 msgid "To start using AIIFY Blocks, please setup you OpenAi Key"
-msgstr ""
-"Pour commencer à utiliser les blocs AIIFY, veuillez configurer votre clé OpenAiPour "
-"commencer à utiliser les blocs AIIFY, veuillez configurer votre clé OpenAI"
+msgstr "Pour commencer à utiliser les blocs AIIFY, veuillez configurer votre clé OpenAi"
 
 #: aiify.php:43
 msgid "Go to Aiify Blocks settings"
@@ -32,10 +30,7 @@ msgstr "Comment souhaitez-vous modifier ce texte ?"
 
 #: aiify/src/aiify__premium_only.js:36
 msgid "You can ask for specific edits like : Translate to german"
-msgstr ""
-"Vous pouvez demander des modifications spécifiques telles que : Traduire en allemandVous "
-"pouvez demander des modifications spécifiques telles que : Traduire en allemandVous pouvez "
-"demander des modifications spécifiques telles que : Traduire en allemand"
+msgstr "Vous pouvez demander des modifications spécifiques telles que : Traduire en allemand"
 
 #: aiify/src/aiify__premium_only.js:39
 msgid "Cancel"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aiify\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-07 20:07+0100\n"
+"POT-Creation-Date: 2023-05-24 13:34+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Rahal <rahal.aboulfeth@gmail.com>\n"
 "Language-Team: \n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.3\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;esc_attr_e;esc_attr__;esc_html__;esc_html_e\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -88,15 +88,15 @@ msgstr "هيا لي"
 
 #: aiify/src/toolbar.js:154
 msgid "Review or edit this block"
-msgstr "مراجعة أو تحرير هذه الكتلة"
+msgstr "مراجعة أو تحرير هذه المجموعة"
 
 #: aiify/src/toolbar.js:157
 msgid "Generate and prepend based on this block"
-msgstr "التوليد والاعتماد المسبق على أساس هذه الكتلة"
+msgstr "التوليد والاعتماد المسبق على أساس هذه المجموعة"
 
 #: aiify/src/toolbar.js:160
 msgid "Generate and append based on this block"
-msgstr "إنشاء وإلحاق بناءً على هذه الكتلة"
+msgstr "إنشاء وإلحاق بناءً على هذه المجموعة"
 
 #: aiify/src/toolbar.js:169
 msgid "Custom command"
@@ -108,7 +108,7 @@ msgstr "انتظر من فضلك ..."
 
 #: includes/constants.php:19
 msgid "Write a blog post about"
-msgstr "اكتب منشور مدونة حول"
+msgstr "أكتب مقال حول"
 
 #: includes/constants.php:19
 msgid "a topic"
@@ -208,7 +208,7 @@ msgstr "كتابة صفحة هبوط ل"
 
 #: includes/constants.php:31
 msgid "a specific offer or promotion"
-msgstr "عرض أو ترقية محددة"
+msgstr "عرض أو ترويج محدد"
 
 #: includes/constants.php:32
 msgid "Write a product review for"
@@ -216,7 +216,7 @@ msgstr "كتابة مراجعة للمنتج"
 
 #: includes/constants.php:33
 msgid "Write a how-to guide for"
-msgstr "اكتب دليل إرشادي لـ"
+msgstr "اكتب دليل إرشادي عن"
 
 #: includes/constants.php:33
 msgid "a specific task or process"
@@ -264,7 +264,7 @@ msgstr "شخص أو مكان أو شيء معين"
 
 #: includes/constants.php:39
 msgid "Write a company profile about"
-msgstr "كتابة ملف تعريف الشركة عنه"
+msgstr "كتابة ملف تعريف الشركة عن"
 
 #: includes/constants.php:39
 msgid "a specific business or organization"
@@ -284,7 +284,7 @@ msgstr "كتابة مقالة مقارنة على"
 
 #: includes/constants.php:41
 msgid "two or more products or services"
-msgstr "منتجان أو أكثر من الخدمات"
+msgstr "اثنان أو أكثر من المنتجات أو الخدمات"
 
 #: includes/constants.php:42
 msgid "Write an interview article with"
@@ -464,15 +464,15 @@ msgstr "تحليلي"
 
 #: includes/constants.php:126 includes/constants.php:185
 msgid "Critical"
-msgstr "حرج"
+msgstr "شديد الأهمية"
 
 #: includes/constants.php:127 includes/constants.php:163
 msgid "Conversational"
-msgstr "المحادثة"
+msgstr "تحادثي"
 
 #: includes/constants.php:128 includes/constants.php:142
 msgid "Professional"
-msgstr "محترف"
+msgstr "احترافي"
 
 #: includes/constants.php:129 includes/constants.php:156
 #: includes/constants.php:170
@@ -493,7 +493,7 @@ msgstr "تحفيزية"
 
 #: includes/constants.php:143
 msgid "Cheerful"
-msgstr "مَسَاء"
+msgstr "مبتهج"
 
 #: includes/constants.php:144
 msgid "Excited"
@@ -509,7 +509,7 @@ msgstr "واثق"
 
 #: includes/constants.php:147
 msgid "Sarcastic"
-msgstr "سَخِيرٌ"
+msgstr "ساخر"
 
 #: includes/constants.php:148
 msgid "Sincere"
@@ -537,7 +537,7 @@ msgstr "موثوق"
 
 #: includes/constants.php:155
 msgid "Serious"
-msgstr "جاد"
+msgstr "جدي"
 
 #: includes/constants.php:157
 msgid "Playful"
@@ -545,7 +545,7 @@ msgstr "مرح"
 
 #: includes/constants.php:158
 msgid "Friendly"
-msgstr "ود"
+msgstr "ودي"
 
 #: includes/constants.php:159
 msgid "Warm"
@@ -617,7 +617,7 @@ msgstr "حل المشكلات"
 
 #: includes/constants.php:180
 msgid "Encouraging"
-msgstr "التشجيع"
+msgstr "مشجع"
 
 #: includes/constants.php:181
 msgid "Straightforward"
@@ -625,7 +625,7 @@ msgstr "مباشر"
 
 #: includes/constants.php:184
 msgid "Objective"
-msgstr "الهدف"
+msgstr "موضوعي"
 
 #: includes/constants.php:186
 msgid "Simplified"
@@ -641,7 +641,7 @@ msgstr "فضولي"
 
 #: includes/constants.php:189
 msgid "Inspiring"
-msgstr "ملهمة"
+msgstr "ملهم"
 
 #: includes/constants.php:190
 msgid "Motivating"
@@ -659,13 +659,13 @@ msgstr "مرحبًا  %1$s"
 #: includes/init_freemius.php:53
 #, php-format
 msgid ""
-"Please help us improve %2$s! If you opt-in, some data about your usage of "
-"%2$s will be sent to %5$s. If you skip this, that's okay! %2$s will still "
-"work just fine."
+"Please help us improve %2$s! If you opt-in, some data about your usage of %2$s "
+"will be sent to %5$s. If you skip this, that's okay! %2$s will still work just "
+"fine."
 msgstr ""
-"من فضلك ساعدنا في تحسين %2$s! إذا قمت بالموافقة، فسيتم إرسال بعض البيانات "
-"حول استخدامك لـ %2$s إلى %5$s. إذا قررت الاستمرار بدون الموافقة، فهذا لا "
-"مشكلة! %2$s سيعمل بشكل جيد بالنسبة لك."
+"من فضلك ساعدنا في تحسين %2$s! إذا قمت بالموافقة، فسيتم إرسال بعض البيانات حول "
+"استخدامك لـ %2$s إلى %5$s. إذا قررت الاستمرار بدون الموافقة، فهذا لا مشكلة! "
+"%2$s سيعمل بشكل جيد بالنسبة لك."
 
 #: includes/settings.php:12
 msgid "Aiify Blocks"
@@ -710,12 +710,12 @@ msgstr "نموذج الدردشة"
 #, php-format
 msgid ""
 "GPT-4 is currently in a limited beta and only accessible to those who have "
-"been granted access. Please join the <a target='_blank' href='%s'>waitlist</"
-"a> to get access when capacity is available."
+"been granted access. Please join the <a target='_blank' href='%s'>waitlist</a> "
+"to get access when capacity is available."
 msgstr ""
-"‫GPT-4 في الوقت الحالي في مرحلة بيتا محدودة ومتاحة فقط لأولئك الذين حصلوا "
-"على الوصول. يرجى الانضمام إلى <a target=‘_blank’ href=‘%s’>قائمة الانتظار</"
-"a> للحصول على الوصول عند توافر القدرة."
+"‫GPT-4 في الوقت الحالي في مرحلة بيتا محدودة ومتاحة فقط لأولئك الذين حصلوا على "
+"الوصول. يرجى الانضمام إلى <a target=‘_blank’ href=‘%s’>قائمة الانتظار</a> "
+"للحصول على الوصول عند توافر القدرة."
 
 #: includes/settings.php:62
 msgid "Temparature"
@@ -726,8 +726,8 @@ msgid ""
 "Lower temperature means model generates repetitive text like training data. "
 "Higher temperature leads to more varied and creative text."
 msgstr ""
-"تعني درجة الحرارة المنخفضة أن النموذج يولد نصًا متكررًا مثل بيانات التدريب. "
-"في حين يؤدي الارتفاع في درجة الحرارة إلى نصوص متنوعة وإبداعية أكثر."
+"تعني درجة الحرارة المنخفضة أن النموذج يولد نصًا متكررًا مثل بيانات التدريب. في "
+"حين يؤدي الارتفاع في درجة الحرارة إلى نصوص متنوعة وإبداعية أكثر."
 
 #: includes/settings.php:75
 msgid "Frequency penalty"
@@ -740,8 +740,7 @@ msgid ""
 "completely."
 msgstr ""
 "يخفض تطبيق عقوبة التكرار بمعدل 0.5 احتمالية استخدام النموذج للكلمات أو "
-"العبارات الشائعة بنسبة 50٪. بينما يؤدي تطبيق عقوبة بمعدل 1 إلى إزالتها "
-"تمامًا."
+"العبارات الشائعة بنسبة 50٪. بينما يؤدي تطبيق عقوبة بمعدل 1 إلى إزالتها تمامًا."
 
 #: includes/settings.php:87
 msgid "Presence penalty"
@@ -753,9 +752,9 @@ msgid ""
 "words or phrases not in the training data by 50%. A penalty of 1 avoids all "
 "new words or phrases."
 msgstr ""
-"عند تطبيق عقوبة الحضور بمعدل 0.5، يقلل النموذج من فرصة إنتاج كلمات أو "
-"عبارات لم تظهر في البيانات التدريبية بنسبة 50٪. في حين أن تطبيق عقوبة بمعدل "
-"1 يمنع تماماً ظهور أي كلمات أو عبارات جديدة."
+"عند تطبيق عقوبة الحضور بمعدل 0.5، يقلل النموذج من فرصة إنتاج كلمات أو عبارات "
+"لم تظهر في البيانات التدريبية بنسبة 50٪. في حين أن تطبيق عقوبة بمعدل 1 يمنع "
+"تماماً ظهور أي كلمات أو عبارات جديدة."
 
 #: includes/settings.php:103
 msgid "Writing Settings"
