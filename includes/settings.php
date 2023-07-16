@@ -32,6 +32,25 @@ class Settings extends \WP_Settings_Kit
     }
 }
 
+function get_languages()
+{
+    // get language list form wordpress available translations, that's an exhaustive list
+    require_once ABSPATH . 'wp-admin/includes/translation-install.php';
+    $translations = wp_get_available_translations();
+    $languages = [ 'en_US' =>  'English (United States)' ];
+    $languages  += array_map(function ($t) {
+        return $t['native_name'];
+    }, $translations);
+    $return = [];
+    foreach ($languages as $locale => $language) {
+        $return[$language] = $language;
+    }
+    return $return;
+}
+
+
+
+
 
 function settings()
 {
@@ -98,10 +117,18 @@ function settings()
         ],
     ];
 
+
     $writing_settings = [
         'name' => 'AIIFY_WRITING',
         'title' => __('Writing Settings', 'aiify'),
         'fields' => [
+            [
+                'id' => 'LANGUAGE',
+                'type' => 'select',
+                'default' => AIIFY_WRITING_DEFAULT_LANGUAGE ,
+                'title' => __('Output Language', 'aiify') ,
+                'options' => get_languages()
+            ] ,
             [
                 'id' => 'STYLE',
                 'type' => 'select',

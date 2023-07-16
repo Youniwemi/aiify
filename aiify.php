@@ -3,7 +3,7 @@
 /**
  * Plugin Name: Aiify Blocks - ChatGPT AI Content Editing and Generation Blocks
  * Plugin URI: https://www.wpaiify.com
- * Version: 0.0.9
+ * Version: 0.1.0
  * Author: Instareza
  * Author URI: https://www.instareza.com
  * Description: Create and edit content using Chatgpt AI. Improve your content's quality and optimize it for search engines.
@@ -11,7 +11,7 @@
  * Text Domain: aiify
  * Domain Path: /languages
  * Requires PHP: 7.4
- * Stable tag: 0.0.9
+ * Stable tag: 0.1.0
  * @package AIIFY
  */
 namespace AIIFY;
@@ -78,6 +78,8 @@ function register_aiify_block()
             'styles'          => array_to_options( AIIFY_STYLES ),
             'style'           => AIIFY_WRITING_STYLE,
             'tones'           => array_to_options( AIIFY_TONES ),
+            'languages'       => array_to_options( get_languages() ),
+            'language'        => AIIFY_WRITING_LANGUAGE,
             'tone'            => AIIFY_WRITING_TONE,
             'maxWords'        => AIIFY_WRITING_MAX_WORDS,
             'nonce'           => wp_create_nonce( "secure-nonce" ),

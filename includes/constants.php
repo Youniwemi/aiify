@@ -2,8 +2,8 @@
 
 namespace AIIFY;
 
-define('AIIFY_MAX_TOKENS', 256);
 define('AIIFY_TOKEN_WORD_RATIO', 0.6);
+define('AIIFY_WRITING_DEFAULT_LANGUAGE', 'English (United States)');
 
 
 // Availabe chat models
@@ -86,29 +86,6 @@ define('AIIFY_GENERATE_AFTER_PROMPTS', [
     __("Write a Conclusion", "aiify") => "Write a conclusion for the following text."
 ]);
 
-// define('AIIFY_STYLES', [
-//       __("Journalistic", "aiify"),
-//       __("Academic", "aiify"),
-//       __("Creative", "aiify"),
-//       __("Technical", "aiify"),
-//       __("Business", "aiify"),
-//       __("Scientific", "aiify"),
-//       __("Casual", "aiify"),
-//       __("Formal", "aiify"),
-//       __("Narrative", "aiify"),
-//       __("Descriptive", "aiify"),
-//       __("Persuasive", "aiify"),
-//       __("Expository", "aiify"),
-//       __("Analytical", "aiify"),
-//       __("Critical", "aiify"),
-//       __("Conversational", "aiify"),
-//       __("Professional", "aiify"),
-//       __("Humorous", "aiify"),
-//       __("Instructional", "aiify"),
-//       __("Inspirational", "aiify"),
-//       __("Motivational", "aiify")
-// ]);
-
 define('AIIFY_STYLES', [
       "Journalistic" => __("Journalistic", "aiify"),
       "Academic" => __("Academic", "aiify"),
@@ -131,9 +108,6 @@ define('AIIFY_STYLES', [
       "Inspirational" => __("Inspirational", "aiify"),
       "Motivational" => __("Motivational", "aiify")
 ]);
-
-
-define('AIIFY_STYLE', "Journalistic");
 
 
 define(
@@ -190,11 +164,6 @@ define(
       "Motivating" => __("Motivating", "aiify")
     ]
 );
-
-
-define('AIIFY_TONE', "Professional");
-
-
 
 
 define('AIIFY_SYSTEM_PROMPT', "Ignore all previous instructions.\n\nAs an advanced AI language model, you already possess a deep understanding of the basic principles of search engine optimization and Copywriting. As an expert Copywriter, you know the importance of crafting unique, high-quality content that engages readers and drives traffic to websites. You also understand the key factors that impact search engine rankings, allowing you to optimize content for both search engines and human readers. To further enhance your skills as a professional SEO expert and Copywriter, let's review some of these basic principles.");

@@ -17,6 +17,7 @@ add_action('wp_ajax_open_ai', function () {
     $tone = isset($_GET['tone']) && isset(AIIFY_TONES[ $_GET['tone'] ]) ? $_GET['tone'] : AIIFY_WRITING_TONE;
     $words = isset($_GET['maxWords']) ? intval($_GET['maxWords']) : AIIFY_WRITING_MAX_WORDS;
 
+
     //$words = intval($maxTokens * AIIFY_TOKEN_WORD_RATIO); //
     // Prepare context for style, tone, formating and length
     $setup = sprintf(AIIFY_EDIT_INSTRUCTION_HEADER, $style, $tone, $words);
@@ -37,9 +38,11 @@ add_action('wp_ajax_open_ai', function () {
         $command .= " Do not translate to english, respond in the same language variety or dialect as the following text and do your best to respect the expected Markdown formatting (headings, lists, bold, emphasize, bold, quotes) :";
         $prompt = "[$setup]\n\n".AIIFY_EDIT_TO_THE_POINT.$command. "\n\n" .'"""'."\n". $edit."\n".'"""';
     } else {
+        $languages = get_languages();
+        $language = isset($_GET['language']) && isset($languages[$_GET['language']]) ? $_GET['language'] : AIIFY_WRITING_LANGUAGE;
         $setup .= " Do your best to create unique content free of plagiarism that respects the expected Markdown formatting (headings, lists, bold, emphasize, bold, quotes)";
 
-        $command = "Now, here is the task, respond in the same language variety or dialect : \n\n";
+        $command = "Now, here is the task, respond in '$language' language.: \n\n";
         $prompt = "[$setup]\n\n".$command.'"""'."\n".$prompt."\n".'"""';
     }
 

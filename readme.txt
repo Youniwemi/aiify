@@ -5,7 +5,7 @@ Requires at least: 5.0
 Tested up to: 6.2.2
 Requires PHP: 7.4
 License: GPL
-Stable tag: 0.0.9
+Stable tag: 0.1.0
 
 Create high-quality content quickly with AI-powered copywriting, and optimize your existing content with advanced editing capabilities. Aiify Blocks uses ChatGPT AI technology within the WordPress block editor to help you generate new content and enhance your existing text for SEO and conversions.
 
@@ -108,6 +108,8 @@ Big Thanks to :
 
 
 == Changelog ==
+= 0.1.0 : Choose output language
+- Added possibility to select an output language
 = 0.0.9 : Updated dependencies =
 - Updated freemius to latest version
 - Updated orhanerday/open-ai
