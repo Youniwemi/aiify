@@ -3,6 +3,16 @@
 namespace AIIFY;
 
 use Orhanerday\OpenAi\OpenAi;
+use Youniwemi\StringTemplate\Engine;
+
+function render(string $template, $values=[])
+{
+    static $tpl;
+    if ($tpl===null) {
+        $tpl = new Engine();
+    }
+    return $tpl->render($template, $values);
+}
 
 /**
  * Main AI query action
@@ -11,39 +21,43 @@ add_action('wp_ajax_open_ai', function () {
     check_ajax_referer('secure-nonce', 'openai_nonce');
     require_once AIIFY_VENDOR. '/autoload.php';
 
+
     $open_ai = new OpenAi(AIIFY_OPEN_AI_KEY);
     // Make sur style and tone are in our list of styles and tones
     $style = isset($_GET['style']) && isset(AIIFY_STYLES[ $_GET['style'] ]) ? $_GET['style'] : AIIFY_WRITING_STYLE;
     $tone = isset($_GET['tone']) && isset(AIIFY_TONES[ $_GET['tone'] ]) ? $_GET['tone'] : AIIFY_WRITING_TONE;
     $words = isset($_GET['maxWords']) ? intval($_GET['maxWords']) : AIIFY_WRITING_MAX_WORDS;
 
-
+    $tpl = new Engine();
     //$words = intval($maxTokens * AIIFY_TOKEN_WORD_RATIO); //
     // Prepare context for style, tone, formating and length
-    $setup = sprintf(AIIFY_EDIT_INSTRUCTION_HEADER, $style, $tone, $words);
+    //$setup = sprintf(AIIFY_EDIT_INSTRUCTION_HEADER, $style, $tone, $words);
+    $header = render(AIIFY_EDIT_INSTRUCTION_HEADER, compact('style', 'tone', 'words'));
 
     // don't need slashes, sani
     $prompt = isset($_GET['prompt']) ? wp_kses_post(wp_unslash($_GET['prompt'])) : null;
     if (isset($_GET['edit'])) {
-        $edit = wp_kses_post(wp_unslash($_GET['edit'])) ;
+        $edit = wp_kses_post($_GET['edit']) ;
         $commads = array_merge(AIIFY_EDIT_PROMPTS, AIIFY_GENERATE_AFTER_PROMPTS, AIIFY_GENERATE_BEFORE_PROMPTS);
-        $setup .= " Use the same Language as the text to edit. And consider it formated in Markdown or HTML.";
 
-        $command = "Now, ";
-        $command .= isset($commads[ $prompt ]) ? $commads[$prompt] : $prompt ;
+        $command = isset($commads[ $prompt ]) ? $commads[$prompt] : $prompt ;
         if (isset(AIIFY_EDIT_PROMPTS[$prompt])) {
             // Do not change structure
             $command .= " Do not change its structure (if the input text is a paragraph, please respond with a paragraph)." ;
         }
-        $command .= " Do not translate to english, respond in the same language variety or dialect as the following text and do your best to respect the expected Markdown formatting (headings, lists, bold, emphasize, bold, quotes) :";
-        $prompt = "[$setup]\n\n".AIIFY_EDIT_TO_THE_POINT.$command. "\n\n" .'"""'."\n". $edit."\n".'"""';
+
+        $prompt = render(AIIFY_EDIT_STRUCTURE, compact('header', 'command', 'edit'));
     } else {
         $languages = get_languages();
         $language = isset($_GET['language']) && isset($languages[$_GET['language']]) ? $_GET['language'] : AIIFY_WRITING_LANGUAGE;
-        $setup .= " Do your best to create unique content free of plagiarism that respects the expected Markdown formatting (headings, lists, bold, emphasize, bold, quotes)";
 
-        $command = "Now, here is the task, respond in '$language' language.: \n\n";
-        $prompt = "[$setup]\n\n".$command.'"""'."\n".$prompt."\n".'"""';
+        $context = isset($_GET['context']) ? wp_kses_post(wp_unslash($_GET['context'])) : null;
+        $keywords = isset($_GET['keywords']) ? wp_kses_post(wp_unslash($_GET['keywords'])) : null;
+        $prompt = rtrim($prompt, '.');
+
+        $prompt = render(AIIFY_PROMPT_STRUCTURE, compact('header', 'language', 'prompt', 'context', 'keywords'));
+
+
     }
 
 

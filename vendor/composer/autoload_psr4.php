@@ -6,5 +6,6 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Youniwemi\\StringTemplate\\' => array($vendorDir . '/youniwemi/string-template/src/StringTemplate'),
     'Orhanerday\\OpenAi\\' => array($vendorDir . '/orhanerday/open-ai/src'),
 );

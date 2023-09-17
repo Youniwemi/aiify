@@ -11,6 +11,10 @@ class ComposerStaticInitc70834b422bbe9b59dd53905050feaa8
     );
 
     public static $prefixLengthsPsr4 = array (
+        'Y' => 
+        array (
+            'Youniwemi\\StringTemplate\\' => 25,
+        ),
         'O' => 
         array (
             'Orhanerday\\OpenAi\\' => 18,
@@ -18,6 +22,10 @@ class ComposerStaticInitc70834b422bbe9b59dd53905050feaa8
     );
 
     public static $prefixDirsPsr4 = array (
+        'Youniwemi\\StringTemplate\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/youniwemi/string-template/src/StringTemplate',
+        ),
         'Orhanerday\\OpenAi\\' => 
         array (
             0 => __DIR__ . '/..' . '/orhanerday/open-ai/src',

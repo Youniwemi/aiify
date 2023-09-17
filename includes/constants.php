@@ -172,9 +172,34 @@ define('AIIFY_SYSTEM_PROMPT', "Ignore all previous instructions.\n\nAs an advanc
 
 define('AIIFY_SYSTEM_PROMPT_FORMATING', "Use markdown for formatting and organize your content and help readers navigate it easily, use headings starting at level 2 (##). Additionally, bold the relevant keywords related to the main topic (**) and italicize when appropriate (*). Using list items (-) and quotes (>) are also great techniques to make your content more readable and engaging. To make quotes stand out, consider repeating them in a quote formatting at right the end of the mentionning paragraph (>). Follow those principles as much as you can."); // Follow all these formatting principles to create content that's not only informative and valuable but also aesthetically pleasing and easy to read.
 
-define('AIIFY_EDIT_INSTRUCTION_HEADER', 'Style: %s. Tone: %s. Your response must not exceed %d words and must be formatted in Markdown and highlighting keywords.');
+define('AIIFY_EDIT_INSTRUCTION_HEADER', 'Style: {style}. Tone: {tone}. Your response must not exceed {words} words and must be formatted in Markdown and highlighting keywords.');
 
-
-define('AIIFY_EDIT_TO_THE_POINT', "The main objectif of this task is to edit a provided text, answer in the same language as the provided text. Do not write explanations. Do not echo my prompt. Do not remind me what I asked you for. Do not apologize. Do not self-reference. Do not use generic filler phrases. Get to the point precisely and accurately. Do not explain what and why, just give me your best possible result.\n");
 
 define('AIIFY_PARAGRAPH_BLOCK_PROMPT', __('Type "AI+Enter" for AI, or "/" to choose a block', 'aiify'));
+
+
+define('AIIFY_PROMPT_STRUCTURE', '[{header} Do your best to create unique content free of plagiarism that respects the expected Markdown formatting (headings, lists, bold, emphasize, bold, quotes)]
+
+{#context}
+First, here is some context/informations to include for your answer : {context}
+{/context}
+
+Now, here is the task, respond in {language} language{#keywords} , and make sure to include and highlight the following comma seperated keywords in your answer using markdown (*) "{keywords}"
+{/keywords} :
+
+"""
+{prompt}.
+"""
+');
+
+
+define('AIIFY_EDIT_STRUCTURE', '[{header} Use the same Language as the text to edit. And consider it formated in Markdown or HTML.]
+
+The main objectif of this task is to edit a provided text, answer in the same language as the provided text. Do not write explanations. Do not echo my prompt. Do not remind me what I asked you for. Do not apologize. Do not self-reference. Do not use generic filler phrases. Get to the point precisely and accurately. Do not explain what and why, just give me your best possible result.
+
+Now, {command} Do not translate to english, respond in the same language variety or dialect as the following text and do your best to respect the expected Markdown formatting (headings, lists, bold, emphasize, bold, quotes) :
+
+"""
+{edit}.
+"""
+');
