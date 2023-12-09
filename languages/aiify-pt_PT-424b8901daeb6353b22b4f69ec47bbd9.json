@@ -16,6 +16,12 @@
             "What do you want to write today?": [
                 "O que voc\u00ea quer escrever hoje?"
             ],
+            "Add key information to include in the content?": [
+                ""
+            ],
+            "Add keywords to highlight in the content? (comma separated keywords)": [
+                ""
+            ],
             "Write": [
                 "Escrever"
             ],
@@ -33,6 +39,9 @@
             ],
             "Select writing tone": [
                 ""
+            ],
+            "Select an output language": [
+                "Selecione um idioma de sa\u00edda."
             ],
             "Aiify Settings": [
                 "Param\u00e8tres Aiify"

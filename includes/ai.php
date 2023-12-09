@@ -57,7 +57,6 @@ add_action('wp_ajax_open_ai', function () {
 
         $prompt = render(AIIFY_PROMPT_STRUCTURE, compact('header', 'language', 'prompt', 'context', 'keywords'));
 
-
     }
 
 

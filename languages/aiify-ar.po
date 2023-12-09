@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aiify\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-24 13:34+0100\n"
+"POT-Creation-Date: 2023-09-18 13:06+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Rahal <rahal.aboulfeth@gmail.com>\n"
 "Language-Team: \n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 3.3\n"
+"X-Generator: Poedit 3.1.1\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;esc_attr_e;esc_attr__;esc_html__;esc_html_e\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -42,39 +42,53 @@ msgstr "إلغاء"
 msgid "Edit"
 msgstr "تحرير"
 
-#: aiify/src/edit.js:89
+#: aiify/src/edit.js:94
 msgid "Select a content type"
 msgstr "حدد نوع المحتوى"
 
-#: aiify/src/edit.js:106
+#: aiify/src/edit.js:111
 msgid "What do you want to write today?"
 msgstr "ماذا تريد أن تكتب اليوم؟"
 
-#: aiify/src/edit.js:114
+#: aiify/src/edit.js:121
+msgid "Add key information to include in the content?"
+msgstr "هل ترغب في إضافة معلومات أساسية لتضمينها في المحتوى؟"
+
+#: aiify/src/edit.js:130
+msgid "Add keywords to highlight in the content? (comma separated keywords)"
+msgstr ""
+"هل ترغب في إضافة كلمات رئيسية لتسليط الضوء عليها في المحتوى؟ (كلمات رئيسية "
+"مفصولة بفواصل)"
+
+#: aiify/src/edit.js:138
 msgid "Write"
 msgstr "اكتب"
 
-#: aiify/src/edit.js:115
+#: aiify/src/edit.js:139
 msgid "Clear"
 msgstr "واضح"
 
-#: aiify/src/panel.js:31
+#: aiify/src/panel.js:32
 msgid "Max words to generate"
 msgstr "أقصى عدد كلمات لتوليد"
 
-#: aiify/src/panel.js:32
+#: aiify/src/panel.js:33
 msgid "Do not exceed this value"
 msgstr "لا تتجاوز هذه القيمة"
 
-#: aiify/src/panel.js:40
+#: aiify/src/panel.js:41
 msgid "Select writing style"
 msgstr "حدد أسلوب الكتابة"
 
-#: aiify/src/panel.js:52
+#: aiify/src/panel.js:53
 msgid "Select writing tone"
 msgstr "تحديد نغمة الكتابة"
 
-#: aiify/src/panel.js:70
+#: aiify/src/panel.js:65
+msgid "Select an output language"
+msgstr "حدد لغة الإخراج"
+
+#: aiify/src/panel.js:83
 msgid "Aiify Settings"
 msgstr "إعدادات Aiify"
 
@@ -410,244 +424,244 @@ msgstr "تقييم وتقديم الملاحظات"
 msgid "Write a Conclusion"
 msgstr "كتابة خاتمة"
 
-#: includes/constants.php:113
+#: includes/constants.php:90
 msgid "Journalistic"
 msgstr "صحفي"
 
-#: includes/constants.php:114
+#: includes/constants.php:91
 msgid "Academic"
 msgstr "أكاديمي"
 
-#: includes/constants.php:115
+#: includes/constants.php:92
 msgid "Creative"
 msgstr "إبداعي"
 
-#: includes/constants.php:116
+#: includes/constants.php:93
 msgid "Technical"
 msgstr "تقني"
 
-#: includes/constants.php:117
+#: includes/constants.php:94
 msgid "Business"
 msgstr "عمل"
 
-#: includes/constants.php:118
+#: includes/constants.php:95
 msgid "Scientific"
 msgstr "علمي"
 
-#: includes/constants.php:119
+#: includes/constants.php:96
 msgid "Casual"
 msgstr "عرضي"
 
-#: includes/constants.php:120 includes/constants.php:153
+#: includes/constants.php:97 includes/constants.php:127
 msgid "Formal"
 msgstr "رسمي"
 
-#: includes/constants.php:121
+#: includes/constants.php:98
 msgid "Narrative"
 msgstr "سرد"
 
-#: includes/constants.php:122
+#: includes/constants.php:99
 msgid "Descriptive"
 msgstr "وصفي"
 
-#: includes/constants.php:123 includes/constants.php:166
+#: includes/constants.php:100 includes/constants.php:140
 msgid "Persuasive"
 msgstr "مقنع"
 
-#: includes/constants.php:124
+#: includes/constants.php:101
 msgid "Expository"
 msgstr "تفسيري"
 
-#: includes/constants.php:125 includes/constants.php:183
+#: includes/constants.php:102 includes/constants.php:157
 msgid "Analytical"
 msgstr "تحليلي"
 
-#: includes/constants.php:126 includes/constants.php:185
+#: includes/constants.php:103 includes/constants.php:159
 msgid "Critical"
 msgstr "شديد الأهمية"
 
-#: includes/constants.php:127 includes/constants.php:163
+#: includes/constants.php:104 includes/constants.php:137
 msgid "Conversational"
 msgstr "تحادثي"
 
-#: includes/constants.php:128 includes/constants.php:142
+#: includes/constants.php:105 includes/constants.php:116
 msgid "Professional"
 msgstr "احترافي"
 
-#: includes/constants.php:129 includes/constants.php:156
-#: includes/constants.php:170
+#: includes/constants.php:106 includes/constants.php:130
+#: includes/constants.php:144
 msgid "Humorous"
 msgstr "روح الدعابة"
 
-#: includes/constants.php:130
+#: includes/constants.php:107
 msgid "Instructional"
 msgstr "تعليمي"
 
-#: includes/constants.php:131
+#: includes/constants.php:108
 msgid "Inspirational"
 msgstr "ملهمة"
 
-#: includes/constants.php:132
+#: includes/constants.php:109
 msgid "Motivational"
 msgstr "تحفيزية"
 
-#: includes/constants.php:143
+#: includes/constants.php:117
 msgid "Cheerful"
 msgstr "مبتهج"
 
-#: includes/constants.php:144
+#: includes/constants.php:118
 msgid "Excited"
 msgstr "متحمس"
 
-#: includes/constants.php:145 includes/constants.php:182
+#: includes/constants.php:119 includes/constants.php:156
 msgid "Optimistic"
 msgstr "متفائل"
 
-#: includes/constants.php:146
+#: includes/constants.php:120
 msgid "Confident"
 msgstr "واثق"
 
-#: includes/constants.php:147
+#: includes/constants.php:121
 msgid "Sarcastic"
 msgstr "ساخر"
 
-#: includes/constants.php:148
+#: includes/constants.php:122
 msgid "Sincere"
 msgstr "صدق"
 
-#: includes/constants.php:149
+#: includes/constants.php:123
 msgid "Sympathetic"
 msgstr "متعاطفة"
 
-#: includes/constants.php:150
+#: includes/constants.php:124
 msgid "Concerned"
 msgstr "القلق"
 
-#: includes/constants.php:151
+#: includes/constants.php:125
 msgid "Caring"
 msgstr "رعاية"
 
-#: includes/constants.php:152
+#: includes/constants.php:126
 msgid "Neutral"
 msgstr "محايد"
 
-#: includes/constants.php:154 includes/constants.php:165
+#: includes/constants.php:128 includes/constants.php:139
 msgid "Authoritative"
 msgstr "موثوق"
 
-#: includes/constants.php:155
+#: includes/constants.php:129
 msgid "Serious"
 msgstr "جدي"
 
-#: includes/constants.php:157
+#: includes/constants.php:131
 msgid "Playful"
 msgstr "مرح"
 
-#: includes/constants.php:158
+#: includes/constants.php:132
 msgid "Friendly"
 msgstr "ودي"
 
-#: includes/constants.php:159
+#: includes/constants.php:133
 msgid "Warm"
 msgstr "دافئ"
 
-#: includes/constants.php:160
+#: includes/constants.php:134
 msgid "Cold"
 msgstr "جَ: بارد"
 
-#: includes/constants.php:161
+#: includes/constants.php:135
 msgid "Impersonal"
 msgstr "غير شخصي"
 
-#: includes/constants.php:162
+#: includes/constants.php:136
 msgid "Informative/Educational"
 msgstr "إعلامي / تربوي"
 
-#: includes/constants.php:164
+#: includes/constants.php:138
 msgid "Professional/Formal"
 msgstr "مهني / رسمي"
 
-#: includes/constants.php:167
+#: includes/constants.php:141
 msgid "Inspirational/Motivational"
 msgstr "ملهمة / تحفيزية"
 
-#: includes/constants.php:168
+#: includes/constants.php:142
 msgid "Entertaining"
 msgstr "ترفيهي"
 
-#: includes/constants.php:169
+#: includes/constants.php:143
 msgid "Controversial"
 msgstr "مثير للجدل"
 
-#: includes/constants.php:171
+#: includes/constants.php:145
 msgid "Empathetic"
 msgstr "متعاطف"
 
-#: includes/constants.php:172
+#: includes/constants.php:146
 msgid "Personal"
 msgstr "شخصي"
 
-#: includes/constants.php:173
+#: includes/constants.php:147
 msgid "Storytelling"
 msgstr "رواية القصص"
 
-#: includes/constants.php:174
+#: includes/constants.php:148
 msgid "Thought-provoking"
 msgstr "إثارة الفكر"
 
-#: includes/constants.php:175
+#: includes/constants.php:149
 msgid "Authentic"
 msgstr "أصيلة"
 
-#: includes/constants.php:176
+#: includes/constants.php:150
 msgid "Trustworthy"
 msgstr "جدير بالثقة"
 
-#: includes/constants.php:177
+#: includes/constants.php:151
 msgid "Authorial"
 msgstr "المؤلف"
 
-#: includes/constants.php:178
+#: includes/constants.php:152
 msgid "Collaborative"
 msgstr "تعاوني"
 
-#: includes/constants.php:179
+#: includes/constants.php:153
 msgid "Problem-solving"
 msgstr "حل المشكلات"
 
-#: includes/constants.php:180
+#: includes/constants.php:154
 msgid "Encouraging"
 msgstr "مشجع"
 
-#: includes/constants.php:181
+#: includes/constants.php:155
 msgid "Straightforward"
 msgstr "مباشر"
 
-#: includes/constants.php:184
+#: includes/constants.php:158
 msgid "Objective"
 msgstr "موضوعي"
 
-#: includes/constants.php:186
+#: includes/constants.php:160
 msgid "Simplified"
 msgstr "مبسط"
 
-#: includes/constants.php:187
+#: includes/constants.php:161
 msgid "Complex"
 msgstr "مجمع"
 
-#: includes/constants.php:188
+#: includes/constants.php:162
 msgid "Curious"
 msgstr "فضولي"
 
-#: includes/constants.php:189
+#: includes/constants.php:163
 msgid "Inspiring"
 msgstr "ملهم"
 
-#: includes/constants.php:190
+#: includes/constants.php:164
 msgid "Motivating"
 msgstr "التحفيز"
 
-#: includes/constants.php:211
+#: includes/constants.php:178
 msgid "Type \"AI+Enter\" for AI, or \"/\" to choose a block"
 msgstr "اكتب “AI + Enter” للحصول على الذكاء الاصطناعي، أو “/“ لاختيار كتلة"
 
@@ -689,24 +703,24 @@ msgstr "إعدادات  Blocks Aiify"
 msgid "Please insert a valid %s"
 msgstr "الرجاء إدخال %s صالح"
 
-#: includes/settings.php:40
+#: includes/settings.php:59
 msgid "Open AI Settings"
 msgstr "افتح إعدادات AI"
 
-#: includes/settings.php:45
+#: includes/settings.php:64
 msgid "Your Open AI Key"
 msgstr "مفتاح AI المفتوح الخاص بك"
 
-#: includes/settings.php:48
+#: includes/settings.php:67
 #, php-format
 msgid "You can get your key here : %s"
 msgstr "يمكنك الحصول على مفتاحك هنا: %s"
 
-#: includes/settings.php:55
+#: includes/settings.php:74
 msgid "Chat Model"
 msgstr "نموذج الدردشة"
 
-#: includes/settings.php:57
+#: includes/settings.php:76
 #, php-format
 msgid ""
 "GPT-4 is currently in a limited beta and only accessible to those who have "
@@ -717,11 +731,11 @@ msgstr ""
 "الوصول. يرجى الانضمام إلى <a target=‘_blank’ href=‘%s’>قائمة الانتظار</a> "
 "للحصول على الوصول عند توافر القدرة."
 
-#: includes/settings.php:62
+#: includes/settings.php:81
 msgid "Temparature"
 msgstr "درجة الحرارة"
 
-#: includes/settings.php:69
+#: includes/settings.php:88
 msgid ""
 "Lower temperature means model generates repetitive text like training data. "
 "Higher temperature leads to more varied and creative text."
@@ -729,11 +743,11 @@ msgstr ""
 "تعني درجة الحرارة المنخفضة أن النموذج يولد نصًا متكررًا مثل بيانات التدريب. في "
 "حين يؤدي الارتفاع في درجة الحرارة إلى نصوص متنوعة وإبداعية أكثر."
 
-#: includes/settings.php:75
+#: includes/settings.php:94
 msgid "Frequency penalty"
 msgstr "عقوبة التردد"
 
-#: includes/settings.php:82
+#: includes/settings.php:101
 msgid ""
 "A frequency penalty of 0.5 reduces the likelihood of the model using "
 "frequently seen words or phrases by 50%. A penalty of 1 will eliminate them "
@@ -742,11 +756,11 @@ msgstr ""
 "يخفض تطبيق عقوبة التكرار بمعدل 0.5 احتمالية استخدام النموذج للكلمات أو "
 "العبارات الشائعة بنسبة 50٪. بينما يؤدي تطبيق عقوبة بمعدل 1 إلى إزالتها تمامًا."
 
-#: includes/settings.php:87
+#: includes/settings.php:106
 msgid "Presence penalty"
 msgstr "عقوبة الحضور"
 
-#: includes/settings.php:94
+#: includes/settings.php:113
 msgid ""
 "With a presence penalty of 0.5, the model reduces the chance of generating "
 "words or phrases not in the training data by 50%. A penalty of 1 avoids all "
@@ -756,18 +770,22 @@ msgstr ""
 "لم تظهر في البيانات التدريبية بنسبة 50٪. في حين أن تطبيق عقوبة بمعدل 1 يمنع "
 "تماماً ظهور أي كلمات أو عبارات جديدة."
 
-#: includes/settings.php:103
+#: includes/settings.php:123
 msgid "Writing Settings"
 msgstr "إعدادات الكتابة"
 
-#: includes/settings.php:109
+#: includes/settings.php:129
+msgid "Output Language"
+msgstr "لغة الإخراج"
+
+#: includes/settings.php:136
 msgid "Writing Style"
 msgstr "أسلوب الكتابة"
 
-#: includes/settings.php:116
+#: includes/settings.php:143
 msgid "Writing Tone"
 msgstr "نغمة الكتابة"
 
-#: includes/settings.php:123
+#: includes/settings.php:150
 msgid "Maximum words"
 msgstr "أقصى عدد من الكلمات"

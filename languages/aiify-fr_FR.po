@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2023-05-07 19:38+0100\n"
+"POT-Creation-Date: 2023-09-18 15:05+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Rahal <rahal.aboulfeth@gmail.com>\n"
 "Language-Team: \n"
@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.3\n"
+"X-Generator: Poedit 3.1.1\n"
 "X-Poedit-KeywordsList: __;_e;esc_attr_e;esc_attr__;esc_html__;esc_html_e\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -18,7 +18,9 @@ msgstr ""
 
 #: aiify.php:42
 msgid "To start using AIIFY Blocks, please setup you OpenAi Key"
-msgstr "Pour commencer à utiliser les blocs AIIFY, veuillez configurer votre clé OpenAi"
+msgstr ""
+"Pour commencer à utiliser les blocs AIIFY, veuillez configurer votre clé "
+"OpenAi"
 
 #: aiify.php:43
 msgid "Go to Aiify Blocks settings"
@@ -30,7 +32,9 @@ msgstr "Comment souhaitez-vous modifier ce texte ?"
 
 #: aiify/src/aiify__premium_only.js:36
 msgid "You can ask for specific edits like : Translate to german"
-msgstr "Vous pouvez demander des modifications spécifiques telles que : Traduire en allemand"
+msgstr ""
+"Vous pouvez demander des modifications spécifiques telles que : Traduire en "
+"allemand"
 
 #: aiify/src/aiify__premium_only.js:39
 msgid "Cancel"
@@ -40,39 +44,53 @@ msgstr "Annuler"
 msgid "Edit"
 msgstr "Modifier"
 
-#: aiify/src/edit.js:89
+#: aiify/src/edit.js:94
 msgid "Select a content type"
 msgstr "Sélectionner le type de contenu"
 
-#: aiify/src/edit.js:106
+#: aiify/src/edit.js:111
 msgid "What do you want to write today?"
 msgstr "Qu'est-ce que tu veux écrire aujourd'hui ?"
 
-#: aiify/src/edit.js:114
+#: aiify/src/edit.js:121
+msgid "Add key information to include in the content?"
+msgstr "Ajouter des informations clés au contenu?"
+
+#: aiify/src/edit.js:130
+msgid "Add keywords to highlight in the content? (comma separated keywords)"
+msgstr ""
+"Ajouter des mots-clés à mettre en avant dans le contenu (mots séparé par des "
+"vírgules)"
+
+#: aiify/src/edit.js:138
 msgid "Write"
 msgstr "Écrire"
 
-#: aiify/src/edit.js:115
+#: aiify/src/edit.js:139
 msgid "Clear"
 msgstr "Effacer"
 
-#: aiify/src/panel.js:31
+#: aiify/src/panel.js:32
 msgid "Max words to generate"
 msgstr "Mots max à générer"
 
-#: aiify/src/panel.js:32
+#: aiify/src/panel.js:33
 msgid "Do not exceed this value"
 msgstr "Ne pas dépasser cette valeur"
 
-#: aiify/src/panel.js:40
+#: aiify/src/panel.js:41
 msgid "Select writing style"
 msgstr "Sélectionner le style d'écriture"
 
-#: aiify/src/panel.js:52
+#: aiify/src/panel.js:53
 msgid "Select writing tone"
 msgstr "Sélectionner la tonalité d'écriture"
 
-#: aiify/src/panel.js:70
+#: aiify/src/panel.js:65
+msgid "Select an output language"
+msgstr "Sélectionner une langue de réponse"
+
+#: aiify/src/panel.js:83
 msgid "Aiify Settings"
 msgstr "Paramètres Aiify"
 
@@ -408,243 +426,244 @@ msgstr "Évaluer et fournir des commentaires"
 msgid "Write a Conclusion"
 msgstr "Rédiger une conclusion"
 
-#: includes/constants.php:113
+#: includes/constants.php:90
 msgid "Journalistic"
 msgstr "Journalistique"
 
-#: includes/constants.php:114
+#: includes/constants.php:91
 msgid "Academic"
 msgstr "Académique"
 
-#: includes/constants.php:115
+#: includes/constants.php:92
 msgid "Creative"
 msgstr "Création"
 
-#: includes/constants.php:116
+#: includes/constants.php:93
 msgid "Technical"
 msgstr "Technique"
 
-#: includes/constants.php:117
+#: includes/constants.php:94
 msgid "Business"
 msgstr "Affaires"
 
-#: includes/constants.php:118
+#: includes/constants.php:95
 msgid "Scientific"
 msgstr "Scientifique"
 
-#: includes/constants.php:119
+#: includes/constants.php:96
 msgid "Casual"
 msgstr "Décontracté"
 
-#: includes/constants.php:120 includes/constants.php:153
+#: includes/constants.php:97 includes/constants.php:127
 msgid "Formal"
 msgstr "Formel"
 
-#: includes/constants.php:121
+#: includes/constants.php:98
 msgid "Narrative"
 msgstr "Récit"
 
-#: includes/constants.php:122
+#: includes/constants.php:99
 msgid "Descriptive"
 msgstr "Descriptif"
 
-#: includes/constants.php:123 includes/constants.php:166
+#: includes/constants.php:100 includes/constants.php:140
 msgid "Persuasive"
 msgstr "Persuasif"
 
-#: includes/constants.php:124
+#: includes/constants.php:101
 msgid "Expository"
 msgstr "Exposé"
 
-#: includes/constants.php:125 includes/constants.php:183
+#: includes/constants.php:102 includes/constants.php:157
 msgid "Analytical"
 msgstr "Analytique"
 
-#: includes/constants.php:126 includes/constants.php:185
+#: includes/constants.php:103 includes/constants.php:159
 msgid "Critical"
 msgstr "Critique"
 
-#: includes/constants.php:127 includes/constants.php:163
+#: includes/constants.php:104 includes/constants.php:137
 msgid "Conversational"
 msgstr "Conversationnel"
 
-#: includes/constants.php:128 includes/constants.php:142
+#: includes/constants.php:105 includes/constants.php:116
 msgid "Professional"
 msgstr "Professionnel"
 
-#: includes/constants.php:129 includes/constants.php:156 includes/constants.php:170
+#: includes/constants.php:106 includes/constants.php:130
+#: includes/constants.php:144
 msgid "Humorous"
 msgstr "Humoristique"
 
-#: includes/constants.php:130
+#: includes/constants.php:107
 msgid "Instructional"
 msgstr "Instruction"
 
-#: includes/constants.php:131
+#: includes/constants.php:108
 msgid "Inspirational"
 msgstr "Inspiré"
 
-#: includes/constants.php:132
+#: includes/constants.php:109
 msgid "Motivational"
 msgstr "Motivation"
 
-#: includes/constants.php:143
+#: includes/constants.php:117
 msgid "Cheerful"
 msgstr "Gai"
 
-#: includes/constants.php:144
+#: includes/constants.php:118
 msgid "Excited"
 msgstr "Excité"
 
-#: includes/constants.php:145 includes/constants.php:182
+#: includes/constants.php:119 includes/constants.php:156
 msgid "Optimistic"
 msgstr "Optimiste"
 
-#: includes/constants.php:146
+#: includes/constants.php:120
 msgid "Confident"
 msgstr "Confiant"
 
-#: includes/constants.php:147
+#: includes/constants.php:121
 msgid "Sarcastic"
 msgstr "Sarcastique"
 
-#: includes/constants.php:148
+#: includes/constants.php:122
 msgid "Sincere"
 msgstr "Sincère"
 
-#: includes/constants.php:149
+#: includes/constants.php:123
 msgid "Sympathetic"
 msgstr "Sympathique"
 
-#: includes/constants.php:150
+#: includes/constants.php:124
 msgid "Concerned"
 msgstr "Préoccupé"
 
-#: includes/constants.php:151
+#: includes/constants.php:125
 msgid "Caring"
 msgstr "Prendre soin"
 
-#: includes/constants.php:152
+#: includes/constants.php:126
 msgid "Neutral"
 msgstr "Neutre"
 
-#: includes/constants.php:154 includes/constants.php:165
+#: includes/constants.php:128 includes/constants.php:139
 msgid "Authoritative"
 msgstr "Faisant autorité"
 
-#: includes/constants.php:155
+#: includes/constants.php:129
 msgid "Serious"
 msgstr "Sérieux"
 
-#: includes/constants.php:157
+#: includes/constants.php:131
 msgid "Playful"
 msgstr "Ludique"
 
-#: includes/constants.php:158
+#: includes/constants.php:132
 msgid "Friendly"
 msgstr "Amical"
 
-#: includes/constants.php:159
+#: includes/constants.php:133
 msgid "Warm"
 msgstr "Chaud"
 
-#: includes/constants.php:160
+#: includes/constants.php:134
 msgid "Cold"
 msgstr "Froid"
 
-#: includes/constants.php:161
+#: includes/constants.php:135
 msgid "Impersonal"
 msgstr "Impersonnel"
 
-#: includes/constants.php:162
+#: includes/constants.php:136
 msgid "Informative/Educational"
 msgstr "Informatif/Éducatif"
 
-#: includes/constants.php:164
+#: includes/constants.php:138
 msgid "Professional/Formal"
 msgstr "Professionnel/Formel"
 
-#: includes/constants.php:167
+#: includes/constants.php:141
 msgid "Inspirational/Motivational"
 msgstr "Inspirant/motivant"
 
-#: includes/constants.php:168
+#: includes/constants.php:142
 msgid "Entertaining"
 msgstr "Divertissant"
 
-#: includes/constants.php:169
+#: includes/constants.php:143
 msgid "Controversial"
 msgstr "Controversé"
 
-#: includes/constants.php:171
+#: includes/constants.php:145
 msgid "Empathetic"
 msgstr "Empathique"
 
-#: includes/constants.php:172
+#: includes/constants.php:146
 msgid "Personal"
 msgstr "Personnel"
 
-#: includes/constants.php:173
+#: includes/constants.php:147
 msgid "Storytelling"
 msgstr "Contes"
 
-#: includes/constants.php:174
+#: includes/constants.php:148
 msgid "Thought-provoking"
 msgstr "Provoquer la réflexion"
 
-#: includes/constants.php:175
+#: includes/constants.php:149
 msgid "Authentic"
 msgstr "Authentique"
 
-#: includes/constants.php:176
+#: includes/constants.php:150
 msgid "Trustworthy"
 msgstr "Digne de confiance"
 
-#: includes/constants.php:177
+#: includes/constants.php:151
 msgid "Authorial"
 msgstr "Auteur"
 
-#: includes/constants.php:178
+#: includes/constants.php:152
 msgid "Collaborative"
 msgstr "Collaboratif"
 
-#: includes/constants.php:179
+#: includes/constants.php:153
 msgid "Problem-solving"
 msgstr "Résolution de problèmes"
 
-#: includes/constants.php:180
+#: includes/constants.php:154
 msgid "Encouraging"
 msgstr "Encourageant"
 
-#: includes/constants.php:181
+#: includes/constants.php:155
 msgid "Straightforward"
 msgstr "Simple"
 
-#: includes/constants.php:184
+#: includes/constants.php:158
 msgid "Objective"
 msgstr "Objectif"
 
-#: includes/constants.php:186
+#: includes/constants.php:160
 msgid "Simplified"
 msgstr "Simplifié"
 
-#: includes/constants.php:187
+#: includes/constants.php:161
 msgid "Complex"
 msgstr "Complexe"
 
-#: includes/constants.php:188
+#: includes/constants.php:162
 msgid "Curious"
 msgstr "Curieux"
 
-#: includes/constants.php:189
+#: includes/constants.php:163
 msgid "Inspiring"
 msgstr "Inspirant"
 
-#: includes/constants.php:190
+#: includes/constants.php:164
 msgid "Motivating"
 msgstr "Motivation"
 
-#: includes/constants.php:211
+#: includes/constants.php:178
 msgid "Type \"AI+Enter\" for AI, or \"/\" to choose a block"
 msgstr "Tapez “AI+Entrée” pour utiliser l’IA, ou “/“ pour choisir un bloc"
 
@@ -656,12 +675,13 @@ msgstr "Salut %1$s"
 #: includes/init_freemius.php:53
 #, php-format
 msgid ""
-"Please help us improve %2$s! If you opt-in, some data about your usage of %2$s will be "
-"sent to %5$s. If you skip this, that's okay! %2$s will still work just fine."
+"Please help us improve %2$s! If you opt-in, some data about your usage of "
+"%2$s will be sent to %5$s. If you skip this, that's okay! %2$s will still "
+"work just fine."
 msgstr ""
-"Aidez nous svp à améliorer  %2$s! Si vous acceptez, certaines données de votre usage de  "
-"%2$s! Seront envoyées à %5$s. Si vous n’acceptez pas, c’est cool! %2$s fonctionnera "
-"correctement."
+"Aidez nous svp à améliorer  %2$s! Si vous acceptez, certaines données de "
+"votre usage de  %2$s! Seront envoyées à %5$s. Si vous n’acceptez pas, c’est "
+"cool! %2$s fonctionnera correctement."
 
 #: includes/settings.php:12
 msgid "Aiify Blocks"
@@ -670,8 +690,11 @@ msgstr "Aiify Blocks"
 #: includes/settings.php:19
 #, php-format
 msgid ""
-"Welcome to Aiify Blocks, feel to <a href=\"%s\" >contact us</a> if you have any question."
+"Welcome to Aiify Blocks, feel to <a href=\"%s\" >contact us</a> if you have "
+"any question."
 msgstr ""
+"Bienvenue sur Aiify Blocks, n’hésitez pas à <a href=“%s” >nous contacter</a> "
+"si vous avez des questions."
 
 #: includes/settings.php:23
 msgid "Aiify Blocks Settings"
@@ -682,73 +705,93 @@ msgstr "Paramètres Aiify Blocks"
 msgid "Please insert a valid %s"
 msgstr "Veuillez insérer un %s valide"
 
-#: includes/settings.php:40
+#: includes/settings.php:59
 msgid "Open AI Settings"
 msgstr "Paramètres Open AI"
 
-#: includes/settings.php:45
+#: includes/settings.php:64
 msgid "Your Open AI Key"
 msgstr "Votre clé AI ouverte"
 
-#: includes/settings.php:48
+#: includes/settings.php:67
 #, php-format
 msgid "You can get your key here : %s"
 msgstr "Vous pouvez obtenir votre clé ici : %s"
 
-#: includes/settings.php:55
+#: includes/settings.php:74
 msgid "Chat Model"
 msgstr "Modèle de conversation"
 
-#: includes/settings.php:57
+#: includes/settings.php:76
 #, php-format
 msgid ""
-"GPT-4 is currently in a limited beta and only accessible to those who have been granted "
-"access. Please join the <a target='_blank' href='%s'>waitlist</a> to get access when "
-"capacity is available."
+"GPT-4 is currently in a limited beta and only accessible to those who have "
+"been granted access. Please join the <a target='_blank' href='%s'>waitlist</"
+"a> to get access when capacity is available."
 msgstr ""
+"GPT-4 est actuellement en version bêta limitée et accessible uniquement à "
+"ceux qui ont obtenu l’accès. Veuillez vous inscrire à la <a target=‘_blank’ "
+"href=‘%s’>liste d’attente</a> pour y accéder lorsque la capacité est "
+"disponible."
 
-#: includes/settings.php:62
+#: includes/settings.php:81
 msgid "Temparature"
 msgstr "Température"
 
-#: includes/settings.php:69
+#: includes/settings.php:88
 msgid ""
-"Lower temperature means model generates repetitive text like training data. Higher "
-"temperature leads to more varied and creative text."
+"Lower temperature means model generates repetitive text like training data. "
+"Higher temperature leads to more varied and creative text."
 msgstr ""
+"Une température plus basse signifie que le modèle génère du texte répétitif "
+"comme des données d’entraînement. Une température plus élevée conduit à un "
+"texte plus varié et créatif."
 
-#: includes/settings.php:75
+#: includes/settings.php:94
 msgid "Frequency penalty"
 msgstr "Pénalité de fréquence"
 
-#: includes/settings.php:82
+#: includes/settings.php:101
 msgid ""
-"A frequency penalty of 0.5 reduces the likelihood of the model using frequently seen words "
-"or phrases by 50%. A penalty of 1 will eliminate them completely."
+"A frequency penalty of 0.5 reduces the likelihood of the model using "
+"frequently seen words or phrases by 50%. A penalty of 1 will eliminate them "
+"completely."
 msgstr ""
+"Une pénalité de fréquence de 0,5 réduit de 50 % la probabilité que le modèle "
+"utilise des mots ou des expressions fréquemment vus. Une pénalité de 1 les "
+"éliminera complètement."
 
-#: includes/settings.php:87
+#: includes/settings.php:106
 msgid "Presence penalty"
 msgstr "Pénalité de présence"
 
-#: includes/settings.php:94
+#: includes/settings.php:113
 msgid ""
-"With a presence penalty of 0.5, the model reduces the chance of generating words or "
-"phrases not in the training data by 50%. A penalty of 1 avoids all new words or phrases."
+"With a presence penalty of 0.5, the model reduces the chance of generating "
+"words or phrases not in the training data by 50%. A penalty of 1 avoids all "
+"new words or phrases."
 msgstr ""
+"Avec une pénalité de présence de 0,5, le modèle réduit de 50 % le risque de "
+"générer des mots ou des phrases ne figurant pas dans les données "
+"d’entraînement. Une pénalité de 1 évite tous les nouveaux mots ou "
+"expressions."
 
-#: includes/settings.php:103
+#: includes/settings.php:123
 msgid "Writing Settings"
 msgstr "Paramètres Redaction"
 
-#: includes/settings.php:109
+#: includes/settings.php:129
+msgid "Output Language"
+msgstr "Langue de réponse"
+
+#: includes/settings.php:136
 msgid "Writing Style"
 msgstr "Style d'écriture"
 
-#: includes/settings.php:116
+#: includes/settings.php:143
 msgid "Writing Tone"
 msgstr "Tonalité d'écriture"
 
-#: includes/settings.php:123
+#: includes/settings.php:150
 msgid "Maximum words"
 msgstr "Mots maximum"
