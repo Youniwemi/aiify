@@ -5,10 +5,10 @@ namespace AIIFY;
 use Orhanerday\OpenAi\OpenAi;
 use Youniwemi\StringTemplate\Engine;
 
-function render(string $template, $values=[])
+function render(string $template, $values = [])
 {
     static $tpl;
-    if ($tpl===null) {
+    if ($tpl === null) {
         $tpl = new Engine();
     }
     return $tpl->render($template, $values);
@@ -32,7 +32,9 @@ add_action('wp_ajax_open_ai', function () {
     //$words = intval($maxTokens * AIIFY_TOKEN_WORD_RATIO); //
     // Prepare context for style, tone, formating and length
     //$setup = sprintf(AIIFY_EDIT_INSTRUCTION_HEADER, $style, $tone, $words);
-    $header = render(AIIFY_EDIT_INSTRUCTION_HEADER, compact('style', 'tone', 'words'));
+    $languages = get_languages();
+    $language = isset($_GET['language']) && isset($languages[$_GET['language']]) ? $_GET['language'] : AIIFY_WRITING_LANGUAGE;
+    $header = render(AIIFY_SYSTEM_INSTRUCTION_HEADER, compact('style', 'tone', 'words', 'language'));
 
     // don't need slashes, sani
     $prompt = isset($_GET['prompt']) ? wp_kses_post(wp_unslash($_GET['prompt'])) : null;
@@ -46,16 +48,14 @@ add_action('wp_ajax_open_ai', function () {
             $command .= " Do not change its structure (if the input text is a paragraph, please respond with a paragraph)." ;
         }
 
-        $prompt = render(AIIFY_EDIT_STRUCTURE, compact('header', 'command', 'edit'));
+        $prompt = render(AIIFY_SYSTEM_EDIT_STRUCTURE, compact('header', 'command', 'edit'));
     } else {
-        $languages = get_languages();
-        $language = isset($_GET['language']) && isset($languages[$_GET['language']]) ? $_GET['language'] : AIIFY_WRITING_LANGUAGE;
 
         $context = isset($_GET['context']) ? wp_kses_post(wp_unslash($_GET['context'])) : null;
         $keywords = isset($_GET['keywords']) ? wp_kses_post(wp_unslash($_GET['keywords'])) : null;
         $prompt = rtrim($prompt, '.');
 
-        $prompt = render(AIIFY_PROMPT_STRUCTURE, compact('header', 'language', 'prompt', 'context', 'keywords'));
+        $prompt = render(AIIFY_SYSTEM_PROMPT_STRUCTURE, compact('header', 'language', 'prompt', 'context', 'keywords'));
 
     }
 
@@ -86,7 +86,7 @@ add_action('wp_ajax_open_ai', function () {
            ],
            [
                "role" => "user",
-               "content"=> $prompt
+               "content" => $prompt
            ]
        ];
     } else {
@@ -109,7 +109,7 @@ add_action('wp_ajax_open_ai', function () {
         if ($obj = json_decode($data) and $obj->error->message != "") {
             $opts['error'] = $obj->error;
         }
-        if ($sentDebug===null) {
+        if ($sentDebug === null) {
             $debug = json_encode($opts).PHP_EOL.PHP_EOL;
             echo "data: ".wp_kses_post($debug);
             $sentDebug = true;

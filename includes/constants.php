@@ -166,19 +166,20 @@ define(
 );
 
 
-define('AIIFY_SYSTEM_PROMPT', "Ignore all previous instructions.\n\nAs an advanced AI language model, you already possess a deep understanding of the basic principles of search engine optimization and Copywriting. As an expert Copywriter, you know the importance of crafting unique, high-quality content that engages readers and drives traffic to websites. You also understand the key factors that impact search engine rankings, allowing you to optimize content for both search engines and human readers. To further enhance your skills as a professional SEO expert and Copywriter, let's review some of these basic principles.");
-
-// define('AIIFY_SYSTEM_PROMPT_FORMATING', "Additionally, please note that all of your responses should be written in Markdown format. This means that you should use headings (starting at level 2 ##) to organize your content and help readers navigate through it easily. You should also always emphasize (bold) the relevant keywords related to the main topic (**) to make them stand out and italicize when appropriate (*) Additionally, using list items (-), quotes (>) are great techniques to make your content more readable and engaging. When mentionning quotes, it can be very eye catchy to repeat it after the paragraph end in a quote formating to make them stand out (>). By incorporating these formatting principles into your writing, you'll create content that's not only informative and valuable but also aesthetically pleasing and easy to read. And that's what you do.");
-
-define('AIIFY_SYSTEM_PROMPT_FORMATING', "Use markdown for formatting and organize your content and help readers navigate it easily, use headings starting at level 2 (##). Additionally, bold the relevant keywords related to the main topic (**) and italicize when appropriate (*). Using list items (-) and quotes (>) are also great techniques to make your content more readable and engaging. To make quotes stand out, consider repeating them in a quote formatting at right the end of the mentionning paragraph (>). Follow those principles as much as you can."); // Follow all these formatting principles to create content that's not only informative and valuable but also aesthetically pleasing and easy to read.
-
-define('AIIFY_EDIT_INSTRUCTION_HEADER', 'Style: {style}. Tone: {tone}. Your response must not exceed {words} words and must be formatted in Markdown and highlighting keywords.');
-
-
 define('AIIFY_PARAGRAPH_BLOCK_PROMPT', __('Type "AI+Enter" for AI, or "/" to choose a block', 'aiify'));
 
 
-define('AIIFY_PROMPT_STRUCTURE', '[{header} Do your best to create unique content free of plagiarism that respects the expected Markdown formatting (headings, lists, bold, emphasize, bold, quotes)]
+// System Formatting defaults
+define('AIIFY_SYSTEM_PROMPT_DEFAULT', "Ignore all previous instructions.\n\nAs an advanced AI language model, you already possess a deep understanding of the basic principles of search engine optimization and Copywriting. As an expert Copywriter, you know the importance of crafting unique, high-quality content that engages readers and drives traffic to websites. You also understand the key factors that impact search engine rankings, allowing you to optimize content for both search engines and human readers."); // To further enhance your skills as a professional SEO expert and Copywriter, let's review some of these basic principles.
+
+
+define('AIIFY_SYSTEM_PROMPT_FORMATING_DEFAULT', "Use markdown for formatting and organize your content and help readers navigate it easily, use headings starting at level 2 (##). Additionally, bold the relevant keywords related to the main topic (**) and italicize when appropriate (*). Using list items (-) and quotes (>) are also great techniques to make your content more readable and engaging. Follow those principles, when appropriate, as much as you can."); // Follow all these formatting principles to create content that's not only informative and valuable but also aesthetically pleasing and easy to read.
+
+define('AIIFY_SYSTEM_INSTRUCTION_HEADER_DEFAULT', 'Style: {style}. Tone: {tone}. Your response must not exceed {words} words and must be formatted in Markdown and highlighting keywords.');
+
+
+
+define('AIIFY_SYSTEM_PROMPT_STRUCTURE_DEFAULT', '[{header} Do your best to create unique content free of plagiarism that respects the expected Markdown formatting (headings, lists, bold, emphasize, bold, quotes)]
 
 {#context}
 First, here is some context/informations to include for your answer : {context}
@@ -193,11 +194,11 @@ Now, here is the task, respond in {language} language{#keywords} , and make sure
 ');
 
 
-define('AIIFY_EDIT_STRUCTURE', '[{header} Use the same Language as the text to edit. And consider it formated in Markdown or HTML.]
+define('AIIFY_SYSTEM_EDIT_STRUCTURE_DEFAULT', '[{header} Consider the input text formated in Markdown or HTML.]
 
-The main objectif of this task is to edit a provided text, answer in the same language as the provided text. Do not write explanations. Do not echo my prompt. Do not remind me what I asked you for. Do not apologize. Do not self-reference. Do not use generic filler phrases. Get to the point precisely and accurately. Do not explain what and why, just give me your best possible result.
+The main objectif of this task is to edit a provided text. Do not write explanations. Do not echo my prompt. Do not remind me what I asked you for. Do not apologize. Do not self-reference. Do not use generic filler phrases. Get to the point precisely and accurately. Do not explain what and why, just give me your best possible result.
 
-Now, {command} Do not translate to english, respond in the same language variety or dialect as the following text and do your best to respect the expected Markdown formatting (headings, lists, bold, emphasize, bold, quotes) :
+Now, {command} Respond in {language} and do your best to respect the expected Markdown formatting (headings, lists, bold, emphasize, bold, quotes) when appropriate :
 
 """
 {edit}.

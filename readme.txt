@@ -2,10 +2,10 @@
 Contributors: rahal.aboulfeth
 Tags: chatgpt, ai, block, seo, openai, content, copywriting
 Requires at least: 5.0
-Tested up to: 6.4.1
+Tested up to: 6.4.2
 Requires PHP: 7.4
 License: GPL
-Stable tag: 0.1.2
+Stable tag: 0.1.3
 
 Create high-quality content quickly with AI-powered copywriting, and optimize your existing content with advanced editing capabilities. Aiify Blocks uses ChatGPT AI technology within the WordPress block editor to help you generate new content and enhance your existing text for SEO and conversions.
 
@@ -76,6 +76,10 @@ To create new content with Aiify Blocks, simply add Aiify Block to your page, po
 
 When selecting the Aiify Block or any Aiify Enhanced Block, you'll see customization options in the editor's side panel. From there, you can adjust the maximum words, tone, and style.
 
+= How can I customize the prompts content? =
+
+You can customize the system prompts in the setting section
+
 = Is this plugin compatible with the classic editor =
 
 Sorry, for now, this plugin is only usable via the block editor (Gutenberg). It can't be used to write and edit content in the classic editor. However, it can be used in Full Site Editor if your theme is FSE compatible.
@@ -108,6 +112,10 @@ Big Thanks to :
 
 
 == Changelog ==
+= 0.1.3 : Configurable system prompts and templates
+- System prompts can be configured now in settings
+- Fix bug : sometimes, ai answers in a random langage while editing. Now, aiify will consistently use the language specified in the configuration or sidebar settings.
+- Sidebar : Added a textarea showing the latest prompt (to help debug, inderstand, then improve the prompts)
 = 0.1.2 : Fix bug corrupted install
 - For some reason, a directory is missing after an install via wordpress plugin installer, this version is an attempt ti fix this by renaming the directory that was missing from the plugin
 = 0.1.1 : Extra context and keywords

@@ -14,7 +14,7 @@ class Settings extends \WP_Settings_Kit
 
     public function plugin_page()
     {
-        if (isset($_GET['welcome-message']) && $_GET['welcome-message'] =='true') {
+        if (isset($_GET['welcome-message']) && $_GET['welcome-message'] == 'true') {
             echo '<div class="notice notice-success is-dismissible"><p>'.
             sprintf(__('Welcome to Aiify Blocks, feel to <a href="%s" >contact us</a> if you have any question.', 'aiify'), aii_fs()->contact_url()).
             '</p></div>';
@@ -64,7 +64,7 @@ function settings()
                 'title' => __('Your Open AI Key', 'aiify') ,
                 'default' => '' ,
                 'placeholder' => 'sk-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
-                'description'=> sprintf(esc_html__("You can get your key here : %s", 'aiify'), '<a href="https://platform.openai.com/" target="_blank"> https://platform.openai.com/</a>')
+                'description' => sprintf(esc_html__("You can get your key here : %s", 'aiify'), '<a href="https://platform.openai.com/" target="_blank"> https://platform.openai.com/</a>')
 
             ] ,
             [
@@ -85,7 +85,7 @@ function settings()
                     'max' => 1 ,
                     'step' => 0.1
                 ],
-                'description'=> __("Lower temperature means model generates repetitive text like training data. Higher temperature leads to more varied and creative text.", 'aiify')
+                'description' => __("Lower temperature means model generates repetitive text like training data. Higher temperature leads to more varied and creative text.", 'aiify')
 
             ] ,
             [
@@ -98,7 +98,7 @@ function settings()
                     'max' => 1 ,
                     'step' => 0.1
                 ],
-                'description'=> __("A frequency penalty of 0.5 reduces the likelihood of the model using frequently seen words or phrases by 50%. A penalty of 1 will eliminate them completely.", 'aiify')
+                'description' => __("A frequency penalty of 0.5 reduces the likelihood of the model using frequently seen words or phrases by 50%. A penalty of 1 will eliminate them completely.", 'aiify')
             ] ,
             [
                 'id' => 'PRESENCE_PENALTY',
@@ -110,7 +110,7 @@ function settings()
                     'max' => 1 ,
                     'step' => 0.1
                 ],
-                'description'=> __("With a presence penalty of 0.5, the model reduces the chance of generating words or phrases not in the training data by 50%. A penalty of 1 avoids all new words or phrases.", 'aiify')
+                'description' => __("With a presence penalty of 0.5, the model reduces the chance of generating words or phrases not in the training data by 50%. A penalty of 1 avoids all new words or phrases.", 'aiify')
 
             ] ,
 
@@ -159,9 +159,56 @@ function settings()
         ],
     ];
 
+    $prompts_settings = [
+        'name' => 'AIIFY_SYSTEM',
+        'title' => __('System Prompts and templates', 'aiify'),
+        'fields' => [
+            [
+                'id' => 'PROMPT',
+                'type' => 'textarea',
+                'default' => AIIFY_SYSTEM_PROMPT_DEFAULT ,
+                'placeholder' => AIIFY_SYSTEM_PROMPT_DEFAULT ,
+                'title' => __('Main system prompt, sets up the "ai personnality"', 'aiify') ,
+            ] ,
+            [
+                'id' => 'PROMPT_FORMATING',
+                'type' => 'textarea',
+                'default' => AIIFY_SYSTEM_PROMPT_FORMATING_DEFAULT ,
+                'placeholder' => AIIFY_SYSTEM_PROMPT_FORMATING_DEFAULT ,
+                'title' => __('Formatting (be very careful while changing)', 'aiify')
+            ],
+            [
+                'id' => 'INSTRUCTION_HEADER',
+                'type' => 'textarea',
+                'default' => AIIFY_SYSTEM_INSTRUCTION_HEADER_DEFAULT ,
+                'placeholder' => AIIFY_SYSTEM_INSTRUCTION_HEADER_DEFAULT ,
+                'title' => __('Instructions about style, tone, language, words..', 'aiify'),
+                'description' => "You can use those variables {style}. {tone}, {words}, {language}"
+            ],
+            [
+                'id' => 'PROMPT_STRUCTURE',
+                'type' => 'textarea',
+                'default' => AIIFY_SYSTEM_PROMPT_STRUCTURE_DEFAULT ,
+                'placeholder' => AIIFY_SYSTEM_PROMPT_STRUCTURE_DEFAULT ,
+                'title' => __('Create a new content prompt structure', 'aiify'),
+                'description' => "You can use those variables {header}. {context}, {keywords}, {prompt}"
+            ],
+            [
+                'id' => 'EDIT_STRUCTURE',
+                'type' => 'textarea',
+                'default' => AIIFY_SYSTEM_EDIT_STRUCTURE_DEFAULT ,
+                'placeholder' => AIIFY_SYSTEM_EDIT_STRUCTURE_DEFAULT ,
+                'title' => __('Edit a content prompt structure', 'aiify'),
+                'description' => "You can use those variables {style}. {command}, {language}, {header}"
+            ]
+
+        ],
+    ];
+
     return [
         'AIIFY_OPEN_AI' => $openai_settings ,
-        'AIIFY_WRITING' => $writing_settings
+        'AIIFY_WRITING' => $writing_settings ,
+        'AIIFY_SYSTEM' => $prompts_settings
     ];
 }
 
