@@ -14,9 +14,10 @@ class Settings extends \WP_Settings_Kit
 
     public function plugin_page()
     {
+        // phpcs:ignore WordPress.Security.NonceVerification.Recommended
         if (isset($_GET['welcome-message']) && $_GET['welcome-message'] == 'true') {
             echo '<div class="notice notice-success is-dismissible"><p>'.
-            sprintf(__('Welcome to Aiify Blocks, feel to <a href="%s" >contact us</a> if you have any question.', 'aiify'), aii_fs()->contact_url()).
+            sprintf(__('Welcome to Aiify Blocks, feel to <a href="%s" >contact us</a> if you have any question.', 'aiify'), esc_url(aii_fs()->contact_url())).
             '</p></div>';
         }
         echo '<div class="wrap">';
@@ -183,7 +184,7 @@ function settings()
                 'default' => AIIFY_SYSTEM_INSTRUCTION_HEADER_DEFAULT ,
                 'placeholder' => AIIFY_SYSTEM_INSTRUCTION_HEADER_DEFAULT ,
                 'title' => __('Instructions about style, tone, language, words..', 'aiify'),
-                'description' => "You can use those variables {style}. {tone}, {words}, {language}"
+                'description' => "You can use those variables {style}. {tone}, {maxWords}, {language}"
             ],
             [
                 'id' => 'PROMPT_STRUCTURE',
@@ -191,7 +192,7 @@ function settings()
                 'default' => AIIFY_SYSTEM_PROMPT_STRUCTURE_DEFAULT ,
                 'placeholder' => AIIFY_SYSTEM_PROMPT_STRUCTURE_DEFAULT ,
                 'title' => __('Create a new content prompt structure', 'aiify'),
-                'description' => "You can use those variables {header}. {context}, {keywords}, {prompt}"
+                'description' => "You can use those variables {header}. {context}, {keywords}, {prompt}, {maxWords}"
             ],
             [
                 'id' => 'EDIT_STRUCTURE',
@@ -199,9 +200,8 @@ function settings()
                 'default' => AIIFY_SYSTEM_EDIT_STRUCTURE_DEFAULT ,
                 'placeholder' => AIIFY_SYSTEM_EDIT_STRUCTURE_DEFAULT ,
                 'title' => __('Edit a content prompt structure', 'aiify'),
-                'description' => "You can use those variables {style}. {command}, {language}, {header}"
+                'description' => "You can use those variables {style}. {command}, {language}, {header}, {maxWords}"
             ]
-
         ],
     ];
 
@@ -211,6 +211,20 @@ function settings()
         'AIIFY_SYSTEM' => $prompts_settings
     ];
 }
+
+add_action('wsa_form_bottom_AIIFY_SYSTEM', function () {
+    $revertAction = wp_nonce_url(admin_url("admin-ajax.php?action=aiify_reset_prompt"), 'aiify_reset_prompt', 'aiify_settings_nonce');
+    ?>
+    <p class="notice-error notice" style="padding:1em">Danger Zone : <a class="button" href="<?php echo esc_url($revertAction);?>">Revert to default prompts</a></p>
+    <?php
+});
+
+add_action('wp_ajax_aiify_reset_prompt', function () {
+    check_ajax_referer('aiify_reset_prompt', 'aiify_settings_nonce');
+    update_option('AIIFY_SYSTEM', []);
+    wp_safe_redirect(admin_url("admin.php?page=aiify"));
+    exit;
+});
 
 add_action('plugins_loaded', function () {
     load_plugin_textdomain('aiify', false, dirname(plugin_basename(__FILE__)) . '/languages');

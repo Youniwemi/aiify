@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aiify\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-18 13:06+0100\n"
+"POT-Creation-Date: 2023-12-24 00:24+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Rahal <rahal.aboulfeth@gmail.com>\n"
 "Language-Team: \n"
@@ -11,114 +11,119 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.4.1\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;esc_attr_e;esc_attr__;esc_html__;esc_html_e\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: node_modules\n"
 "X-Poedit-SearchPathExcluded-1: vendor\n"
+"X-Poedit-SearchPathExcluded-2: aiify-block/build\n"
 
-#: aiify.php:42
-msgid "To start using AIIFY Blocks, please setup you OpenAi Key"
-msgstr "لبدء استخدام AIIFY Blocks ، يرجى إعداد OpenAi Key"
-
-#: aiify.php:43
-msgid "Go to Aiify Blocks settings"
-msgstr "انتقل إلى إعدادات Aiify Blocks"
-
-#: aiify/src/aiify__premium_only.js:32
+#: aiify-block/src/aiify__premium_only.js:30
 msgid "How would you like to edit this text?"
 msgstr "كيف تريد تحرير هذا النص؟"
 
-#: aiify/src/aiify__premium_only.js:36
+#: aiify-block/src/aiify__premium_only.js:37
 msgid "You can ask for specific edits like : Translate to german"
 msgstr "يمكنك طلب تعديلات معينة مثل: الترجمة إلى الألمانية"
 
-#: aiify/src/aiify__premium_only.js:39
+#: aiify-block/src/aiify__premium_only.js:42
 msgid "Cancel"
 msgstr "إلغاء"
 
-#: aiify/src/aiify__premium_only.js:42
+#: aiify-block/src/aiify__premium_only.js:48
 msgid "Edit"
 msgstr "تحرير"
 
-#: aiify/src/edit.js:94
+#: aiify-block/src/edit.js:110
+msgid "Clear"
+msgstr "واضح"
+
+#: aiify-block/src/edit.js:115
 msgid "Select a content type"
 msgstr "حدد نوع المحتوى"
 
-#: aiify/src/edit.js:111
+#: aiify-block/src/edit.js:134
 msgid "What do you want to write today?"
 msgstr "ماذا تريد أن تكتب اليوم؟"
 
-#: aiify/src/edit.js:121
+#: aiify-block/src/edit.js:147
 msgid "Add key information to include in the content?"
 msgstr "هل ترغب في إضافة معلومات أساسية لتضمينها في المحتوى؟"
 
-#: aiify/src/edit.js:130
+#: aiify-block/src/edit.js:159
 msgid "Add keywords to highlight in the content? (comma separated keywords)"
 msgstr ""
 "هل ترغب في إضافة كلمات رئيسية لتسليط الضوء عليها في المحتوى؟ (كلمات رئيسية "
 "مفصولة بفواصل)"
 
-#: aiify/src/edit.js:138
+#: aiify-block/src/edit.js:174
 msgid "Write"
 msgstr "اكتب"
 
-#: aiify/src/edit.js:139
-msgid "Clear"
-msgstr "واضح"
-
-#: aiify/src/panel.js:32
+#: aiify-block/src/panel.js:29
 msgid "Max words to generate"
 msgstr "أقصى عدد كلمات لتوليد"
 
-#: aiify/src/panel.js:33
+#: aiify-block/src/panel.js:30
 msgid "Do not exceed this value"
 msgstr "لا تتجاوز هذه القيمة"
 
-#: aiify/src/panel.js:41
+#: aiify-block/src/panel.js:39
 msgid "Select writing style"
 msgstr "حدد أسلوب الكتابة"
 
-#: aiify/src/panel.js:53
+#: aiify-block/src/panel.js:49
 msgid "Select writing tone"
 msgstr "تحديد نغمة الكتابة"
 
-#: aiify/src/panel.js:65
+#: aiify-block/src/panel.js:59
 msgid "Select an output language"
 msgstr "حدد لغة الإخراج"
 
-#: aiify/src/panel.js:83
+#: aiify-block/src/panel.js:86
 msgid "Aiify Settings"
 msgstr "إعدادات Aiify"
 
-#: aiify/src/toolbar.js:113
+#: aiify-block/src/panel.js:91
+msgid "Last Prompt"
+msgstr "الموجه الأخير"
+
+#: aiify-block/src/toolbar.js:126
 msgid "Custom edit"
 msgstr "تعديل مخصص"
 
-#: aiify/src/toolbar.js:150
+#: aiify-block/src/toolbar.js:160
 msgid "Aiify me"
 msgstr "هيا لي"
 
-#: aiify/src/toolbar.js:154
+#: aiify-block/src/toolbar.js:166
 msgid "Review or edit this block"
 msgstr "مراجعة أو تحرير هذه المجموعة"
 
-#: aiify/src/toolbar.js:157
+#: aiify-block/src/toolbar.js:178
 msgid "Generate and prepend based on this block"
 msgstr "التوليد والاعتماد المسبق على أساس هذه المجموعة"
 
-#: aiify/src/toolbar.js:160
+#: aiify-block/src/toolbar.js:190
 msgid "Generate and append based on this block"
 msgstr "إنشاء وإلحاق بناءً على هذه المجموعة"
 
-#: aiify/src/toolbar.js:169
+#: aiify-block/src/toolbar.js:207
 msgid "Custom command"
 msgstr "أمر مخصص"
 
-#: aiify/src/tools.js:112
+#: aiify-block/src/tools.js:109
 msgid "Please wait..."
 msgstr "انتظر من فضلك ..."
+
+#: aiify.php:66
+msgid "To start using AIIFY Blocks, please setup you OpenAi Key"
+msgstr "لبدء استخدام AIIFY Blocks ، يرجى إعداد OpenAi Key"
+
+#: aiify.php:67
+msgid "Go to Aiify Blocks settings"
+msgstr "انتقل إلى إعدادات Aiify Blocks"
 
 #: includes/constants.php:19
 msgid "Write a blog post about"
@@ -661,7 +666,7 @@ msgstr "ملهم"
 msgid "Motivating"
 msgstr "التحفيز"
 
-#: includes/constants.php:178
+#: includes/constants.php:169
 msgid "Type \"AI+Enter\" for AI, or \"/\" to choose a block"
 msgstr "اكتب “AI + Enter” للحصول على الذكاء الاصطناعي، أو “/“ لاختيار كتلة"
 
@@ -789,3 +794,27 @@ msgstr "نغمة الكتابة"
 #: includes/settings.php:150
 msgid "Maximum words"
 msgstr "أقصى عدد من الكلمات"
+
+#: includes/settings.php:164
+msgid "System Prompts and templates"
+msgstr "إشارات النظام والقوالب"
+
+#: includes/settings.php:171
+msgid "Main system prompt, sets up the \"ai personnality\""
+msgstr "الإشارة الرئيسية للنظام، تهيء ‘شخصية الذكاء الاصطناعي"
+
+#: includes/settings.php:178
+msgid "Formatting (be very careful while changing)"
+msgstr "تنسيق (كن حذرًا جدًا أثناء التغيير)"
+
+#: includes/settings.php:185
+msgid "Instructions about style, tone, language, words.."
+msgstr "تعليمات حول الأسلوب، والنبرة، واللغة، والكلمات.."
+
+#: includes/settings.php:193
+msgid "Create a new content prompt structure"
+msgstr "إنشاء هيكل توجيه محتوى جديد"
+
+#: includes/settings.php:201
+msgid "Edit a content prompt structure"
+msgstr "تحرير هيكل توجيه المحتوى"

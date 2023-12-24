@@ -6,7 +6,7 @@
         "youniwemi/string-template": "~0.2"
     } ,
    "scripts": {
-		"cs": "phpcs --standard=phpcs.xml .",
+		"cs": "phpcs -s --standard=phpcs.xml .",
 		"cbf": "phpcbf --standard=phpcs.xml ."
 	}
 }

@@ -24,22 +24,25 @@ add_action('wp_ajax_open_ai', function () {
 
     $open_ai = new OpenAi(AIIFY_OPEN_AI_KEY);
     // Make sur style and tone are in our list of styles and tones
-    $style = isset($_GET['style']) && isset(AIIFY_STYLES[ $_GET['style'] ]) ? $_GET['style'] : AIIFY_WRITING_STYLE;
+    // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized, WordPress.Security.ValidatedSanitizedInput.MissingUnslash
+    $style = isset($_GET['style']) && isset(AIIFY_STYLES[ $_GET['style']]) ? $_GET['style'] : AIIFY_WRITING_STYLE;
+    // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized, WordPress.Security.ValidatedSanitizedInput.MissingUnslash
     $tone = isset($_GET['tone']) && isset(AIIFY_TONES[ $_GET['tone'] ]) ? $_GET['tone'] : AIIFY_WRITING_TONE;
-    $words = isset($_GET['maxWords']) ? intval($_GET['maxWords']) : AIIFY_WRITING_MAX_WORDS;
+    // keep words for compatibility
+    $maxWords = $words = isset($_GET['maxWords']) ? intval($_GET['maxWords']) : AIIFY_WRITING_MAX_WORDS;
 
     $tpl = new Engine();
-    //$words = intval($maxTokens * AIIFY_TOKEN_WORD_RATIO); //
+
     // Prepare context for style, tone, formating and length
-    //$setup = sprintf(AIIFY_EDIT_INSTRUCTION_HEADER, $style, $tone, $words);
     $languages = get_languages();
+    // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized, WordPress.Security.ValidatedSanitizedInput.MissingUnslash
     $language = isset($_GET['language']) && isset($languages[$_GET['language']]) ? $_GET['language'] : AIIFY_WRITING_LANGUAGE;
-    $header = render(AIIFY_SYSTEM_INSTRUCTION_HEADER, compact('style', 'tone', 'words', 'language'));
+    $header = render(AIIFY_SYSTEM_INSTRUCTION_HEADER, compact('style', 'tone', 'words', 'maxWords', 'language'));
 
     // don't need slashes, sani
     $prompt = isset($_GET['prompt']) ? wp_kses_post(wp_unslash($_GET['prompt'])) : null;
     if (isset($_GET['edit'])) {
-        $edit = wp_kses_post($_GET['edit']) ;
+        $edit = wp_kses_post(wp_unslash($_GET['edit'])) ;
         $commads = array_merge(AIIFY_EDIT_PROMPTS, AIIFY_GENERATE_AFTER_PROMPTS, AIIFY_GENERATE_BEFORE_PROMPTS);
 
         $command = isset($commads[ $prompt ]) ? $commads[$prompt] : $prompt ;
@@ -48,22 +51,16 @@ add_action('wp_ajax_open_ai', function () {
             $command .= " Do not change its structure (if the input text is a paragraph, please respond with a paragraph)." ;
         }
 
-        $prompt = render(AIIFY_SYSTEM_EDIT_STRUCTURE, compact('header', 'command', 'edit'));
+        $prompt = render(AIIFY_SYSTEM_EDIT_STRUCTURE, compact('header', 'command', 'edit', 'maxWords', 'words'));
     } else {
 
         $context = isset($_GET['context']) ? wp_kses_post(wp_unslash($_GET['context'])) : null;
         $keywords = isset($_GET['keywords']) ? wp_kses_post(wp_unslash($_GET['keywords'])) : null;
         $prompt = rtrim($prompt, '.');
 
-        $prompt = render(AIIFY_SYSTEM_PROMPT_STRUCTURE, compact('header', 'language', 'prompt', 'context', 'keywords'));
+        $prompt = render(AIIFY_SYSTEM_PROMPT_STRUCTURE, compact('header', 'language', 'prompt', 'context', 'keywords', 'maxWords', 'words'));
 
     }
-
-
-    // Total input words
-    // $count_words_input = str_word_count(AIIFY_SYSTEM_PROMPT) + str_word_count($prompt);
-    // total allowed response
-    // $max_response = $words - $count_words_input;
 
     $isStream = !isset($_GET['nostream']);
     $method =  substr(AIIFY_CHAT_MODEL, 0, 3) == 'gpt' ? 'chat' : 'completion';

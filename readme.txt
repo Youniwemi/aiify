@@ -5,17 +5,18 @@ Requires at least: 5.0
 Tested up to: 6.4.2
 Requires PHP: 7.4
 License: GPL
-Stable tag: 0.1.3
+Stable tag: 0.1.4
 
 Create high-quality content quickly with AI-powered copywriting, and optimize your existing content with advanced editing capabilities. Aiify Blocks uses ChatGPT AI technology within the WordPress block editor to help you generate new content and enhance your existing text for SEO and conversions.
 
 == Description ==
 
 
-Simplify your content creation process with **Aiify Blocks**, the AI-powered **WordPress plugin** that allows you to **generate new content** and **enhance existing text** using the power of **ChatGPT 3 & 4 models**. With **ultra-customizable** generation and **seamless integration** with the WordPress **block editor**, you can easily insert AI-generated content directly into your **pages** and **articles**, complete with structured **headings**, **lists**, **bold keywords**, and more. **Aiify Blocks** is perfect for **bloggers**, **writers**, and anyone looking to elevate their content game.
+Simplify your content creation process with **Aiify Blocks**, the AI-powered **WordPress plugin** that allows you to **generate new content** and **enhance existing text** using the power of **ChatGPT 3 & 4 models**. With **ultra-customizable** generation and **seamless integration** with the WordPress **block editor**, you can easily insert AI-generated content directly into your **pages** and **articles**, complete with structured **headings**, **lists**, **bold keywords**, and more. Aiify Blocks is perfect for **bloggers**, **writers**, and anyone looking to elevate their content game.
 
-Effortlessly create **compelling** and **SEO-optimized content** with **Aiify Blocks**. Our AI-powered plugin for **WordPress** simplifies the **content generation** and **editing process**, with the ability to **highlight keywords**, **insert lists**, and more. **Aiify Blocks** is compatible with the block editor and can be used directly from the **WordPress customizer** or the FSE (full site editor), streamlining your content creation process and enhancing the quality of your website's copy.
+Effortlessly create **compelling** and **SEO-optimized content** with **Aiify Blocks**. Our AI-powered plugin for **WordPress** simplifies the **content generation** and **editing process**, with the ability to **highlight keywords**, **insert lists**, and more. Aiify Blocks is compatible with the block editor and can be used directly from the **WordPress customizer** or the FSE (full site editor), streamlining your content creation process and enhancing the quality of your website's copy.
 
+Moreover, Aiify is not only Block Compatible; it extends its functionality to every TinyMCE content editor thanks to the Tinymce plugin button.
 
 
 == OPEN AI ==
@@ -40,8 +41,8 @@ Customize the style and tone of your content for maximum flexibility.
 = Optimized Formatting =
 AI-generated content is already formatted using Blocks such as Headings, Lists, Paragraphs, and Quotes as well as inline styles such as bolding and italic.
 
-= Preconfigured Prompts =
-Preconfigured prompts for SEO-optimized and engaging generated content
+= Preconfigured and Customizable Prompts for SEO-Optimized Content =
+Explore our preconfigured prompts designed to help you create SEO-optimized and engaging content. Tailor these prompts to your specific needs and enjoy the flexibility of customizable content generation.
 
 = High-Quality Content =
 Create high-quality content that engages and converts your audience
@@ -82,7 +83,11 @@ You can customize the system prompts in the setting section
 
 = Is this plugin compatible with the classic editor =
 
-Sorry, for now, this plugin is only usable via the block editor (Gutenberg). It can't be used to write and edit content in the classic editor. However, it can be used in Full Site Editor if your theme is FSE compatible.
+Yes, Exciting, right? We've just introduced a new plugin for TinyMCE that seamlessly integrates aiify, your AI-powered content assistant. This plugin adds a convenient button to your TinyMCE editor's toolbar, allowing you to effortlessly access the aiify prompter. Currently, our support enables you to create fresh, high-quality content with AI assistance. But stay tuned because in the near future, you'll also be able to utilize aiify to enhance and edit your existing content.
+
+= Is this plugin compatible with WooCommerce =
+
+Yes, you'll be able to use Aiify Blocks with WooCommerce. You can utilize it to enhance your product descriptions effortlessly, leveraging its capabilities to craft captivating and compelling product descriptions.
 
 = Aiify plugin is great, how can I show my appreciation? =
 
@@ -107,11 +112,16 @@ We're glad you love our plugin! You can show your support by subscribing to the 
 Big Thanks to : 
 - [orhanerday](https://github.com/orhanerday/open-ai) for great library "OpenAI GPT-3 Api Client in PHP"
 - [SamHerbert](https://github.com/SamHerbert/SVG-Loaders) for the smooth svg animation
-- [Freemius](https://github.com/SamHerbert/SVG-Loaders) for the smooth svg animation
+- [Freemius](https://github.com/SamHerbert/SVG-Loaders) for plugin freemium experience
 - [Youniwemi](https://packagist.org/packages/youniwemi/wp-settings-kit) for wp-settings-kit - the lightweight library for easily creating WordPress settings pages and Post metaboxes 
 
 
 == Changelog ==
+= 0.1.4 : TinyMCE AI Content Generation and WooCommerce Compatibility
+- Introducing a new Tinymce plugin: a convenient button to access the Aiify Prompter.
+- Added the option to reset default prompts
+- Enhanced prompting mechanisms to ensure content stays within specified word limits.
+- Updated dependencies to latest versions
 = 0.1.3 : Configurable system prompts and templates
 - System prompts can be configured now in settings
 - Fix bug : sometimes, ai answers in a random langage while editing. Now, aiify will consistently use the language specified in the configuration or sidebar settings.

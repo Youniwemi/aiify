@@ -175,7 +175,7 @@ define('AIIFY_SYSTEM_PROMPT_DEFAULT', "Ignore all previous instructions.\n\nAs a
 
 define('AIIFY_SYSTEM_PROMPT_FORMATING_DEFAULT', "Use markdown for formatting and organize your content and help readers navigate it easily, use headings starting at level 2 (##). Additionally, bold the relevant keywords related to the main topic (**) and italicize when appropriate (*). Using list items (-) and quotes (>) are also great techniques to make your content more readable and engaging. Follow those principles, when appropriate, as much as you can."); // Follow all these formatting principles to create content that's not only informative and valuable but also aesthetically pleasing and easy to read.
 
-define('AIIFY_SYSTEM_INSTRUCTION_HEADER_DEFAULT', 'Style: {style}. Tone: {tone}. Your response must not exceed {words} words and must be formatted in Markdown and highlighting keywords.');
+define('AIIFY_SYSTEM_INSTRUCTION_HEADER_DEFAULT', 'Style: {style}. Tone: {tone}. It is very important that your response must be formatted in Markdown and highlighting keywords.');
 
 
 
@@ -185,7 +185,7 @@ define('AIIFY_SYSTEM_PROMPT_STRUCTURE_DEFAULT', '[{header} Do your best to creat
 First, here is some context/informations to include for your answer : {context}
 {/context}
 
-Now, here is the task, respond in {language} language{#keywords} , and make sure to include and highlight the following comma seperated keywords in your answer using markdown (*) "{keywords}"
+Now, here is the task, respond in {language} language in less than {maxWords} words{#keywords} , and make sure to include and highlight the following comma seperated keywords in your answer using markdown (*) "{keywords}"
 {/keywords} :
 
 """
@@ -198,7 +198,7 @@ define('AIIFY_SYSTEM_EDIT_STRUCTURE_DEFAULT', '[{header} Consider the input text
 
 The main objectif of this task is to edit a provided text. Do not write explanations. Do not echo my prompt. Do not remind me what I asked you for. Do not apologize. Do not self-reference. Do not use generic filler phrases. Get to the point precisely and accurately. Do not explain what and why, just give me your best possible result.
 
-Now, {command} Respond in {language} and do your best to respect the expected Markdown formatting (headings, lists, bold, emphasize, bold, quotes) when appropriate :
+Now, {command} Respond in {language} in less than {maxWords} words and do your best to respect the expected Markdown formatting (headings, lists, bold, emphasize, bold, quotes) when appropriate :
 
 """
 {edit}.

@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitc70834b422bbe9b59dd53905050feaa8
+class ComposerStaticInit624261aa4894e7d29f7c92670976b5ba
 {
     public static $files = array (
         '0d4507a35308200d41425eaae4b516fa' => __DIR__ . '/..' . '/youniwemi/wp-settings-kit/class-wp-settings-kit.php',
@@ -39,9 +39,9 @@ class ComposerStaticInitc70834b422bbe9b59dd53905050feaa8
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitc70834b422bbe9b59dd53905050feaa8::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitc70834b422bbe9b59dd53905050feaa8::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInitc70834b422bbe9b59dd53905050feaa8::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit624261aa4894e7d29f7c92670976b5ba::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit624261aa4894e7d29f7c92670976b5ba::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit624261aa4894e7d29f7c92670976b5ba::$classMap;
 
         }, null, ClassLoader::class);
     }
