@@ -3,7 +3,7 @@
 /**
  * Plugin Name: Aiify Blocks - ChatGPT AI Content Editing and Generation Blocks
  * Plugin URI: https://www.wpaiify.com
- * Version: 0.1.4
+ * Version: 0.1.5
  * Author: Instareza
  * Author URI: https://www.instareza.com
  * Description: Create and edit content using Chatgpt AI. Improve your content's quality and optimize it for search engines.
@@ -11,7 +11,7 @@
  * Text Domain: aiify
  * Domain Path: /languages
  * Requires PHP: 7.4
- * Stable tag: 0.1.4
+ * Stable tag: 0.1.5
  * @package AIIFY
  */
 
@@ -28,7 +28,14 @@ define('AIIFY_LANGUAGE_PATH', plugin_dir_path(__FILE__) . '/languages');
 // Init freemius integration.
 require AIIFY_INCLUDES . 'init_freemius.php';
 
-
+function array_to_options($array)
+{
+    $options = [];
+    foreach ($array as $key => $value) {
+        $options[] = ['label' => $value, 'value' => $key];
+    }
+    return $options;
+}
 
 function js_config()
 {
@@ -80,14 +87,6 @@ function register_aiify_block()
         register_block_type(AIIFY_BLOCK);
 
         wp_set_script_translations('aiify-aiify-editor-script', 'aiify', AIIFY_LANGUAGE_PATH);
-        function array_to_options($array)
-        {
-            $options = [];
-            foreach ($array as $key => $value) {
-                $options[] = ['label' => $value, 'value' => $key];
-            }
-            return $options;
-        }
         wp_localize_script(
             'aiify-aiify-editor-script',
             'aiify',

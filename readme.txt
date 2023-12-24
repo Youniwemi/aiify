@@ -5,7 +5,7 @@ Requires at least: 5.0
 Tested up to: 6.4.2
 Requires PHP: 7.4
 License: GPL
-Stable tag: 0.1.4
+Stable tag: 0.1.5
 
 Create high-quality content quickly with AI-powered copywriting, and optimize your existing content with advanced editing capabilities. Aiify Blocks uses ChatGPT AI technology within the WordPress block editor to help you generate new content and enhance your existing text for SEO and conversions.
 
@@ -107,6 +107,8 @@ We're glad you love our plugin! You can show your support by subscribing to the 
 2. Edit and enhance existing blocks
 3. Aiify blocks Open API setting 
 4. Aiify blocks writing setting
+5. Aiify configurable prompts
+6. Aiify TinyMCE plugin
 
 == Credits ==
 Big Thanks to : 
@@ -117,6 +119,7 @@ Big Thanks to :
 
 
 == Changelog ==
+= 0.1.5 : quick bug fix undefined array_to_options and update readme file screenshots titles
 = 0.1.4 : TinyMCE AI Content Generation and WooCommerce Compatibility
 - Introducing a new Tinymce plugin: a convenient button to access the Aiify Prompter.
 - Added the option to reset default prompts
