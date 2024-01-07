@@ -19,8 +19,8 @@
             "What do you want to write today?": [
                 "\u00bfQu\u00e9 quieres escribir hoy?"
             ],
-            "Add key information to include in the content?": [
-                "\u00bfA\u00f1adir informaci\u00f3n clave para incluir en el contenido?"
+            "Add key information to include in the content?\n- Information 1\n- Information 2": [
+                "\u00bfA\u00f1adir informaci\u00f3n clave para incluir en el contenido?\n- Informaci\u00f3n 1\n- Informaci\u00f3n 2"
             ],
             "Add keywords to highlight in the content? (comma separated keywords)": [
                 "\u00bfA\u00f1adir palabras clave para resaltar en el contenido? (palabras clave separadas por comas)"

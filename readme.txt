@@ -1,27 +1,45 @@
-===  Aiify Blocks - ChatGPT AI Copywriting, Content Writing, Rewriting and Editing ===
+===  Aiify - ChatGPT and Ollama AI Copywriting, Content Writing and Editing ===
 Contributors: rahal.aboulfeth
-Tags: chatgpt, ai, block, seo, openai, content, copywriting
+Tags: chatgpt, Llama, ai, seo, openai, Ollama, content, copywriting, block
 Requires at least: 5.0
 Tested up to: 6.4.2
 Requires PHP: 7.4
 License: GPL
-Stable tag: 0.1.5
+Stable tag: 0.1.6
 
-Create high-quality content quickly with AI-powered copywriting, and optimize your existing content with advanced editing capabilities. Aiify Blocks uses ChatGPT AI technology within the WordPress block editor to help you generate new content and enhance your existing text for SEO and conversions.
+Create high-quality content quickly with AI-powered copywriting, and optimize your existing content with advanced editing capabilities. Aiify Blocks can leverage ChatGPT or any Ollama models within the WordPress block editor to help you generate new content and enhance your existing text for SEO and conversions.
 
 == Description ==
 
 
-Simplify your content creation process with **Aiify Blocks**, the AI-powered **WordPress plugin** that allows you to **generate new content** and **enhance existing text** using the power of **ChatGPT 3 & 4 models**. With **ultra-customizable** generation and **seamless integration** with the WordPress **block editor**, you can easily insert AI-generated content directly into your **pages** and **articles**, complete with structured **headings**, **lists**, **bold keywords**, and more. Aiify Blocks is perfect for **bloggers**, **writers**, and anyone looking to elevate their content game.
+Simplify your content creation process with **Aiify Blocks**, the AI-powered **WordPress plugin** that allows you to **generate new content** and **enhance existing text** using the power of AI **ChatGPT 3 & 4 models** as well as **Llama models** via Ollama AI. With **ultra-customizable** generation and **seamless integration** with the WordPress **block editor**, you can easily insert AI-generated content directly into your **pages** and **articles**, complete with structured **headings**, **lists**, **bold keywords**, and more. Aiify Blocks is perfect for **bloggers**, **writers**, and anyone looking to elevate their content game.
 
 Effortlessly create **compelling** and **SEO-optimized content** with **Aiify Blocks**. Our AI-powered plugin for **WordPress** simplifies the **content generation** and **editing process**, with the ability to **highlight keywords**, **insert lists**, and more. Aiify Blocks is compatible with the block editor and can be used directly from the **WordPress customizer** or the FSE (full site editor), streamlining your content creation process and enhancing the quality of your website's copy.
 
-Moreover, Aiify is not only Block Compatible; it extends its functionality to every TinyMCE content editor thanks to the Tinymce plugin button.
+Moreover, Aiify is not only Block Compatible; it extends its functionality to every TinyMCE content editor thanks to the Tinymce plugin button making it compatible with WooCommerce.
+
+
+== IMPORTANT DISCLAIMER ==
+
+This plugin primarily serves as a bridge to AI models like ChatGPT and other Llama-based models running through Ollama.
+
+The main idea, particularly for content generation and editing, is to provide you with a tool (Content Editor Block or TinyMCE plugin). This allows you to submit a prompt to the AI, and then the AI's response will be formatted and inserted into your post or TinyMCE window.
+
+It's important to note that the quality of the content will depend on the quality of the prompt and the model. That's why Aiify provides you with a settings panel allowing you to fine-tune the default prompts to match your needs.
+
+So, while this plugin aims to **facilitate content generation and editing**, the user **must acknowledge the inherent limitations of AI** technology. The accuracy or appropriateness of the AI-generated content is not guaranteed and may vary based on the input provided and the selected **ai model**. Users are responsible for reviewing and verifying the content before use and agree to use this tool at their own risk. The developers of this plugin assume no liability for any direct, indirect, incidental, or consequential damages arising from its use. Always ensure that the generated content adheres to applicable laws and regulations.
+
+We are always open to feedback on how to make this tool better for you, so don't hesitate to get in touch with us.
 
 
 == OPEN AI ==
 
 Aiify Blocks utilizes the API from  [OpenAI](https://platform.openai.com/) . This plugin does not gather any information from your OpenAI account. The data transmitted to the OpenAI servers primarily consists of the AI prompt composed using our models as well as the context you specify. 
+It is important to check your usage on the [OpenAI website](https://platform.openai.com/account/usage) for accurate information. Please also review their [Privacy Policy](https://openai.com/policies/privacy-policy) and [Terms of Service](https://openai.com/policies/terms-of-use) for further information.
+
+== Ollama (beta) ==
+
+Aiify Blocks lets the user set up his prefered Ollama service (can be self hosted) to use multiple models [Ollama](https://ollama.ai/) . This plugin does not gather any information from your Ollama service. The data transmitted to the your Ollama service primarily consists of the AI prompt composed using our models as well as the context you specify. 
 It is important to check your usage on the [OpenAI website](https://platform.openai.com/account/usage) for accurate information. Please also review their [Privacy Policy](https://openai.com/policies/privacy-policy) and [Terms of Service](https://openai.com/policies/terms-of-use) for further information.
 
 == Features ==
@@ -46,6 +64,9 @@ Explore our preconfigured prompts designed to help you create SEO-optimized and 
 
 = High-Quality Content =
 Create high-quality content that engages and converts your audience
+
+= Multi Models support with Ollama =
+You can choose from the various llama models : Mistral, Mixtral, Phi, llama2...
 
 == Frequently Asked Questions ==
 
@@ -89,6 +110,14 @@ Yes, Exciting, right? We've just introduced a new plugin for TinyMCE that seamle
 
 Yes, you'll be able to use Aiify Blocks with WooCommerce. You can utilize it to enhance your product descriptions effortlessly, leveraging its capabilities to craft captivating and compelling product descriptions.
 
+= What is Ollama =
+
+Ollama is a plateform allowing to easy run AI models locally, visit  https://ollama.ai for more information and discover the available models https://ollama.ai/library.
+
+= Why should I use Ollama instead of Open Ai =
+
+Ollama offers a cost-effective and budget-friendly alternative to Open AI, especially if you're seeking to minimize expenses. With Ollama, you have the freedom to explore and leverage a diverse range of models provided by an active community. This opens up a world of experimentation, allowing you to find the perfect fit for your needs, all at a free or more affordable price point.
+
 = Aiify plugin is great, how can I show my appreciation? =
 
 We're glad you love our plugin! You can show your support by subscribing to the pro version, which allows you to:
@@ -105,20 +134,28 @@ We're glad you love our plugin! You can show your support by subscribing to the 
 == Screenshots ==
 1. Create new content with ChatGpt
 2. Edit and enhance existing blocks
-3. Aiify blocks Open API setting 
-4. Aiify blocks writing setting
-5. Aiify configurable prompts
-6. Aiify TinyMCE plugin
+3. Aiify TinyMCE plugin
+4. Aiify blocks Open API setting 
+5. Aiify Ollama configuration
+6. Aiify blocks writing setting
+7. Aiify configurable prompts
 
 == Credits ==
 Big Thanks to : 
 - [orhanerday](https://github.com/orhanerday/open-ai) for great library "OpenAI GPT-3 Api Client in PHP"
 - [SamHerbert](https://github.com/SamHerbert/SVG-Loaders) for the smooth svg animation
 - [Freemius](https://github.com/SamHerbert/SVG-Loaders) for plugin freemium experience
-- [Youniwemi](https://packagist.org/packages/youniwemi/wp-settings-kit) for wp-settings-kit - the lightweight library for easily creating WordPress settings pages and Post metaboxes 
+- [Youniwemi](https://packagist.org/packages/youniwemi/wp-settings-kit) for wp-settings-kit - the lightweight library for easily creating WordPress settings pages and Post metaboxes
+- [Ollama](https://ollama.ai) for easing the llama adoption.
 
 
 == Changelog ==
+= 0.1.6: Aiify Supports Ollama AI =
+- Integration with Ollama: Aiify now supports Ollama. Simply set up the URL of your service and choose the model to get started. As this implementation is new, your feedback is crucial for future enhancements.
+- OpenAI Model Sync: Your account now syncs with OpenAI models, allowing the use of your fine-tuned models for a more personalized experience.
+- Formatting Fixes: Addressed and corrected various formatting glitches to improve user experience.
+- Enhanced Prompt Management: Content creation and edition prompts have been separated for better clarity and control.
+- Added Disclaimer: An important disclaimer has been included in the Readme file to inform users about the usage and limitations of the tool.
 = 0.1.5 : quick bug fix undefined array_to_options and update readme file screenshots titles
 = 0.1.4 : TinyMCE AI Content Generation and WooCommerce Compatibility
 - Introducing a new Tinymce plugin: a convenient button to access the Aiify Prompter.
