@@ -50,7 +50,27 @@ function get_languages() {
 	return $return;
 }
 
+function get_ai_engine( $engine = null ) {
+	switch ( $engine ? $engine : AIIFY_AI_ENGINE ) {
+		case 'openai':
+			return new OpenAi( AIIFY_OPEN_AI_KEY );
+		case 'openrouter':
+			return new OpenRouter( AIIFY_OPENROUTER_KEY );
+		case 'ollama':
+			return new Ollama( AIIFY_OLLAMA_URL );
+	}
+	return null;
+}
 
+function get_ai_model( $engine ) {
+	if ( $engine instanceof Ollama ) {
+		return AIIFY_OLLAMA_MODEL;
+	} elseif ( $engine instanceof OpenRouter ) {
+		return AIIFY_OPENROUTER_MODEL;
+	} elseif ( $engine instanceof OpenAi ) {
+		return AIIFY_OPEN_AI_MODEL;
+	}
+}
 
 function settings() {
 	$update_models = wp_nonce_url( admin_url( 'admin-ajax.php?action=aiify_update_models' ), 'aiify_update_models', 'aiify_settings_nonce' );
@@ -179,6 +199,40 @@ function settings() {
 		),
 	);
 
+	$openrouter_settings = array(
+		'name'   => 'AIIFY_OPENROUTER',
+		'title'  => __( 'OpenRouter Settings (beta)', 'aiify' ),
+		'fields' => array(
+			array(
+				'id'          => 'KEY',
+				'type'        => 'text',
+				'title'       => __( 'Your Open Router Key', 'aiify' ),
+				'default'     => '',
+				'placeholder' => 'sk-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
+				'description' => sprintf( esc_html__( 'You can get your key here : %s', 'aiify' ), '<a href="https://openrouter.ai/keys" target="_blank"> https://openrouter.ai/keys</a>' ),
+
+			),
+			array(
+				'id'          => 'MODEL',
+				'type'        => 'select',
+				// get value from old setting
+				'default'     => 'openrouter/auto',
+				'title'       => __( 'OpenRouter Models', 'aiify' ),
+				'options'     => isset( $models['openrouter'] ) ? $models['openrouter'] : array(),
+				'description' => sprintf(
+					__( "This list is retrieved from the API, click <a href='%s'>here</a> to update it now", 'aiify' ),
+					esc_url(
+						add_query_arg(
+							array( 'engine' => 'openrouter' ),
+							$update_models
+						)
+					)
+				),
+			),
+
+		),
+	);
+
 	$writing_settings = array(
 		'name'   => 'AIIFY_WRITING',
 		'title'  => __( 'Writing Settings', 'aiify' ),
@@ -279,13 +333,15 @@ function settings() {
 			),
 		),
 	);
+	// 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
 
 		return array(
-			'AIIFY'         => $engine_settings,
-			'AIIFY_OPEN_AI' => $openai_settings,
-			'AIIFY_OLLAMA'  => $ollama_settings,
-			'AIIFY_WRITING' => $writing_settings,
-			'AIIFY_SYSTEM'  => $prompts_settings,
+			'AIIFY'            => $engine_settings,
+			'AIIFY_OPEN_AI'    => $openai_settings,
+			'AIIFY_OLLAMA'     => $ollama_settings,
+			'AIIFY_OPENROUTER' => $openrouter_settings,
+			'AIIFY_WRITING'    => $writing_settings,
+			'AIIFY_SYSTEM'     => $prompts_settings,
 		);
 }
 
@@ -316,30 +372,49 @@ add_action(
 		$models = get_option(
 			'AIIFY_MODELS',
 			array(
-				'openai' => null,
-				'ollama' => null,
+				'openai'     => null,
+				'ollama'     => null,
+				'openrouter' => null,
 			)
 		);
+		if ( isset( $_GET['engine'] ) ) {
+			// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.MissingUnslash, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- no need to unslash or sanitiza, it's just a key, get_ai_engine validates
+			$engine = get_ai_engine( $_GET['engine'] );
 
-		if ( isset( $_GET['engine'] ) && 'ollama' === $_GET['engine'] ) {
-			$engine           = new Ollama( AIIFY_OLLAMA_URL );
-			$models['ollama'] = $engine->listModels(
-				function ( $model ) {
-					return $model['name'] . ' - ' . $model['details']['parameter_size'];
+			if ( $engine instanceof Ollama ) {
+				$models['ollama'] = $engine->listModels(
+					function ( $model ) {
+						return $model['name'] . ' - ' . $model['details']['parameter_size'];
+					}
+				);
+			} elseif ( $engine instanceof OpenRouter ) {
+				$response          = json_decode( $engine->listModels(), true );
+				$openrouter_models = array();
+				foreach ( $response['data'] as $model ) {
+					$is_free                           = $model['pricing']['prompt'] === '0' && $model['pricing']['completion'] === '0';
+					$openrouter_models[ $model['id'] ] = array(
+						'label'       => $model['name'] . ( $is_free ? ' (free)' : '' ),
+						'description' => $model['description'],
+					);
 				}
-			);
-		} elseif ( isset( $_GET['engine'] ) && 'openai' === $_GET['engine'] ) {
-			$engine        = new OpenAi( AIIFY_OPEN_AI_KEY );
-			$response      = json_decode( $engine->listModels(), true );
-			$openai_models = array();
-			foreach ( $response['data'] as $model ) {
-				if ( 'openai' === $model['owned_by'] || 'organization-owner' === $model['owned_by'] || 'user' === substr( $model['owned_by'], 0, 4 ) ) {
-					$openai_models[ $model['id'] ] = $model['id'] . ' - ' . $model['owned_by'];
+				$models['openrouter'] = $openrouter_models;
+			} elseif ( $engine instanceof OpenAi ) {
+				$response      = json_decode( $engine->listModels(), true );
+				$openai_models = array();
+				foreach ( $response['data'] as $model ) {
+					if ( 'openai' === $model['owned_by'] || 'organization-owner' === $model['owned_by'] || 'user' === substr( $model['owned_by'], 0, 4 ) ) {
+						$openai_models[ $model['id'] ] = $model['id'] . ' - ' . $model['owned_by'];
 
+					}
 				}
+				$models['openai'] = $openai_models;
+			} else {
+				wp_die( 'Umknown engine' );
 			}
-			$models['openai'] = $openai_models;
+		} else {
+			wp_die( 'Wrong request' );
 		}
+
 		update_option( 'AIIFY_MODELS', $models, false );
 		wp_safe_redirect( admin_url( 'admin.php?page=aiify' ) );
 		exit;

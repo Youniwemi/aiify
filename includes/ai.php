@@ -27,9 +27,10 @@ function get_system_prompt( $is_edit = false ) {
  *
  * @param      string $prompt  The prompt
  */
-function prepare_options_openai( string $prompt, $is_stream = true, $is_edit = false ) {
-	return array(
-		'model'             => AIIFY_OPEN_AI_MODEL,
+function prepare_options_openai( string $model, string $prompt, $is_stream = true, $is_edit = false ) {
+	
+	$options = array(
+		'model'             => $model,
 		'temperature'       => (float) AIIFY_TEMPERATURE,
 		'frequency_penalty' => (float) AIIFY_FREQUENCY_PENALTY,
 		'presence_penalty'  => (float) AIIFY_PRESENCE_PENALTY,
@@ -46,9 +47,12 @@ function prepare_options_openai( string $prompt, $is_stream = true, $is_edit = f
 				'role'    => 'user',
 				'content' => $prompt,
 			),
-		),
-		'stream'            => $is_stream,
+		)
 	);
+	if ($is_stream){
+		$options['stream'] = true;
+	}
+	return $options;
 }
 
 /**
@@ -56,14 +60,14 @@ function prepare_options_openai( string $prompt, $is_stream = true, $is_edit = f
  *
  * @param      string $prompt  The prompt
  */
-function prepare_options_ollama( string $prompt, $is_stream = true, $is_edit = false ) {
+function prepare_options_ollama( string $model, string $prompt, $is_stream = true, $is_edit = false ) {
 	$options = array(
-		'model'   => AIIFY_OLLAMA_MODEL,
-		'stream'  => $is_stream,
+		'model'   => $model,
 		'options' => array(
 			'temperature' => (float) AIIFY_TEMPERATURE,
 		),
 	);
+
 	if ( true ) {
 		$options['messages'] = array(
 			// array(
@@ -87,29 +91,78 @@ function prepare_options_ollama( string $prompt, $is_stream = true, $is_edit = f
 		$options['prompt'] = $prompt;
 		$options['system'] = get_system_prompt( $is_edit );
 	}
+
+	if ($is_stream){
+		$options['stream'] = true;
+	}
+
 	return $options;
 }
 
-function ollama_to_openai( $ollama ) {
-	if ( $ollama->done ) {
-		return '[DONE]';
-	}
-
+/**
+ * Formats message as OpenAi content dela
+ *
+ * @param      string  $message  The message
+ *
+ * @return     string OpenAi compatible json string
+ */
+function format_delta($message){
 	return json_encode(
 		array(
 			'choices' => array(
 				array(
 					'delta' => array(
-						'content' => isset( $ollama->message->content ) ? $ollama->message->content : $ollama->response,
+						'content' => $message,
 					),
 
 				),
 			),
 		)
 	);
+}
+
+/**
+ * Adapt Ollama response format to OpenAi
+ *
+ * @param      <type>  $ollama  The ollama
+ *
+ * @return     string  OpenAi compatible string output
+ */
+function ollama_to_openai( $ollama ) {
+	if ( $ollama->done ) {
+		return '[DONE]';
+	}
+
+	return format_delta( isset( $ollama->message->content ) ? $ollama->message->content : $ollama->response);
 
 }
 
+/**
+ * Detects and returs any error in the buffer
+ *
+ * @param      string  $buffer  The buffer
+ *
+ * @return     mixed  The stream error object or void.
+ */
+function get_stream_error( string $buffer ) {
+	// Avoid parsing...
+	if ( false === strpos( $buffer, 'error' ) ) {
+		return;
+	}
+
+	if ( 0 === strpos( $buffer, 'data: ' ) ) {
+		$maybe_json = substr( $buffer, 6 );
+	} else {
+		$maybe_json = $buffer;
+	}
+	// if it is a valid json
+	$obj = json_decode( $maybe_json );
+	if ( JSON_ERROR_NONE === json_last_error() ) {
+		if ( isset( $obj->error ) && $obj->error->message != '' ) {
+			return $obj->error;
+		}
+	}
+}
 
 /**
  * Main AI query action
@@ -117,15 +170,12 @@ function ollama_to_openai( $ollama ) {
 add_action(
 	'wp_ajax_open_ai',
 	function () {
-		error_reporting( E_ALL );
-		ini_set( 'display_errors', 1 );
-
 		check_ajax_referer( 'secure-nonce', 'openai_nonce' );
 
-		if ( AIIFY_AI_ENGINE == 'openai' ) {
-			$engine = new OpenAi( AIIFY_OPEN_AI_KEY );
-		} else {
-			$engine = new Ollama( AIIFY_OLLAMA_URL );
+		$engine = get_ai_engine();
+		$model  = get_ai_model( $engine );
+		if ( $model === null ) {
+			wp_send_json_error( 'Please setup your ai engine and model' );
 		}
 
 		// Make sur style and tone are in our list of styles and tones
@@ -169,47 +219,32 @@ add_action(
 
 		}
 
-		$isStream = ! isset( $_GET['nostream'] );
+		$is_stream = ! isset( $_GET['nostream'] ) ;
 
-		if ( AIIFY_AI_ENGINE == 'openai' ) {
-			$opts = prepare_options_openai( $prompt, $isStream, $is_edit );
-		} elseif ( AIIFY_AI_ENGINE == 'ollama' ) {
-			$opts = prepare_options_ollama( $prompt, $isStream, $is_edit );
+		// Both OpenRouter extends OpenAi
+		if ( $engine instanceof OpenAi ) {
+			$opts = prepare_options_openai( $model, $prompt, $is_stream, $is_edit );
+		} elseif ( $engine instanceof Ollama ) {
+			$opts = prepare_options_ollama( $model, $prompt, $is_stream, $is_edit );
 		}
 
-		if ( $isStream ) {
+		if ( $is_stream ) {
 			header( 'Content-type: text/event-stream' );
 			header( 'Cache-Control: no-cache' );
-		}
-
-		function get_stream_error( string $buffer ) {
-			// Avoid parsing...
-			if ( false === strpos( $buffer, 'error' ) ) {
-				return;
-			}
-
-			if ( 0 === strpos( $buffer, 'data: ' ) ) {
-				$maybe_json = substr( $buffer, 6 );
-			} else {
-				$maybe_json = $buffer;
-			}
-			// if it is a valid json
-			$obj = json_decode( $maybe_json );
-			if ( JSON_ERROR_NONE === json_last_error() ) {
-				if ( isset( $obj->error ) && $obj->error->message != '' ) {
-					return $obj->error;
-				}
-			}
-
+			header( 'X-Accel-Buffering: no' ); // Turn off bufferinf in Nginx.
 		}
 
 		$complete = $engine->chat(
 			$opts,
-			function ( $curl_info, $data ) use ( $opts ) {
+			$is_stream ? function ( $curl_info, $data ) use ( $engine, $opts ) {
 				static $sentDebug;
 				static $buffer = ''; // Initialize a static buffer to store partial JSON.
-
 				$length = strlen( $data );
+				// Open Router processing request, we skip
+				if ( $engine instanceof OpenRouter && strpos( $data, ": OPENROUTER PROCESSING") === 0 ){
+					return $length;
+				}
+				
 				// Append the new data to the buffer.
 				$buffer .= $data;
 
@@ -221,13 +256,16 @@ add_action(
 					if ( $error ) {
 						$opts['error'] = $error;
 					}
-					$debug = json_encode( $opts ) . PHP_EOL . PHP_EOL;
-					echo 'data: ' . wp_kses_post( $debug );
+					$debug = json_encode( $opts ) ;
+					echo 'data: ' . wp_kses_post( $debug ). PHP_EOL . PHP_EOL;
 					$sentDebug = true;
-					ob_flush();
+					ob_end_flush();
+
 				} else {
 					if ( $error ) {
 						echo 'data: ' . wp_kses_post( json_encode( array( 'error' => $obj ) ) ) . PHP_EOL . PHP_EOL;
+						ob_end_flush();
+
 					}
 				}
 
@@ -235,7 +273,7 @@ add_action(
 				$parts = explode( "\n", $buffer );
 				// If the last part is not complete (does not end with \n), we keep it as our buffer, else, fresh buffer.
 				$buffer = ( $buffer[-1] !== "\n" ) ? array_pop( $parts ) : '';
-
+				$finish = '';
 				foreach ( $parts as $part ) {
 					if ( '' === $part ) {
 						continue;
@@ -248,25 +286,65 @@ add_action(
 					}
 					$obj = json_decode( $maybe_json );
 					if ( json_last_error() === JSON_ERROR_NONE ) {
-						$response = ( AIIFY_AI_ENGINE === 'openai' ) ? $maybe_json : ollama_to_openai( $obj );
+						if ( $engine instanceof OpenAi ) {
+							if ( isset( $obj->choices[0]->finish_reason ) ) {
+								$finish = $obj->choices[0]->finish_reason;
+							}
+						}
+
+						$response = ( $engine instanceof OpenAi ) ? $maybe_json : ollama_to_openai( $obj );
 						echo 'data: ' . wp_kses_post( $response ) . PHP_EOL . PHP_EOL;
+						ob_end_flush();
+
 					} else {
 						$buffer .= $part;
 					}
 				}
 
 				// Open AI : We are done here.
-				if ( $buffer === 'data: [DONE]' ) {
+				if ( $buffer === 'data: [DONE]' || $finish === 'length' ) {
 					echo 'data: [DONE]' . PHP_EOL . PHP_EOL;
+					ob_end_flush();
 				}
 
-				// echo PHP_EOL;
-				ob_flush();
+				
 				flush();
-
 				return $length;
-			}
+			} : null
 		);
+
+		// Almost dead code, need client side handle correctly either a string (markdown) to format to blocks, or multiples lines
+		if (!$is_stream){
+			$json = json_decode($complete);
+			// Sorry not sorry. but for now, we'll send it as a stream ( of lines )
+			if ( json_last_error() === JSON_ERROR_NONE ) {
+				if ( isset( $json->error ) && $json->error->message != '' ) {
+					 $opts['error'] =   $json->error;
+				}
+				header( 'Content-type: text/event-stream' );
+				header( 'Cache-Control: no-cache' );
+				header( 'X-Accel-Buffering: no' ); // Turn off bufferinf in Nginx.
+				// Send debug
+				echo 'data: ' . wp_kses_post( json_encode( $opts )). PHP_EOL . PHP_EOL;
+				flush();
+				if ( isset($json->choices[0]->message->content)){
+					$lines = explode("\n", $json->choices[0]->message->content ) ;
+					foreach($lines as $line){
+						if ($line==""){
+							$line="\n";
+						} else{
+							$line.="\n";
+						}
+						echo "data: ".wp_kses_post(format_delta($line)). PHP_EOL . PHP_EOL;
+						flush();
+					}
+
+					echo 'data: [DONE]' . PHP_EOL . PHP_EOL;
+					flush();
+					exit();
+				}
+			}
+		}
 
 	}
 );

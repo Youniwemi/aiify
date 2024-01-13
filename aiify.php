@@ -1,24 +1,24 @@
 <?php
 
 /**
- * Plugin Name: Aiify - ChatGPT and Ollama AI Copywriting, Content Writing and Editing
+ * Plugin Name: Aiify - ChatGPT, Ollama and OpenRouter AI Copywriting, Content Writing and Editing
  * Plugin URI: https://www.wpaiify.com
- * Version: 0.1.6
+ * Version: 0.1.7
  * Author: Instareza
  * Author URI: https://www.instareza.com
- * Description: Create and edit content using Chatgpt or Ollama AI. Improve your content's quality and optimize it for search engines.
+ * Description: Create and edit content using Chatgpt or Ollama AI or any OpenRouter model. Improve your content's quality and optimize it for search engines.
  * License: GPL
  * Text Domain: aiify
  * Domain Path: /languages
  * Requires PHP: 7.4
- * Stable tag: 0.1.6
+ * Stable tag: 0.1.7
  *
  * @package AIIFY
  */
 
 namespace AIIFY;
 
-define( 'AIIFY_VERSION', '0.1.6' );
+define( 'AIIFY_VERSION', '0.1.7' );
 define( 'AIIFY_VENDOR', __DIR__ . '/vendor/' );
 define( 'AIIFY_ASSETS_DIR', __DIR__ . '/assets/' );
 define( 'AIIFY_INCLUDES', __DIR__ . '/includes/' );
@@ -65,8 +65,10 @@ function js_config() {
 
 function register_aiify_block() {
 	if ( ( ! defined( 'AIIFY_OPEN_AI_KEY' ) || AIIFY_OPEN_AI_KEY == '' ) &&
-	( ! defined( 'AIIFY_OLLAMA_URL' ) || AIIFY_OLLAMA_URL === '' ) ) {
-		// just bail if no key is there and notify
+	( ! defined( 'AIIFY_OLLAMA_URL' ) || AIIFY_OLLAMA_URL === '' ) &&
+	( ! defined( 'AIIFY_OPENROUTER_KEY' ) || AIIFY_OPENROUTER_KEY === '' )
+	) {
+		// just bail if no key is there and notify.
 		add_action(
 			'admin_notices',
 			function () {
@@ -82,9 +84,9 @@ function register_aiify_block() {
 				</div>
 				<div>
 					<h3><?php echo esc_html__( 'Aiify For WordPress is installed, almost ready to go', 'aiify' ); ?></h3>
-					<p><?php echo esc_html__( 'To start using AIIFY Blocks, please setup your Ai Engine, OpenAi Key or Ollama URL', 'aiify' ); ?></p>
+					<p><?php echo esc_html__( 'To start using AIIFY, please setup your Ai Engine, OpenAi or OpenRouter Key or Ollama URL', 'aiify' ); ?></p>
 					<p>
-					<a class="button-primary button" href="<?php echo esc_url( admin_url( 'admin.php?page=aiify&welcome-message=true' ) ); ?>"  ><?php echo esc_html__( 'Go to Aiify Blocks settings', 'aiify' ); ?></a>
+					<a class="button-primary button" href="<?php echo esc_url( admin_url( 'admin.php?page=aiify&welcome-message=true' ) ); ?>"  ><?php echo esc_html__( 'Go to AIIFY settings', 'aiify' ); ?></a>
 					</p>
 				</div>
 			</div>
@@ -121,6 +123,7 @@ function register_aiify_block() {
 if ( defined( 'WP_ADMIN' ) && WP_ADMIN ) {
 	require_once AIIFY_VENDOR . '/autoload.php';
 	require AIIFY_INCLUDES . 'class-ollama.php';
+	require AIIFY_INCLUDES . 'class-openrouter.php';
 	require AIIFY_INCLUDES . 'settings.php';
 	require AIIFY_INCLUDES . 'tinymce.php';
 	// allow only on admin ( or ajax )

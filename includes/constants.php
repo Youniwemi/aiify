@@ -10,8 +10,9 @@ define( 'AIIFY_WRITING_DEFAULT_LANGUAGE', 'English (United States)' );
 define(
 	'AIIFY_AI_ENGINES',
 	array(
-		'openai' => 'Open Ai',
-		'ollama' => 'Ollama',
+		'openai'     => 'Open Ai : ChatGpt-3.5, ChatGpt-4',
+		'ollama'     => 'Ollama : Llama 2, Phi-2, etc...',
+		'openrouter' => 'OpenRouter : Claude, Gemini, Mistral, GPTs, etc…',
 	// "text-davinci-003" => 'text-davinci-003' ( disabled completions for now as prompting is not really compatible )
 	)
 );

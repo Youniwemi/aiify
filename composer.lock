@@ -161,16 +161,16 @@
         },
         {
             "name": "youniwemi/wp-settings-kit",
-            "version": "1.1.1",
+            "version": "1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Youniwemi/WP-OOP-Settings-API.git",
-                "reference": "59278c315cc6637b436a4b8c398f92630c0b31b2"
+                "reference": "645632925f48054b5ad31c8b75b21bff700027ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Youniwemi/WP-OOP-Settings-API/zipball/59278c315cc6637b436a4b8c398f92630c0b31b2",
-                "reference": "59278c315cc6637b436a4b8c398f92630c0b31b2",
+                "url": "https://api.github.com/repos/Youniwemi/WP-OOP-Settings-API/zipball/645632925f48054b5ad31c8b75b21bff700027ad",
+                "reference": "645632925f48054b5ad31c8b75b21bff700027ad",
                 "shasum": ""
             },
             "require": {
@@ -188,9 +188,9 @@
             ],
             "description": "WP Settings Kit is a lightweight library for easily creating WordPress settings pages and Post metaboxes.",
             "support": {
-                "source": "https://github.com/Youniwemi/WP-OOP-Settings-API/tree/1.1.1"
+                "source": "https://github.com/Youniwemi/WP-OOP-Settings-API/tree/1.1.2"
             },
-            "time": "2023-09-22T11:51:08+00:00"
+            "time": "2024-01-11T19:02:45+00:00"
         }
     ],
     "packages-dev": [],

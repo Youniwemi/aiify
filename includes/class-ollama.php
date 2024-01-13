@@ -3,6 +3,10 @@
 namespace AIIFY;
 
 /**
+ * Should we consider trying to keep the model up by sending empty prompts?
+ */
+
+/**
  * This class is a fast adaptation of orhanerday/open-ai to Ollama
  */
 class Ollama {
